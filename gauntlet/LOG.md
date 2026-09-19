@@ -48,7 +48,7 @@ nomi senza lettere latine o uguali al barcode scartati. Catalogo rigenerato: 120
 Catture nostre: `rounds/round-2/ours-{light,dark,light-axl}.png`. Mappe cieche: P1 A=bar B=ours ·
 P2 A=ours B=bar · P4 A=ours B=bar. Critici P1/P2/P4 e P5 (round 2) lanciati a contesto fresco.
 
-ESITO P3: VINTO — round 1, alla cieca (dark + AX-L), nessuna modifica necessaria.
+(P3: vinto al round 1, vedi «Esiti finali».)
 
 Verdetti round 2:
 

@@ -63,7 +63,7 @@ if [ -d "$OUT/ui.xcresult" ]; then
   ui=$(xcrun xcresulttool get test-results summary --path "$OUT/ui.xcresult" 2>/dev/null \
        | python3 -c 'import sys,json; d=json.load(sys.stdin); print("%d/%d passati, %d falliti, %d saltati" % (d["passedTests"], d["totalTestCount"], d["failedTests"], d.get("skippedTests", 0)))')
   echo "  UI: $ui"; summary+=("UI $ui")
-  case "$ui" in *", 0 falliti") ;; *) fail "test UI falliti";; esac
+  case "$ui" in *" 0 falliti"*) ;; *) fail "test UI falliti";; esac
 fi
 
 step "5. gauntlet"
@@ -76,8 +76,11 @@ for piece in P1 P2 P3 P4 P5; do
 done
 refs=$(ls gauntlet/reference/*.png 2>/dev/null | wc -l | tr -d ' ')
 if [ "$refs" -ge 4 ]; then ok "catture del bar: $refs"; else fail "catture del bar: $refs (minimo 4)"; fi
-won=$(grep -cE "^ESITO P[1-5]: VINTO" gauntlet/LOG.md 2>/dev/null || true)
-summary+=("gauntlet vinti ${won:-0}/5")
+won=0
+for piece in P1 P2 P3 P4 P5; do
+  case "$(grep -E "^ESITO $piece:" gauntlet/LOG.md 2>/dev/null | tail -1)" in "ESITO $piece: VINTO"*) won=$((won + 1));; esac
+done
+summary+=("gauntlet vinti $won/5")
 
 step "6. verificatore a contesto fresco"
 if grep -qE "^VERIFICATORE: PASS" PROGRESS.md; then ok "VERIFICATORE: PASS in PROGRESS.md"; else fail "esito del verificatore assente in PROGRESS.md"; fi
