@@ -5,6 +5,7 @@ import SkinCareKit
 /// Uso:
 ///   catalog-builder build --out <file.json> [--per-category 100] [--max-pages 5] [--min-interval 6.5]
 ///                         [--user-agent "App/Versione (contatto)"]
+///                         [--images-dir <dir> --images-base-url <url>] [--skip-images]
 ///   catalog-builder verify <file.json>
 /// Exit: 0 ok · 1 soglia di qualità non superata · 2 errore d'uso o di rete.
 enum CLI {
@@ -48,7 +49,17 @@ enum CLI {
         )
         do {
             let started = Date()
-            let result = try await assembler.build()
+            var result = try await assembler.build()
+            if let imagesDir = option("--images-dir", in: args), !args.contains("--skip-images") {
+                guard let base = option("--images-base-url", in: args).flatMap(URL.init(string:)) else { return usage() }
+                let pipeline = CutoutPipeline(
+                    directory: URL(fileURLWithPath: imagesDir), baseURL: base,
+                    fetcher: URLSessionImageFetcher(userAgent: userAgent)
+                )
+                let outcome = try await pipeline.run(products: result.catalog.products)
+                result.catalog.products = outcome.products
+                print(outcome.summary.description)
+            }
             for report in result.reports {
                 print("\(report.tag): pagine \(report.pagesFetched)+\(report.targetedPages) mirate, "
                     + "visti \(report.productsSeen), selezionati \(report.productsSelected) "
@@ -82,8 +93,10 @@ enum CLI {
 
     static func report(_ catalog: Catalog) -> Int32 {
         let quality = CatalogQuality.check(catalog)
+        let cutouts = catalog.products.filter { $0.image.cutoutURL != nil }.count
+        let italian = catalog.products.filter(\.soldInItaly).count
         print("qualità: \(quality.productCount) prodotti, \(quality.categoryCount) categorie, "
-            + "generato \(catalog.generatedAt.formatted(.iso8601))")
+            + "\(italian) Italia, \(cutouts) ritagli, generato \(catalog.generatedAt.formatted(.iso8601))")
         for issue in quality.issues {
             print("  ✘ \(issue)")
         }
