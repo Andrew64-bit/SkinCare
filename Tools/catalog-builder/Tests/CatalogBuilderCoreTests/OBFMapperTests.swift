@@ -250,4 +250,22 @@ struct OBFMapperTests {
         #expect(try name("Savon surgras", in: antiAging) == nil)
         #expect(try name("Gel nettoyant purifiant", in: cleansers) != nil)
     }
+
+    @Test("a token with non-Latin letters among the first four (Cyrillic 'Аqua') rejects the product")
+    func nonLatinTokenRejected() throws {
+        let json = """
+        {"code":"1","product_name":"Crema","brands":"B",\(image),
+         "ingredients_text":"Аqua, Glycerin, Parfum, Limonene, Linalool, Citral"}
+        """
+        #expect(try mapped(json) == nil)
+    }
+
+    @Test("accented Latin ingredient names are still accepted")
+    func accentedLatinAccepted() throws {
+        let json = """
+        {"code":"1","product_name":"Crème","brands":"B",\(image),
+         "ingredients_text":"Eau, glycérine, palmitate d'isopropyle, alcool cétéarylique, parfum, limonène"}
+        """
+        #expect(try mapped(json) != nil)
+    }
 }

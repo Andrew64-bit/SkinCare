@@ -1,5 +1,5 @@
 {
-  "generatedAt" : "2026-09-19T14:53:00Z",
+  "generatedAt" : "2026-09-19T15:09:00Z",
   "products" : [
     {
       "brand" : "Mixa",
@@ -36,7 +36,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/20057060",
-          "uploader" : "openfoodfacts-contributors"
+          "uploader" : "foodless"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/000/002/005/7060/front_fr.24.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/000/002/005/7060/front_fr.24.400.jpg"
@@ -59,7 +59,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/4005800001192",
-          "uploader" : "smoothie-app"
+          "uploader" : "scailyna"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/400/580/000/1192/front_fr.5.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/400/580/000/1192/front_fr.5.400.jpg"
@@ -82,7 +82,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3574661287201",
-          "uploader" : "smoothie-app"
+          "uploader" : "foodless"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/357/466/128/7201/front_fr.14.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/357/466/128/7201/front_fr.14.400.jpg"
@@ -398,7 +398,7 @@
         "id" : "facial-creams",
         "label" : "Creme viso"
       },
-      "description" : "Crema viso di Nivea, 100 ml. Ingredienti principali: Aqua, Glycerin, Myristyl Alcohol, Alcohol Denat..",
+      "description" : "Crema viso di Nivea, 100 ml. Ingredienti principali: Aqua, Glycerin, Myristyl Alcohol, Alcohol Denat.",
       "id" : "4005900009135",
       "image" : {
         "credit" : {
@@ -588,7 +588,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3401395376706",
-          "uploader" : "r40s"
+          "uploader" : "aydan"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/340/139/537/6706/front_ru.11.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/340/139/537/6706/front_ru.11.400.jpg"
@@ -1069,7 +1069,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3600551125275",
-          "uploader" : "openfoodfacts-contributors"
+          "uploader" : "foodless"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/360/055/112/5275/front_fr.18.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/360/055/112/5275/front_fr.18.400.jpg"
@@ -1184,7 +1184,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3282770396874",
-          "uploader" : "jenjango"
+          "uploader" : "smoothie-app"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/328/277/039/6874/front_it.5.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/328/277/039/6874/front_it.5.400.jpg"
@@ -1207,7 +1207,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/4012400800711",
-          "uploader" : "smoothie-app"
+          "uploader" : "aaaldo"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/401/240/080/0711/front_fr.8.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/401/240/080/0711/front_fr.8.400.jpg"
@@ -1293,7 +1293,7 @@
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di Nivea, 200 ml. Ingredienti principali: Aqua, Homosalate, Glycerin, Alcohal Denat..",
+      "description" : "Protezione solare di Nivea, 200 ml. Ingredienti principali: Aqua, Homosalate, Glycerin, Alcohal Denat.",
       "id" : "4005900246905",
       "image" : {
         "credit" : {
@@ -1334,29 +1334,6 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/3337875698696"
     },
     {
-      "brand" : "Sun Dance",
-      "category" : {
-        "id" : "sunscreen",
-        "label" : "Solari"
-      },
-      "description" : "Protezione solare di Sun Dance, 200 ml. Ingredienti principali: Аqua, Dibutyl Adipate, Glycerin, Diethylamino Hydroxybenzoyl Hexyl Benzoate.",
-      "id" : "4066447786460",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/4066447786460",
-          "uploader" : "smoothie-app"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/406/644/778/6460/front_de.18.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/406/644/778/6460/front_de.18.400.jpg"
-      },
-      "ingredientsPreview" : "Аqua, Dibutyl Adipate, Glycerin, Diethylamino Hydroxybenzoyl Hexyl Benzoate",
-      "lastModified" : "2026-05-04T10:51:14Z",
-      "name" : "Latte solare per bambini 50+",
-      "quantity" : "200 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/4066447786460"
-    },
-    {
       "brand" : "Cien",
       "category" : {
         "id" : "sunscreen",
@@ -1378,6 +1355,29 @@
       "name" : "Sonnenmilch classic LSF 30",
       "quantity" : "250 ml",
       "sourceURL" : "https://world.openbeautyfacts.org/product/20382933"
+    },
+    {
+      "brand" : "Laboratoires De Biarritz",
+      "category" : {
+        "id" : "sunscreen",
+        "label" : "Solari"
+      },
+      "description" : "Protezione solare di Laboratoires De Biarritz, 100 ml. Ingredienti principali: Caprylic/Capric Triglyceride, Coconut Alkanes, Zinc Oxide, Titanium Dioxide.",
+      "id" : "3760211481421",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/3760211481421",
+          "uploader" : "fiuzzy"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/376/021/148/1421/front_fr.14.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/376/021/148/1421/front_fr.14.400.jpg"
+      },
+      "ingredientsPreview" : "Caprylic/Capric Triglyceride, Coconut Alkanes, Zinc Oxide, Titanium Dioxide",
+      "lastModified" : "2025-03-16T17:28:56Z",
+      "name" : "Spray solaire Alga maris",
+      "quantity" : "100 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/3760211481421"
     },
     {
       "brand" : "Argile",
@@ -1454,7 +1454,7 @@
         "id" : "face-masks",
         "label" : "Maschere viso"
       },
-      "description" : "Maschera viso di Soho N.y.c, 100 ml. Ingredienti principali: Aqua, Glycerin, Aloe Barbadensis Leaf Extract, Alcohol Denat..",
+      "description" : "Maschera viso di Soho N.y.c, 100 ml. Ingredienti principali: Aqua, Glycerin, Aloe Barbadensis Leaf Extract, Alcohol Denat.",
       "id" : "8683420170045",
       "image" : {
         "credit" : {
@@ -2203,29 +2203,6 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/7640183490613"
     },
     {
-      "brand" : "Alvora Lab",
-      "category" : {
-        "id" : "anti-aging-face-care-products",
-        "label" : "Anti-età"
-      },
-      "description" : "Trattamento viso anti-età di Alvora Lab, 30 ml. Ingredienti principali: Hamamelis Virginiana Water (25-50%), Barbadensis Leaf Juice Aloe (10-25%), Tetrapeptide-21 (1-5%), Butylene Glycerin (5-10%).",
-      "id" : "0717639101076",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/0717639101076",
-          "uploader" : "giacomoalo13"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/071/763/910/1076/front_it.6.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/071/763/910/1076/front_it.6.400.jpg"
-      },
-      "ingredientsPreview" : "Hamamelis Virginiana Water (25-50%), Barbadensis Leaf Juice Aloe (10-25%), Tetrapeptide-21 (1-5%), Butylene Glycerin (5-10%)",
-      "lastModified" : "2026-08-20T12:03:17Z",
-      "name" : "ALBA PEPTIDE SERUM",
-      "quantity" : "30 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/0717639101076"
-    },
-    {
       "brand" : "Diadermine",
       "category" : {
         "id" : "anti-aging-face-care-products",
@@ -2272,27 +2249,50 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/7640183490330"
     },
     {
-      "brand" : "Comptoir Provençal Des Argiles",
+      "brand" : "Diadermine",
       "category" : {
         "id" : "anti-aging-face-care-products",
         "label" : "Anti-età"
       },
-      "description" : "Trattamento viso anti-età di Comptoir Provençal Des Argiles, 50 ml. Ingredienti principali: Ribes Nigrum (Black currant) leaf water, Aqua (Water), Glycerin, _Corylus avellana_ (Hazelnut) seed oil.",
-      "id" : "3760020731403",
+      "description" : "Trattamento viso anti-età di Diadermine, 30 ml. Ingredienti principali: Aqua, Caprylic/Capric Triglyceride, C12-15 Alkyl Benzoate, Dimethicone.",
+      "id" : "3178041302135",
       "image" : {
         "credit" : {
           "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3760020731403",
-          "uploader" : "miel2thym"
+          "sourceURL" : "https://world.openbeautyfacts.org/product/3178041302135",
+          "uploader" : "tacite"
         },
-        "url200" : "https://images.openbeautyfacts.org/images/products/376/002/073/1403/front_fr.7.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/376/002/073/1403/front_fr.7.400.jpg"
+        "url200" : "https://images.openbeautyfacts.org/images/products/317/804/130/2135/front_fr.8.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/317/804/130/2135/front_fr.8.400.jpg"
       },
-      "ingredientsPreview" : "Ribes Nigrum (Black currant) leaf water, Aqua (Water), Glycerin, _Corylus avellana_ (Hazelnut) seed oil",
-      "lastModified" : "2016-10-09T13:40:24Z",
-      "name" : "BB cream Crème soin teintée Sable anti-âge",
-      "quantity" : "50 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3760020731403"
+      "ingredientsPreview" : "Aqua, Caprylic/Capric Triglyceride, C12-15 Alkyl Benzoate, Dimethicone",
+      "lastModified" : "2016-10-07T10:29:09Z",
+      "name" : "Jeunesse infusée concentré anti-rides",
+      "quantity" : "30 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/3178041302135"
+    },
+    {
+      "brand" : "Swiss Toniq Geneva",
+      "category" : {
+        "id" : "anti-aging-face-care-products",
+        "label" : "Anti-età"
+      },
+      "description" : "Trattamento viso anti-età di Swiss Toniq Geneva, 30 ml. Ingredienti principali: Rosa Canina Fruit Oil, Simmondsia Chinensis Seed Oil, Argania Spinosa Kernel Oil, Saponaria Pumila Callus Culture Extract.",
+      "id" : "7640183490101",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/7640183490101",
+          "uploader" : "swisstoniq"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/764/018/349/0101/front_en.3.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/764/018/349/0101/front_en.3.400.jpg"
+      },
+      "ingredientsPreview" : "Rosa Canina Fruit Oil, Simmondsia Chinensis Seed Oil, Argania Spinosa Kernel Oil, Saponaria Pumila Callus Culture Extract",
+      "lastModified" : "2025-08-05T08:02:29Z",
+      "name" : "Double Stem Cell Repair 11-in-1 Serum With Essential Oil",
+      "quantity" : "30 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/7640183490101"
     },
     {
       "brand" : "Vaseline",
@@ -2329,7 +2329,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/8714100597347",
-          "uploader" : "openfoodfacts-contributors"
+          "uploader" : "jaksel"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/871/410/059/7347/front_nl.14.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/871/410/059/7347/front_nl.14.400.jpg"

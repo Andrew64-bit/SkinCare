@@ -21,8 +21,13 @@ public enum OBFMapper {
         // dal primo ingrediente della lista (token incollati senza virgole, rumore OCR).
         let raw = DescriptionComposer.rawIngredientTokens(from: text, max: 4)
         guard Array(tokens.prefix(raw.count)) == raw else { return false }
+        // Solo alfabeto latino (con accenti), cifre e punteggiatura INCI nei primi 4: una «А» cirillica o
+        // simboli estranei tradiscono OCR o testo nella lingua sbagliata.
+        guard raw.allSatisfy({ $0.range(of: latinTokenPattern, options: .regularExpression) != nil }) else { return false }
         return tokens.prefix(4).filter { INCIVocabulary.isKnown($0) }.count >= 2
     }
+
+    private static let latinTokenPattern = #"^[A-Za-zÀ-ÖØ-öø-ÿ0-9\-/().,'’ ]+$"#
 
     /// Nome che rivela un prodotto di altro tipo (es. solvente per unghie fra i detergenti).
     static func belongsElsewhere(_ name: String, category: CategorySpec) -> Bool {

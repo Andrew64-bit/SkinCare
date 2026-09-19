@@ -179,4 +179,23 @@ struct DescriptionComposerTests {
         )
         #expect(result.ingredientsPreview == "Aqua, Alcohol Denat., Parfum, Limonene")
     }
+
+    @Test("the description never ends with a double period when the last ingredient ends with one")
+    func noDoublePeriodAtEnd() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Aqua, Glycerin, Parfum, Alcohol Denat., Limonene"
+        )
+        #expect(result.description.hasSuffix("Parfum, Alcohol Denat."))
+        #expect(!result.description.hasSuffix(".."))
+    }
+
+    @Test("a misspelled 'Ingedients:' label is stripped like the correct one")
+    func misspelledLabelStripped() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Ingedients: Aqua, Glycerin, Parfum, Limonene"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Glycerin, Parfum, Limonene")
+    }
 }

@@ -45,4 +45,15 @@ struct OBFModelsTests {
         let product = try OBFDecoder.product(from: Data(json.utf8))
         #expect(product.frontImageUploader == "u1")
     }
+
+    @Test("the uploader is taken from the front image of the same language as the image URL, not the first key")
+    func uploaderFollowsImageLanguage() throws {
+        let json = """
+        {"code":"1","product_name":"X","image_front_url":"https://images.openbeautyfacts.org/images/products/000/front_fr.3.400.jpg",
+         "images":{"1":{"uploader":"arabic-uploader"},"2":{"uploader":"french-uploader"},
+                   "front_ar":{"imgid":"1","rev":"5"},"front_fr":{"imgid":"2","rev":"3"}}}
+        """
+        let product = try OBFDecoder.product(from: Data(json.utf8))
+        #expect(product.frontImageUploader == "french-uploader")
+    }
 }

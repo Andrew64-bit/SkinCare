@@ -125,10 +125,16 @@ public struct OBFProduct: Decodable, Sendable {
     public var firstBrand: String? {
         brands?.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }.first { !$0.isEmpty }
     }
-    /// Autore della foto frontale: `images["front_xx"].imgid` → `images[imgid].uploader`.
+    /// Autore della foto frontale mostrata: la chiave `front_<lingua>` è quella dell'URL dell'immagine
+    /// (`…/front_fr.3.400.jpg` → `front_fr`), così il credito va all'autore della foto davvero usata;
+    /// in mancanza, la prima chiave `front_*` con un autore.
     public var frontImageUploader: String? {
-        let frontKeys = images.keys.filter { $0.hasPrefix("front") }.sorted()
-        for key in frontKeys {
+        var candidates: [String] = []
+        if let file = imageFrontURL?.lastPathComponent.split(separator: ".").first, file.hasPrefix("front") {
+            candidates.append(String(file))
+        }
+        candidates += images.keys.filter { $0.hasPrefix("front") }.sorted()
+        for key in candidates {
             if let imgid = images[key]?.imgid, let uploader = images[imgid]?.uploader, !uploader.isEmpty {
                 return uploader
             }

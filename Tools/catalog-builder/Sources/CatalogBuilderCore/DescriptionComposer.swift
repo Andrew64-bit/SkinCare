@@ -27,7 +27,7 @@ public enum DescriptionComposer {
         let tokens = ingredientTokens(from: ingredientsText ?? "", max: maxIngredients)
         let preview = tokens.isEmpty ? nil : tokens.joined(separator: ", ")
         if let preview {
-            sentence += " Ingredienti principali: \(preview)."
+            sentence += " Ingredienti principali: \(preview)" + (preview.hasSuffix(".") ? "" : ".")
         }
         return ComposedDescription(description: sentence, ingredientsPreview: preview)
     }
