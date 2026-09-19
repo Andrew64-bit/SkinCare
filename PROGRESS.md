@@ -25,8 +25,15 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
   diagnostici saltati di default (`TEST_RUNNER_SKINCARE_AUDIT_LAB=1`). `scripts/check_done.sh` scritto e
   visto fallire su gauntlet/verificatore. Catture del bar Landmarks in `gauntlet/reference/` (4).
 
+- 2026-09-19: step 5 — gauntlet contro Apple Landmarks (iOS 26), 3 round, critici e builder a contesto
+  fresco, confronto cieco. Esiti: **P2 e P3 vinti alla cieca**, P1/P4/P5 a cap con gap residui annotati
+  (`gauntlet/LOG.md`). Cambi nati dal loop: card «in evidenza» con testo su gradiente, miniature a riquadro
+  fisso con filetto, gerarchia riga (marca piena, descrizione in due righe), attribuzione come ultima riga;
+  builder: plausibilità INCI, tokenizer esteso, quantità/marche normalizzate, esclusioni per categoria,
+  credito foto dall'endpoint prodotto e dalla lingua dell'URL (crediti generici 0/120).
+
 ## In corso
-- Step 5: gauntlet P1–P5 (builder ≠ critico, cieco, cap 3 round).
+- Step 6: verificatore a contesto fresco → `check_done.sh` → DONE=PASS.
 
 ## Da fare
 - Step 2: `catalog-builder` + generazione `catalog.json` (≥ 60 prodotti).

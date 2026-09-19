@@ -74,3 +74,27 @@ saponi), autore della foto dall'endpoint prodotto (19 recuperati: crediti generi
 
 Cattura nostra: `rounds/round-3/ours-light.png`. Mappe cieche: P1 A=bar B=ours · P2 A=ours B=bar ·
 P4 A=ours B=bar. Critici P1/P2/P4 e P5 (round 3) lanciati a contesto fresco.
+
+Verdetti round 3 (ultimo):
+
+| Pezzo | Mappa | Sceglie | Esito | Nota |
+|---|---|---|---|---|
+| P1 riga | A=bar B=ours | A | **CAP** | gap residuo: la riga «Ingredienti principali» va a capo su 2–3 righe e le altezze variano (3–5 righe); la soluzione proposta (`lineLimit(1)`) è incompatibile con l'audit di accessibilità (testo tagliato) — scelta consapevole: leggibilità completa prima del ritmo |
+| P2 struttura | A=ours B=bar | A | **VINTO** | titolo grande reale, hero allineato ai margini, lista raggruppata pulita; al bar: nessun titolo, chevron «indietro» su schermata radice, pulsante flottante che copre un'etichetta |
+| P4 immagini | A=ours B=bar | B | **CAP** | gap residuo: miniature 72 pt quadrate in alto in righe 2–3 volte più alte; prossimo passo suggerito: riquadro verticale 104×130 (4:5) centrato sul blocco di testo, filetto invariato |
+| P5 dati | — | — | **CAP** | 8/10 coerenti; 16/120 anteprime con rumore OCR o token incollati (13 %), credito foto alla lingua sbagliata in ~10 % dei prodotti multilingua |
+
+Correzioni **post-cap** (fuori dal loop, senza nuovo round, commit 0c78607): credito foto dalla chiave
+`front_<lingua>` dell'URL dell'immagine (Nivea Creme: da «smoothie-app» a «scailyna», autore della foto
+davvero mostrata — rilevante per CC BY-SA), primi 4 ingredienti solo in alfabeto latino, nessun «..» finale;
+66 test builder, 41 Kit, QUALITY=PASS, crediti generici 0/120. Gap residuo P5: rumore OCR nelle anteprime
+(prossimo passo: validare tutti i primi 4 token contro un dizionario INCI completo, es. CosIng).
+
+## Esiti finali
+
+ESITO P1: CAP — altezze riga variabili per l'anteprima ingredienti a capo; lineLimit vietato dall'audit.
+ESITO P2: VINTO — round 3, alla cieca (struttura: titolo, hero a margini, sezioni).
+ESITO P3: VINTO — round 1, alla cieca (modalità scura e Dynamic Type AX-L).
+ESITO P4: CAP — miniature quadrate 72 pt; prossimo passo riquadro 4:5 centrato.
+ESITO P5: CAP — 16/120 anteprime con rumore OCR; crediti foto corretti post-cap.
+
