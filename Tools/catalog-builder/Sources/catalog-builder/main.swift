@@ -50,8 +50,9 @@ enum CLI {
             let started = Date()
             let result = try await assembler.build()
             for report in result.reports {
-                print("\(report.tag): pagine \(report.pagesFetched), visti \(report.productsSeen), "
-                    + "selezionati \(report.productsSelected)")
+                print("\(report.tag): pagine \(report.pagesFetched)+\(report.targetedPages) mirate, "
+                    + "visti \(report.productsSeen), selezionati \(report.productsSelected) "
+                    + "(Italia \(report.italianProducts))")
             }
             print("crediti foto recuperati dall'endpoint prodotto: \(result.creditsRecovered)")
             let data = try CatalogCodec.encode(result.catalog)

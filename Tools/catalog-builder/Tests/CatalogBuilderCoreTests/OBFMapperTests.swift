@@ -268,4 +268,31 @@ struct OBFMapperTests {
         """
         #expect(try mapped(json) != nil)
     }
+
+    // MARK: - v0.3 Italia
+
+    private func market(_ extra: String) throws -> Product? {
+        let inci = "\"ingredients_text\":\"Aqua, Glycerin, Parfum, Limonene, Linalool\""
+        return try mapped("{\"code\":\"1\",\"product_name\":\"Crema\",\"brands\":\"B\",\(image),\(inci)\(extra)}")
+    }
+
+    @Test("Italy in countries_tags marks the product as sold in Italy and lists the countries without prefix")
+    func soldInItalyByCountry() throws {
+        let product = try #require(try market(",\"countries_tags\":[\"en:france\",\"en:italy\"]"))
+        #expect(product.soldInItaly)
+        #expect(product.countries == ["france", "italy"])
+    }
+
+    @Test("an Italian label (languages_tags) or lang=it marks the product as sold in Italy")
+    func soldInItalyByLabel() throws {
+        #expect(try #require(try market(",\"languages_tags\":[\"en:italian\"]")).soldInItaly)
+        #expect(try #require(try market(",\"lang\":\"it\"")).soldInItaly)
+    }
+
+    @Test("a product sold only elsewhere is not marked")
+    func notSoldInItaly() throws {
+        let product = try #require(try market(",\"countries_tags\":[\"en:france\"],\"languages_tags\":[\"en:french\"]"))
+        #expect(!product.soldInItaly)
+        #expect(product.countries == ["france"])
+    }
 }

@@ -41,6 +41,7 @@ struct OBFClientTests {
         #expect(fields.contains("image_front_url"))
         #expect(fields.contains("ingredients_text"))
         #expect(fields.contains("ingredients_n"))
+        #expect(fields.contains("languages_tags"))
     }
 
     @Test("every request carries the identifying User-Agent")
@@ -118,5 +119,14 @@ struct OBFClientTests {
         #expect(product?.frontImageUploader == "gla01")
         let request = try #require(StubURLProtocol.requests(prefix: base.absoluteString + "/api/v2/product/8001120704788").first)
         #expect(request.url?.query()?.contains("fields=images") == true)
+    }
+
+    @Test("extra filters are appended to the search URL as query items")
+    func extraFilters() {
+        let client = OBFClient(userAgent: Self.userAgent, rateLimiter: RateLimiter(minimumInterval: 0))
+        let url = client.searchURL(categoryTag: "cleansers", page: 1, filters: ["countries_tags": "en:italy"])
+        let params = query(of: url)
+        #expect(params["countries_tags"] == "en:italy")
+        #expect(params["categories_tags"] == "en:cleansers")
     }
 }

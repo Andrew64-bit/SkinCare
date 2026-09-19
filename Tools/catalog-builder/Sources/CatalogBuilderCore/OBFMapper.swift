@@ -122,7 +122,9 @@ public enum OBFMapper {
                 )
             ),
             sourceURL: sourceURL,
-            lastModified: Date(timeIntervalSince1970: TimeInterval(dto.lastModifiedT ?? 0))
+            lastModified: Date(timeIntervalSince1970: TimeInterval(dto.lastModifiedT ?? 0)),
+            soldInItaly: dto.isSoldInItaly,
+            countries: dto.countryNames
         )
         return CatalogCodec.isValid(product) ? product : nil
     }

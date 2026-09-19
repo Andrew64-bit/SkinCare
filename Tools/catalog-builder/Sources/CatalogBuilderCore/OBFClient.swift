@@ -2,6 +2,8 @@ import Foundation
 
 public protocol OBFSearching: Sendable {
     func search(categoryTag: String, page: Int) async throws -> OBFSearchResponse
+    /// Ricerca con filtri aggiuntivi (es. `countries_tags=en:italy`, `languages_tags=en:italian`).
+    func search(categoryTag: String, page: Int, filters: [String: String]) async throws -> OBFSearchResponse
     /// Dettaglio di un prodotto (usato per recuperare l'autore della foto quando la ricerca non lo dà).
     func product(code: String) async throws -> OBFProduct?
 }
@@ -19,7 +21,7 @@ public struct OBFClient: OBFSearching {
         "code", "product_name", "product_name_it", "product_name_en", "product_name_fr", "brands",
         "generic_name", "generic_name_it", "generic_name_en", "generic_name_fr", "quantity", "categories_tags",
         "image_front_url", "image_front_small_url", "ingredients_text", "ingredients_text_it",
-        "ingredients_text_en", "ingredients_text_fr", "lang", "countries_tags", "labels_tags",
+        "ingredients_text_en", "ingredients_text_fr", "lang", "countries_tags", "languages_tags", "labels_tags",
         "last_modified_t", "unique_scans_n", "ingredients_n", "unknown_ingredients_n", "images"
     ]
 
@@ -43,7 +45,7 @@ public struct OBFClient: OBFSearching {
         self.pageSize = min(pageSize, 100)
     }
 
-    public func searchURL(categoryTag: String, page: Int) -> URL {
+    public func searchURL(categoryTag: String, page: Int, filters: [String: String] = [:]) -> URL {
         var components = URLComponents(
             url: baseURL.appending(path: "api/v2/search"), resolvingAgainstBaseURL: false
         )!
@@ -54,13 +56,18 @@ public struct OBFClient: OBFSearching {
             URLQueryItem(name: "page", value: String(page)),
             URLQueryItem(name: "lc", value: "it"),
             URLQueryItem(name: "fields", value: Self.searchFields.joined(separator: ","))
-        ]
+        ] + filters.sorted { $0.key < $1.key }.map { URLQueryItem(name: $0.key, value: $0.value) }
         return components.url!
     }
 
     public func search(categoryTag: String, page: Int) async throws -> OBFSearchResponse {
+        try await search(categoryTag: categoryTag, page: page, filters: [:])
+    }
+
+    public func search(categoryTag: String, page: Int, filters: [String: String]) async throws -> OBFSearchResponse {
         try await rateLimiter.waitTurn()
-        var request = URLRequest(url: searchURL(categoryTag: categoryTag, page: page), timeoutInterval: 60)
+        let url = searchURL(categoryTag: categoryTag, page: page, filters: filters)
+        var request = URLRequest(url: url, timeoutInterval: 60)
         request.setValue(userAgent, forHTTPHeaderField: "User-Agent")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         let (data, response) = try await session.data(for: request)

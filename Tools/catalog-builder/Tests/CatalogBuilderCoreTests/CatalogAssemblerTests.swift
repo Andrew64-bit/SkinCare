@@ -16,13 +16,26 @@ final class FakeSearch: OBFSearching {
     }
 
     var recordedCalls: [String] { calls.withLock { $0 } }
-    /// Solo le chiamate di ricerca (senza i recuperi del credito foto).
-    var searchCalls: [String] { recordedCalls.filter { !$0.hasPrefix("product:") } }
+    /// Solo le ricerche per popolarità (senza ricerche mirate «?…» e senza i recuperi del credito foto).
+    var searchCalls: [String] { recordedCalls.filter { !$0.hasPrefix("product:") && !$0.contains("?") } }
+    var targetedCalls: [String] { recordedCalls.filter { $0.contains("?") } }
 
     func search(categoryTag: String, page: Int) async throws -> OBFSearchResponse {
-        let key = "\(categoryTag)#\(page)"
+        try await search(categoryTag: categoryTag, page: page, filters: [:])
+    }
+
+    func search(categoryTag: String, page: Int, filters: [String: String]) async throws -> OBFSearchResponse {
+        let pairs = filters.sorted { $0.key < $1.key }.map { "\($0.key)=\($0.value)" }
+        let suffix = filters.isEmpty ? "" : "?" + pairs.joined(separator: "&")
+        let key = "\(categoryTag)#\(page)\(suffix)"
         calls.withLock { $0.append(key) }
-        guard let result = pages.withLock({ $0[key] }) else { throw OBFClientError.httpStatus(404) }
+        guard let result = pages.withLock({ $0[key] }) else {
+            // Le ricerche mirate senza risposta registrata sono vuote (nessun prodotto italiano).
+            if !filters.isEmpty {
+                return try OBFDecoder.searchResponse(from: Data("{\"count\":0,\"page_size\":100,\"products\":[]}".utf8))
+            }
+            throw OBFClientError.httpStatus(404)
+        }
         return try result.get()
     }
 
@@ -73,7 +86,8 @@ struct CatalogAssemblerTests {
         )
         let result = try await assembler.build()
         #expect(result.catalog.products.count == 20)
-        let expected = CategoryReport(tag: "facial-creams", pagesFetched: 1, productsSeen: 100, productsSelected: 20)
+        var expected = CategoryReport(tag: "facial-creams", pagesFetched: 1, productsSeen: 100, productsSelected: 20)
+        expected.targetedPages = 2 // le due ricerche mirate (Italia) rispondono vuote in questo test
         #expect(result.reports == [expected])
         let firstMapped = try #require(page.products.lazy.compactMap { OBFMapper.map($0, category: Categories.v1[0]) }.first)
         #expect(result.catalog.products[0].id == firstMapped.id)
@@ -186,5 +200,70 @@ struct CatalogAssemblerTests {
         let assembler = CatalogAssembler(search: search, categories: categories(["facial-creams"]), now: { now })
         let result = try await assembler.build()
         #expect(result.catalog.products.map(\.id) == ["70000", "70009"])
+    }
+
+    // MARK: - v0.3 Italia
+
+    private func page(_ products: [String], pageCount: Int = 1) throws -> OBFSearchResponse {
+        let json = """
+        {"count":\(products.count),"page":1,"page_count":\(pageCount),"page_size":100,
+         "products":[\(products.joined(separator: ","))]}
+        """
+        return try OBFDecoder.searchResponse(from: Data(json.utf8))
+    }
+
+    private func item(_ code: String, name: String, countries: [String] = [], languages: [String] = []) -> String {
+        let cs = countries.map { "\"\($0)\"" }.joined(separator: ",")
+        let ls = languages.map { "\"\($0)\"" }.joined(separator: ",")
+        return """
+        {"code":"\(code)","product_name":"\(name)","brands":"Marca \(code)",
+         "quantity":"50 ml",
+         "ingredients_text":"Aqua, Glycerin, Alcohol Denat., Parfum, Limonene",
+         "countries_tags":[\(cs)],"languages_tags":[\(ls)],
+         "image_front_url":"https://images.openbeautyfacts.org/p/\(code)/front.400.jpg","last_modified_t":1780000000}
+        """
+    }
+
+    @Test("Italian products come first in each category, popularity order preserved within the two groups")
+    func italianProductsFirst() async throws {
+        let search = FakeSearch(["cleansers#1": .success(try page([
+            item("1", name: "Alfa", countries: ["en:france"]),
+            item("2", name: "Beta", countries: ["en:italy"]),
+            item("3", name: "Gamma", countries: ["en:germany"]),
+            item("4", name: "Delta", languages: ["en:italian"])
+        ]))])
+        let assembler = CatalogAssembler(search: search, categories: categories(["cleansers"]), now: { now })
+        let result = try await assembler.build()
+        #expect(result.catalog.products.map(\.id) == ["2", "4", "1", "3"])
+        #expect(result.catalog.products.map(\.soldInItaly) == [true, true, false, false])
+    }
+
+    @Test("targeted Italian searches add products missing from the popularity pages, without duplicates")
+    func targetedItalianSearches() async throws {
+        let search = FakeSearch([
+            "cleansers#1": .success(try page([
+                item("1", name: "Alfa", countries: ["en:france"]), item("2", name: "Beta", countries: ["en:italy"])
+            ])),
+            "cleansers#1?countries_tags=en:italy": .success(try page([
+                item("2", name: "Beta", countries: ["en:italy"]), item("9", name: "Zeta", countries: ["en:italy"])
+            ])),
+            "cleansers#1?languages_tags=en:italian": .success(try page([item("8", name: "Ypsilon", languages: ["en:italian"])]))
+        ])
+        let assembler = CatalogAssembler(search: search, categories: categories(["cleansers"]), now: { now })
+        let result = try await assembler.build()
+        #expect(result.catalog.products.map(\.id) == ["2", "9", "8", "1"])
+        #expect(search.targetedCalls.contains("cleansers#1?countries_tags=en:italy"))
+        #expect(search.targetedCalls.contains("cleansers#1?languages_tags=en:italian"))
+        #expect(result.reports.first?.italianProducts == 3)
+    }
+
+    @Test("the catalog declares its scope and the v1 categories include hand creams and micellar waters")
+    func scopeAndCategories() async throws {
+        let search = FakeSearch(["cleansers#1": .success(try page([item("1", name: "Alfa")]))])
+        let assembler = CatalogAssembler(search: search, categories: categories(["cleansers"]), now: { now })
+        let catalog = try await assembler.build().catalog
+        #expect(catalog.scope?.contains("Italia") == true)
+        #expect(Categories.v1.map(\.tag).contains("hand-creams"))
+        #expect(Categories.v1.map(\.tag).contains("micellar-waters"))
     }
 }

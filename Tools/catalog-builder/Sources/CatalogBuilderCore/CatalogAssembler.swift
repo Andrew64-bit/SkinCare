@@ -15,6 +15,9 @@ public struct CategoryReport: Sendable, Equatable {
     public var pagesFetched: Int
     public var productsSeen: Int
     public var productsSelected: Int
+    public var italianProducts = 0
+    /// Pagine delle ricerche mirate (Italia), separate da quelle per popolarità.
+    public var targetedPages = 0
 }
 
 public struct AssemblyResult: Sendable {
@@ -28,6 +31,12 @@ public struct AssemblyResult: Sendable {
 /// la quota è piena o le pagine finiscono, mappa e filtra i prodotti, evita ripetizioni fra categorie.
 /// Se una categoria fallisce, fallisce l'intera costruzione: non si pubblica mai un catalogo parziale.
 public struct CatalogAssembler: Sendable {
+    /// Perimetro dichiarato nel catalogo (scelta di Andrea, 2026-09-19: «Italia in evidenza, resto come riserva»).
+    public static let scope = "Italia in evidenza: i prodotti segnalati in vendita in Italia (paese di vendita o "
+        + "etichetta in italiano) stanno in cima a ogni categoria; gli altri prodotti europei restano come riserva."
+    /// Ricerche mirate per far entrare i prodotti italiani anche se poco scansionati.
+    static let italianFilters: [[String: String]] = [["countries_tags": "en:italy"], ["languages_tags": "en:italian"]]
+
     public static let sourceInfo = CatalogSourceInfo(
         name: "Open Beauty Facts",
         url: URL(string: "https://world.openbeautyfacts.org")!,
@@ -75,22 +84,45 @@ public struct CatalogAssembler: Sendable {
 
         for category in categories {
             var report = CategoryReport(tag: category.tag, pagesFetched: 0, productsSeen: 0, productsSelected: 0)
+            var italian: [Product] = []
+            var others: [Product] = []
+
+            func take(_ dto: OBFProduct) {
+                guard let product = OBFMapper.map(dto, category: category, baseURL: baseURL),
+                      selectedIDs.insert(product.id).inserted,
+                      selectedVariants.insert(Self.variantKey(of: product)).inserted else { return }
+                if product.soldInItaly { italian.append(product) } else { others.append(product) }
+            }
+
+            // 1. Ricerche mirate: tutti i prodotti italiani della categoria (sono pochi, nessun tetto).
+            for filters in Self.italianFilters {
+                var page = 1
+                while page <= options.maxPagesPerCategory {
+                    let response = try await search.search(categoryTag: category.tag, page: page, filters: filters)
+                    report.targetedPages += 1
+                    report.productsSeen += response.products.count
+                    response.products.forEach(take)
+                    let isLastPage = response.products.isEmpty || page >= (response.pageCount ?? 1)
+                    if isLastPage { break }
+                    page += 1
+                }
+            }
+            // 2. Pagine per popolarità fino al tetto per categoria (gli italiani trovati qui restano in cima).
             var page = 1
-            while report.productsSelected < options.perCategory, page <= options.maxPagesPerCategory {
+            while italian.count + others.count < options.perCategory, page <= options.maxPagesPerCategory {
                 let response = try await search.search(categoryTag: category.tag, page: page)
                 report.pagesFetched += 1
                 report.productsSeen += response.products.count
-                for dto in response.products where report.productsSelected < options.perCategory {
-                    guard let product = OBFMapper.map(dto, category: category, baseURL: baseURL),
-                          selectedIDs.insert(product.id).inserted,
-                          selectedVariants.insert(Self.variantKey(of: product)).inserted else { continue }
-                    products.append(product)
-                    report.productsSelected += 1
+                for dto in response.products where italian.count + others.count < options.perCategory {
+                    take(dto)
                 }
                 let isLastPage = response.products.isEmpty || page >= (response.pageCount ?? 1)
                 if isLastPage { break }
                 page += 1
             }
+            products += italian + others
+            report.italianProducts = italian.count
+            report.productsSelected = italian.count + others.count
             reports.append(report)
         }
 
@@ -109,6 +141,7 @@ public struct CatalogAssembler: Sendable {
             schemaVersion: Catalog.currentSchemaVersion,
             generatedAt: now(),
             source: Self.sourceInfo,
+            scope: Self.scope,
             products: products
         )
         return AssemblyResult(catalog: catalog, reports: reports, creditsRecovered: creditsRecovered)

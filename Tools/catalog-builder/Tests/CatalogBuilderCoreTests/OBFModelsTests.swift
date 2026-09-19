@@ -56,4 +56,14 @@ struct OBFModelsTests {
         let product = try OBFDecoder.product(from: Data(json.utf8))
         #expect(product.frontImageUploader == "french-uploader")
     }
+
+    @Test("languages_tags and countries_tags are decoded")
+    func marketTags() throws {
+        let json = """
+        {"code":"1","product_name":"X","countries_tags":["en:italy","en:france"],"languages_tags":["en:italian","en:french"]}
+        """
+        let product = try OBFDecoder.product(from: Data(json.utf8))
+        #expect(product.countriesTags == ["en:italy", "en:france"])
+        #expect(product.languagesTags == ["en:italian", "en:french"])
+    }
 }

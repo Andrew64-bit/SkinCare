@@ -44,6 +44,7 @@ public struct OBFProduct: Decodable, Sendable {
     public var ingredientsTextFr: String?
     public var lang: String?
     public var countriesTags: [String]?
+    public var languagesTags: [String]?
     public var labelsTags: [String]?
     public var lastModifiedT: Int?
     public var uniqueScansN: Int?
@@ -70,6 +71,7 @@ public struct OBFProduct: Decodable, Sendable {
         case ingredientsTextEn = "ingredients_text_en"
         case ingredientsTextFr = "ingredients_text_fr"
         case countriesTags = "countries_tags"
+        case languagesTags = "languages_tags"
         case labelsTags = "labels_tags"
         case lastModifiedT = "last_modified_t"
         case uniqueScansN = "unique_scans_n"
@@ -99,6 +101,7 @@ public struct OBFProduct: Decodable, Sendable {
         ingredientsTextFr = container.lenientString(.ingredientsTextFr)
         lang = container.lenientString(.lang)
         countriesTags = try? container.decodeIfPresent([String].self, forKey: .countriesTags)
+        languagesTags = try? container.decodeIfPresent([String].self, forKey: .languagesTags)
         labelsTags = try? container.decodeIfPresent([String].self, forKey: .labelsTags)
         lastModifiedT = (try? container.decodeIfPresent(LenientInt.self, forKey: .lastModifiedT))??.value
         uniqueScansN = (try? container.decodeIfPresent(LenientInt.self, forKey: .uniqueScansN))??.value
@@ -125,6 +128,22 @@ public struct OBFProduct: Decodable, Sendable {
     public var firstBrand: String? {
         brands?.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }.first { !$0.isEmpty }
     }
+    /// Segnalato in vendita in Italia: paese di vendita Italia, oppure etichetta in italiano (lingue del
+    /// packaging o lingua principale della scheda). Dati dei contributori OBF: possono mancare prodotti.
+    public var isSoldInItaly: Bool {
+        (countriesTags ?? []).contains("en:italy")
+            || (languagesTags ?? []).contains("en:italian")
+            || lang == "it"
+    }
+
+    /// Paesi di vendita senza il prefisso di lingua del tag («en:italy» → «italy»), nell'ordine di OBF.
+    public var countryNames: [String] {
+        (countriesTags ?? []).map { tag in
+            if let colon = tag.firstIndex(of: ":") { return String(tag[tag.index(after: colon)...]) }
+            return tag
+        }
+    }
+
     /// Autore della foto frontale mostrata: la chiave `front_<lingua>` è quella dell'URL dell'immagine
     /// (`…/front_fr.3.400.jpg` → `front_fr`), così il credito va all'autore della foto davvero usata;
     /// in mancanza, la prima chiave `front_*` con un autore.

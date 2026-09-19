@@ -30,6 +30,8 @@ public enum Categories {
             tag: "anti-aging-face-care-products", label: "Anti-età", singular: "Trattamento viso anti-età",
             excludedNameKeywords: ["savon", "sapone", "soap", "seife", "jabon"]
         ),
-        CategorySpec(tag: "lip-balms", label: "Balsami labbra", singular: "Balsamo labbra")
+        CategorySpec(tag: "lip-balms", label: "Balsami labbra", singular: "Balsamo labbra"),
+        CategorySpec(tag: "hand-creams", label: "Creme mani", singular: "Crema mani"),
+        CategorySpec(tag: "micellar-waters", label: "Acque micellari", singular: "Acqua micellare")
     ]
 }
