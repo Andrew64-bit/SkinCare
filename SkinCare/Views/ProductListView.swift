@@ -4,9 +4,19 @@ import SwiftUI
 struct ProductListView: View {
     let repository: CatalogRepository
     @State private var showAttribution = false
+    @State private var query = ""
+
+    /// Ricerca locale (nome, marca, categoria, barcode): nessuna chiamata di rete.
+    private var visibleProducts: [Product] {
+        ProductSearch.filter(repository.catalog.products, query: query)
+    }
+
+    private var isSearching: Bool {
+        !ProductSearch.normalize(query).isEmpty
+    }
 
     private var sections: [(category: ProductCategory, products: [Product])] {
-        Self.sections(of: repository.catalog.products)
+        Self.sections(of: visibleProducts)
     }
 
     /// Raggruppa per categoria conservando l'ordine del catalogo (le categorie compaiono nell'ordine del builder).
@@ -26,12 +36,18 @@ struct ProductListView: View {
     var body: some View {
         NavigationStack {
             List {
-                // Primo prodotto del catalogo in evidenza, a tutta larghezza subito sotto il titolo grande.
-                if let featured = repository.catalog.products.first {
+                // Primo prodotto del catalogo in evidenza, a tutta larghezza subito sotto il titolo grande
+                // (sparisce durante la ricerca: lo spazio va ai risultati).
+                if !isSearching, let featured = repository.catalog.products.first {
                     Section {
                         FeaturedProductCard(product: featured)
                             .listRowInsets(EdgeInsets())
                             .listRowSeparator(.hidden)
+                    }
+                }
+                if isSearching, visibleProducts.isEmpty {
+                    Section {
+                        emptySearchState
                     }
                 }
                 ForEach(sections, id: \.category.id) { section in
@@ -69,6 +85,11 @@ struct ProductListView: View {
                 }
             }
             .listStyle(.insetGrouped)
+            .searchable(
+                text: $query,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "Cerca" // breve: un segnaposto lungo viene segnalato dall'audit come tagliabile
+            )
             .navigationTitle("Prodotti")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -96,6 +117,22 @@ struct ProductListView: View {
                 _ = await repository.refreshIfNeeded()
             }
         }
+    }
+
+    /// Stato «nessun risultato»: dice quanti prodotti ha il catalogo e come riprovare. Colori espliciti
+    /// (regole dell'audit di accessibilità), nessun troncamento.
+    private var emptySearchState: some View {
+        ContentUnavailableView {
+            Label("Nessun prodotto trovato", systemImage: "magnifyingglass")
+                .foregroundStyle(Color(.label))
+        } description: {
+            Text("Nessun risultato per “\(query.trimmingCharacters(in: .whitespaces))” fra i "
+                + "\(repository.catalog.products.count) prodotti del catalogo. "
+                + "Prova con la marca o il nome: il catalogo cresce ogni settimana.")
+                .foregroundStyle(ProductRow.mutedText)
+        }
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("search.empty")
     }
 
     private var attribution: some View {

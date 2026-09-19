@@ -40,21 +40,6 @@ final class ProductListUITests: XCTestCase {
         app.descendants(matching: .any)["catalog.attribution"]
     }
 
-    /// L'attribuzione è l'ultima sezione della lista e le celle di una List nascono solo quando entrano nello
-    /// schermo: scorre verso il basso (al massimo 20 gesti) finché la riga non esiste, poi la restituisce.
-    /// Gesto veloce: con l'inerzia percorre ~5 volte la distanza di quello predefinito (120 righe ≈ 14 000 pt,
-    /// 20 gesti predefiniti si fermano a metà lista).
-    private func scrollToAttribution(in app: XCUIApplication) -> XCUIElement {
-        let line = attribution(in: app)
-        var swipes = 0
-        while !line.exists && swipes < 40 {
-            app.swipeUp(velocity: .fast)
-            swipes += 1
-        }
-        XCTContext.runActivity(named: "attribuzione raggiunta dopo \(swipes) gesti (esiste: \(line.exists))") { _ in }
-        return line
-    }
-
     /// Scorre la lista raccogliendo gli identificatori delle righe finché ne vede almeno `minimum`.
     private func distinctRows(in app: XCUIApplication, minimum: Int) -> Set<String> {
         var seen = Set<String>()
@@ -66,6 +51,39 @@ final class ProductListUITests: XCTestCase {
             app.swipeUp()
         }
         return seen
+    }
+
+    /// Digita nella barra di ricerca di sistema (la crea se serve toccandola).
+    private func search(_ text: String, in app: XCUIApplication) {
+        let field = app.searchFields.firstMatch
+        XCTAssertTrue(field.waitForExistence(timeout: 10), "barra di ricerca assente")
+        field.tap()
+        field.typeText(text)
+    }
+
+    /// Svuota il campo con i tasti di cancellazione (indipendente dalla lingua del pulsante «Annulla»).
+    private func clearSearch(in app: XCUIApplication) {
+        let field = app.searchFields.firstMatch
+        guard field.exists else { return }
+        field.tap()
+        let length = (field.value as? String)?.count ?? 0
+        if length > 0 {
+            field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: length + 2))
+        }
+    }
+
+    private func featuredCards(in app: XCUIApplication) -> XCUIElementQuery {
+        app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH 'product.featured.'"))
+    }
+
+    /// L'attribuzione è l'ultima sezione: con centinaia di righe non si raggiunge scorrendo, ma una ricerca
+    /// senza risultati lascia in lista solo lo stato vuoto e la riga di attribuzione (obbligo di licenza in
+    /// ogni stato).
+    private func reachAttribution(in app: XCUIApplication) -> XCUIElement {
+        search("zzzzqqqq", in: app)
+        let line = attribution(in: app)
+        _ = line.waitForExistence(timeout: 10)
+        return line
     }
 
     private func wait(for element: XCUIElement, value: String, timeout: TimeInterval = 15,
@@ -100,8 +118,8 @@ final class ProductListUITests: XCTestCase {
         XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
         // Il pulsante «i» espone la data del catalogo corrente: dopo il refresh dallo stub deve essere quella remota.
         wait(for: app.buttons["attribution.button"], value: Self.remoteGeneratedAt)
-        let line = scrollToAttribution(in: app)
-        XCTAssertTrue(line.waitForExistence(timeout: 10))
+        let line = reachAttribution(in: app)
+        XCTAssertTrue(line.exists)
         wait(for: line, value: Self.remoteGeneratedAt)
     }
 
@@ -120,10 +138,11 @@ final class ProductListUITests: XCTestCase {
     func testAttributionLineAndSheet() {
         let app = launch(.stubbed)
         XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
-        let line = scrollToAttribution(in: app)
-        XCTAssertTrue(line.waitForExistence(timeout: 10))
+        let line = reachAttribution(in: app)
+        XCTAssertTrue(line.exists)
         XCTAssertTrue(line.label.contains("Open Beauty Facts"), line.label)
-        app.buttons["attribution.button"].tap()
+        // La riga stessa apre la scheda (il pulsante «i» della barra è nascosto mentre il campo di ricerca è attivo).
+        line.tap()
         XCTAssertTrue(app.descendants(matching: .any)["attribution.sheet"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts.containing(NSPredicate(format: "label CONTAINS 'ODbL'")).firstMatch.exists)
         XCTAssertTrue(app.staticTexts.containing(NSPredicate(format: "label CONTAINS 'CC BY-SA 3.0'")).firstMatch.exists)
@@ -173,6 +192,71 @@ final class ProductListUITests: XCTestCase {
         XCTAssertTrue(window.contains(title.frame), "titolo \(title.frame) fuori dallo schermo \(window)")
         XCTAssertTrue(rowFrame.insetBy(dx: -1, dy: -1).contains(title.frame),
                       "titolo \(title.frame) fuori dalla riga \(rowFrame)")
+    }
+
+    // MARK: - Ricerca
+
+    func testSearchByBrandFiltersRows() {
+        let app = launch(.stubbed)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        XCTAssertTrue(featuredCards(in: app).firstMatch.exists, "card in evidenza attesa prima della ricerca")
+        search("Nivea", in: app)
+        XCTAssertTrue(app.descendants(matching: .any)["product.row.4005800001192"].waitForExistence(timeout: 10))
+        XCTAssertFalse(app.descendants(matching: .any)["product.row.3600551020419"].exists, "Mixa non deve comparire")
+        XCTAssertFalse(featuredCards(in: app).firstMatch.exists, "la card in evidenza sparisce durante la ricerca")
+    }
+
+    func testSearchMultiWordAndEmptyState() {
+        let app = launch(.stubbed)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        search("nivea creme", in: app)
+        XCTAssertTrue(app.descendants(matching: .any)["product.row.4005800001192"].waitForExistence(timeout: 10))
+        clearSearch(in: app)
+        search("zzzzqqqq", in: app)
+        XCTAssertTrue(app.descendants(matching: .any)["search.empty"].waitForExistence(timeout: 10))
+        XCTAssertFalse(rows(in: app).firstMatch.exists, "nessuna riga con una ricerca senza risultati")
+    }
+
+    func testCancelSearchRestoresList() {
+        let app = launch(.stubbed)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        search("zzzzqqqq", in: app)
+        XCTAssertTrue(app.descendants(matching: .any)["search.empty"].waitForExistence(timeout: 10))
+        clearSearch(in: app)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10), "righe assenti dopo aver svuotato la ricerca")
+        XCTAssertGreaterThanOrEqual(distinctRows(in: app, minimum: 20).count, 20)
+    }
+
+    /// Catture per il gauntlet P6 (bar: ricerca del sample Landmarks; nostra: rete reale), come allegati.
+    func testCaptureSearchScreens() throws {
+        try XCTSkipUnless(ProcessInfo.processInfo.environment["SKINCARE_BAR_CAPTURE"] == "1", "catture: SKINCARE_BAR_CAPTURE=1")
+        let bar = XCUIApplication(bundleIdentifier: "com.example.apple-samplecode.Landmarks")
+        bar.launch()
+        sleep(3)
+        let back = bar.navigationBars.buttons.firstMatch
+        if back.exists { back.tap() }
+        let barField = bar.searchFields.firstMatch
+        XCTAssertTrue(barField.waitForExistence(timeout: 10), "ricerca del bar assente")
+        barField.tap()
+        barField.typeText("Mount")
+        sleep(3)
+        attach(bar.screenshot(), name: "bar-search")
+        bar.terminate()
+
+        let ours = XCUIApplication()
+        ours.launch() // nessuna variabile: rete reale, foto vere
+        XCTAssertTrue(rows(in: ours).firstMatch.waitForExistence(timeout: 15))
+        search("nivea", in: ours)
+        sleep(6)
+        attach(ours.screenshot(), name: "ours-search")
+        search("", in: ours)
+    }
+
+    private func attach(_ screenshot: XCUIScreenshot, name: String) {
+        let attachment = XCTAttachment(screenshot: screenshot)
+        attachment.name = name
+        attachment.lifetime = .keepAlways
+        add(attachment)
     }
 
     /// Diagnostica: audita una variante alla volta e stampa il rapporto (fallisce sempre, di proposito).
