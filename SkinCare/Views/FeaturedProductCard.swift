@@ -2,14 +2,24 @@ import SkinCareKit
 import SwiftUI
 
 /// Scheda «in evidenza» a tutta larghezza sotto il titolo grande (come il landmark in evidenza del sample
-/// Landmarks): la foto a 400 px del primo prodotto del catalogo riempie la scheda, un gradiente scurisce
-/// il basso, marca come occhiello e nome del prodotto in bianco su uno scrim garantito, così il contrasto
-/// regge su qualunque foto. La scheda cresce con la taglia di testo (`minHeight`, nessun `lineLimit`).
+/// Landmarks): la foto a 400 px del primo prodotto del catalogo riempie la scheda, un gradiente a tutta
+/// larghezza scurisce la metà bassa e marca (occhiello) e nome del prodotto stanno in bianco direttamente
+/// sul gradiente, in basso a sinistra, con un'ombra sul testo. Nessun pannello dietro al testo: leggeva
+/// come «una card dentro la card». La scheda cresce con la taglia di testo (`minHeight`, nessun `lineLimit`).
 struct FeaturedProductCard: View {
     let product: Product
     @Environment(ImageLoader.self) private var loader
     @State private var image: UIImage?
     @State private var failed = false
+
+    /// Gradiente da trasparente (a `scrimStart` dell'altezza) a nero con opacità `scrimOpacity` sul bordo
+    /// basso. Partito da metà scheda con 0,6, l'audit di contrasto segnalava l'occhiello («Contrast nearly
+    /// passed»: a 0,72 dell'altezza il gradiente valeva 0,26 e su una foto chiara il bianco stava a ~2,9:1);
+    /// misurato sui fotogrammi dell'audit, per stare ≥ 4,5:1 anche con la foto più chiara servono ~0,54 di
+    /// nero sotto l'occhiello: gradiente su tutta l'altezza (invisibile in alto) fino a 0,75. Mai un pannello
+    /// dietro al testo, mai testo meno opaco.
+    static let scrimStart: CGFloat = 0.0
+    static let scrimOpacity: Double = 0.75
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -20,8 +30,6 @@ struct FeaturedProductCard: View {
                 .font(.title2.weight(.bold))
         }
         .foregroundStyle(.white)
-        .padding(12)
-        .background(.black.opacity(0.45), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
         .shadow(color: .black.opacity(0.5), radius: 4)
         .padding(16)
         .frame(maxWidth: .infinity, minHeight: 200, alignment: .bottomLeading)
@@ -34,7 +42,7 @@ struct FeaturedProductCard: View {
     }
 
     /// Foto ritagliata a riempire esattamente la scheda (lo sfondo prende la misura del testo) con il
-    /// gradiente in basso; in attesa o senza rete resta un fondo neutro con l'icona segnaposto.
+    /// gradiente a tutta larghezza; in attesa o senza rete resta un fondo neutro con l'icona segnaposto.
     private var photo: some View {
         Color(.secondarySystemFill)
             .overlay {
@@ -50,8 +58,8 @@ struct FeaturedProductCard: View {
             }
             .overlay {
                 LinearGradient(
-                    colors: [.clear, .black.opacity(0.65)],
-                    startPoint: UnitPoint(x: 0.5, y: 0.3),
+                    colors: [.clear, .black.opacity(Self.scrimOpacity)],
+                    startPoint: UnitPoint(x: 0.5, y: Self.scrimStart),
                     endPoint: .bottom
                 )
             }

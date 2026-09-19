@@ -1,10 +1,11 @@
 import SkinCareKit
 import SwiftUI
 
-/// Miniatura del prodotto: un riquadro 72×72 identico per ogni riga (foto ritagliata a riempire, angoli
-/// continui, fondo `secondarySystemFill` visibile anche sulla card bianca), così le foto con sfondi e
-/// proporzioni diverse non sporcano la riga. Lo stato (`loading` / `loaded` / `placeholder`) è esposto come
-/// valore di accessibilità sull'intero riquadro, così i test UI possono verificare che l'immagine sia comparsa.
+/// Miniatura del prodotto: una tessera 72×72 identica per ogni riga — foto ritagliata a riempire, angoli
+/// continui, fondo `tertiarySystemFill` e un bordo sottile `separator` che la delimita — così una foto quasi
+/// bianca non si scioglie nella card bianca e una foto scura non diventa un blocco pesante. Lo stato
+/// (`loading` / `loaded` / `placeholder`) è esposto come valore di accessibilità sull'intero riquadro, così
+/// i test UI possono verificare che l'immagine sia comparsa.
 struct ProductImageView: View {
     enum Phase: String {
         case loading, loaded, placeholder
@@ -18,7 +19,7 @@ struct ProductImageView: View {
     @State private var image: UIImage?
 
     var body: some View {
-        Color(.secondarySystemFill)
+        Color(.tertiarySystemFill)
             .overlay {
                 if let image {
                     Image(uiImage: image)
@@ -34,6 +35,10 @@ struct ProductImageView: View {
             }
             .frame(width: Self.side, height: Self.side)
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .strokeBorder(Color(.separator), lineWidth: 0.5)
+            }
             .accessibilityElement(children: .ignore)
             .accessibilityAddTraits(.isImage)
             .accessibilityLabel("Foto di \(product.name)")
