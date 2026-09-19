@@ -41,12 +41,17 @@ VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, n
 - 2026-09-19: `./scripts/check_done.sh` →
   `DONE=PASS · kit 42 test · builder 66 test · snapshot 120 prodotti · UI 8/10 passati, 0 falliti, 2 saltati · gauntlet vinti 2/5 · remoto n/d · 2026-09-19T15:29:05Z`
 
+- 2026-09-19: step 7 — repo pubblico https://github.com/Andrew64-bit/SkinCare (default `main`, lavoro su
+  `feat/product-list`), GitHub Pages da `main:/docs`, catalogo online con ETag dopo 40 s, workflow
+  settimanale `.github/workflows/catalog.yml`. Cattura finale accanto al bar in `gauntlet/rounds/final/`.
+  `REQUIRE_REMOTE=1 ./scripts/check_done.sh` →
+  `DONE=PASS · kit 42 test · builder 66 test · snapshot 120 prodotti · UI 8/10 passati, 0 falliti, 2 saltati · gauntlet vinti 2/5 · remoto ok · 2026-09-19T15:34:48Z`
+
 ## In corso
-- Step 7: repo pubblico `Andrew64-bit/SkinCare`, Pages su `/docs`, `REQUIRE_REMOTE=1 ./scripts/check_done.sh`.
+- Nulla: v0.1 consegnata.
 
 ## Da fare
-- Step 7: repo pubblico `Andrew64-bit/SkinCare`, Pages su `/docs`, verifica `REQUIRE_REMOTE=1`.
-- Dopo: gap residui del gauntlet (miniature 4:5 centrate; validazione dizionario INCI completo, es. CosIng;
+- Prossimi passi: gap residui del gauntlet (miniature 4:5 centrate; validazione dizionario INCI completo, es. CosIng;
   ritmo delle righe), schermata dettaglio (App Store 4.2), privacy policy pubblica, mailbox di progetto.
 
 ## Decisioni prese
