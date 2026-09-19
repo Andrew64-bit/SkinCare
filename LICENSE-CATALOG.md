@@ -12,6 +12,10 @@ costruito dal tool `Tools/catalog-builder` tramite l'API pubblica di Open Beauty
   © i rispettivi contributori di Open Beauty Facts; il campo `image.credit.uploader` di ogni prodotto
   riporta l'autore della foto e `image.credit.sourceURL` la pagina del prodotto.
 
+- **Immagini ritagliate** (`docs/images/<barcode>.png`): opere derivate automaticamente dalle foto sopra
+  (soggetto isolato su sfondo trasparente), rilasciate sotto la stessa licenza CC BY-SA 3.0 con lo stesso
+  credito all'autore della foto originale (`image.credit.uploader` nel catalogo).
+
 Attribuzione richiesta per ogni riuso: «Dati: Open Beauty Facts, licenza ODbL — https://world.openbeautyfacts.org».
 Marchi, nomi commerciali e confezioni appartengono ai rispettivi proprietari e sono riportati a solo
 scopo identificativo; questo progetto non è affiliato ad alcun marchio né a Open Beauty Facts.

@@ -51,4 +51,9 @@ di questo repo. Il piano approvato e la definition of done sono in
   stringa la stampa OGNI singolo test verde, quindi la condizione era vera anche con un test fallito e ho
   committato un run rosso. Regola: l'esito di un comando di verifica si legge SOLO dal suo exit code salvato
   in una variabile (`swift test …; TEST=$?`), mai da un grep sul log; il log serve solo a mostrare i dettagli.
+- 2026-09-19 (segfault fantasma in `verify`): dopo aver aggiunto due campi a `CatalogQualityReport` nel Kit,
+  il binario del builder è crollato (`EXC_BAD_ACCESS` iterando `issues`) perché la sua `.build/` conservava
+  oggetti compilati con il vecchio layout della struct; `rm -rf .build` + rebuild ha risolto. Regola: quando
+  cambia il layout di un tipo pubblico del Kit, il package che lo usa va ricompilato da pulito
+  (`swift package clean` in `Tools/catalog-builder`); `check_done.sh` lo fa sempre prima dei test del builder.
 

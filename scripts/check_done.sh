@@ -33,6 +33,8 @@ else
 fi
 
 step "3. swift test — catalog-builder + verify dello snapshot"
+# Build da pulito: la .build del builder può conservare oggetti con il vecchio layout dei tipi del Kit.
+(cd Tools/catalog-builder && swift package clean > /dev/null 2>&1) || true
 if (cd Tools/catalog-builder && swift test > "../../$OUT/builder-test.log" 2>&1); then
   builder=$(grep -oE "with [0-9]+ tests" "$OUT/builder-test.log" | head -1 | grep -oE "[0-9]+")
   ok "catalog-builder: ${builder:-?} test verdi"; summary+=("builder ${builder:-?} test")
@@ -67,7 +69,7 @@ if [ -d "$OUT/ui.xcresult" ]; then
 fi
 
 step "5. gauntlet"
-for piece in P1 P2 P3 P4 P5 P6; do
+for piece in P1 P2 P3 P4 P5 P6 P7; do
   if grep -qE "^ESITO $piece: (VINTO|CAP)" gauntlet/LOG.md 2>/dev/null; then
     ok "$piece: $(grep -E "^ESITO $piece:" gauntlet/LOG.md | tail -1)"
   else
@@ -77,22 +79,52 @@ done
 refs=$(ls gauntlet/reference/*.png 2>/dev/null | wc -l | tr -d ' ')
 if [ "$refs" -ge 4 ]; then ok "catture del bar: $refs"; else fail "catture del bar: $refs (minimo 4)"; fi
 won=0
-for piece in P1 P2 P3 P4 P5 P6; do
+for piece in P1 P2 P3 P4 P5 P6 P7; do
   case "$(grep -E "^ESITO $piece:" gauntlet/LOG.md 2>/dev/null | tail -1)" in "ESITO $piece: VINTO"*) won=$((won + 1));; esac
 done
-summary+=("gauntlet vinti $won/6")
+summary+=("gauntlet vinti $won/7")
 
 step "6. verificatore a contesto fresco"
 if grep -qE "^VERIFICATORE: PASS" PROGRESS.md; then ok "VERIFICATORE: PASS in PROGRESS.md"; else fail "esito del verificatore assente in PROGRESS.md"; fi
 
-step "7. catalogo remoto"
+step "7. catalogo remoto e immagini ritagliate"
 URL=$(grep -oE 'https://[^"]+/catalog\.json' SkinCare/AppConfig.swift | head -1)
+CUTOUT=$(python3 -c 'import json,sys; c=json.load(open(sys.argv[1])); u=[p["image"].get("cutoutURL") for p in c["products"] if p["image"].get("cutoutURL")]; print(u[0] if u else "")' "$SNAPSHOT")
+remote_ok=1
 if curl -sfI --max-time 15 "$URL" > "$OUT/remote-head.txt" 2>/dev/null && grep -qi '^etag:' "$OUT/remote-head.txt"; then
-  ok "catalogo remoto: 200 con ETag ($URL)"; summary+=("remoto ok")
-elif [ "${REQUIRE_REMOTE:-0}" = "1" ]; then
-  fail "catalogo remoto non raggiungibile o senza ETag ($URL)"
+  ok "catalogo remoto: 200 con ETag ($URL)"
 else
-  echo "· catalogo remoto non ancora pubblicato o non raggiungibile: non bloccante (REQUIRE_REMOTE=1 per renderlo tale)"
+  remote_ok=0
+fi
+if [ -n "$CUTOUT" ] && curl -sfI --max-time 15 "$CUTOUT" > "$OUT/cutout-head.txt" 2>/dev/null && grep -qi 'content-type: image/png' "$OUT/cutout-head.txt"; then
+  ok "immagine ritagliata remota: 200 image/png ($CUTOUT)"
+else
+  remote_ok=0
+fi
+# ogni cutoutURL dello snapshot deve avere il file 400×400 in docs/images
+if python3 - "$SNAPSHOT" <<'PY'
+import json, sys, struct, os
+c = json.load(open(sys.argv[1])); missing = 0; bad = 0; n = 0
+for p in c["products"]:
+    u = p["image"].get("cutoutURL")
+    if not u: continue
+    n += 1; f = os.path.join("docs/images", os.path.basename(u))
+    if not os.path.exists(f): missing += 1; continue
+    with open(f, "rb") as h:
+        head = h.read(24)
+    if head[:8] != b"\x89PNG\r\n\x1a\n": bad += 1; continue
+    w, hgt = struct.unpack(">II", head[16:24])
+    if (w, hgt) != (400, 400): bad += 1
+print(f"cutoutURL: {n}, file mancanti {missing}, non 400x400 PNG {bad}")
+sys.exit(0 if n > 0 and missing == 0 and bad == 0 else 1)
+PY
+then ok "file dei ritagli coerenti con lo snapshot"; else fail "file dei ritagli mancanti o non 400×400 (vedi sopra)"; fi
+if [ $remote_ok -eq 1 ]; then
+  summary+=("remoto ok")
+elif [ "${REQUIRE_REMOTE:-0}" = "1" ]; then
+  fail "catalogo remoto o immagine ritagliata non raggiungibili ($URL, $CUTOUT)"
+else
+  echo "· remoto non ancora pubblicato o non raggiungibile: non bloccante (REQUIRE_REMOTE=1 per renderlo tale)"
   summary+=("remoto n/d")
 fi
 

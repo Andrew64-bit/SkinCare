@@ -13,9 +13,17 @@ struct CatalogQualityTests {
         return catalog
     }
 
+    /// Soglie di base (v0.1): i controlli v0.3 (Italia, ritagli) sono disattivati in questi test.
+    private var baseThresholds: CatalogQuality.Thresholds {
+        var thresholds = CatalogQuality.Thresholds()
+        thresholds.minimumItalianProducts = 0
+        thresholds.minimumCutoutShare = 0
+        return thresholds
+    }
+
     @Test("60 products in 5 categories with long descriptions pass")
     func passes() {
-        let report = CatalogQuality.check(catalog(products: 60, categories: 5))
+        let report = CatalogQuality.check(catalog(products: 60, categories: 5), thresholds: baseThresholds)
         #expect(report.passes)
         #expect(report.productCount == 60)
         #expect(report.categoryCount == 5)
@@ -64,5 +72,45 @@ struct CatalogQualityTests {
         catalog.source.license = ""
         let report = CatalogQuality.check(catalog)
         #expect(report.issues.contains { $0.lowercased().contains("licen") })
+    }
+
+    // MARK: - v0.3 soglie Italia e ritagli
+
+    private func v03Catalog(products: Int = 60, italian: Int = 20, cutouts: Int = 24) -> Catalog {
+        var catalog = catalog(products: products, categories: 5)
+        for index in catalog.products.indices {
+            catalog.products[index].soldInItaly = index < italian
+            catalog.products[index].image.cutoutURL = index < cutouts
+                ? URL(string: "https://andrew64-bit.github.io/SkinCare/images/\(catalog.products[index].id).png") : nil
+        }
+        return catalog
+    }
+
+    @Test("20 Italian products and 40 % cutouts pass")
+    func v03Passes() {
+        let report = CatalogQuality.check(v03Catalog())
+        #expect(report.passes, "\(report.issues)")
+        #expect(report.italianCount == 20)
+        #expect(report.cutoutCount == 24)
+    }
+
+    @Test("19 Italian products fail with an issue naming Italia")
+    func tooFewItalian() {
+        let report = CatalogQuality.check(v03Catalog(italian: 19))
+        #expect(report.issues.contains { $0.contains("Italia") && $0.contains("19") })
+    }
+
+    @Test("a cutout share below 40 % fails with an issue naming ritagli")
+    func tooFewCutouts() {
+        let report = CatalogQuality.check(v03Catalog(cutouts: 23))
+        #expect(report.issues.contains { $0.contains("ritagli") })
+    }
+
+    @Test("the thresholds can be disabled for legacy catalogs")
+    func legacyThresholds() {
+        var thresholds = CatalogQuality.Thresholds()
+        thresholds.minimumItalianProducts = 0
+        thresholds.minimumCutoutShare = 0
+        #expect(CatalogQuality.check(v03Catalog(italian: 0, cutouts: 0), thresholds: thresholds).passes)
     }
 }

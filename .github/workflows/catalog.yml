@@ -27,6 +27,8 @@ jobs:
           swift run -c release catalog-builder build
           --out ../../docs/catalog/catalog.json
           --per-category 100 --max-pages 5
+          --images-dir ../../docs/images
+          --images-base-url "https://andrew64-bit.github.io/SkinCare/images/"
           --user-agent "SkinCareCatalogBuilder/0.1 (+https://github.com/Andrew64-bit/SkinCare)"
 
       - name: Verifica di qualità (QUALITY=PASS obbligatorio)
@@ -44,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/catalog/catalog.json Packages/SkinCareKit/Sources/SkinCareKit/Resources/catalog.json
+          git add docs/catalog/catalog.json docs/images Packages/SkinCareKit/Sources/SkinCareKit/Resources/catalog.json
           if git diff --cached --quiet; then echo "nessun cambiamento"; exit 0; fi
           git commit -m "Catalogo: aggiornamento automatico $(date -u +%Y-%m-%d)"
           git push

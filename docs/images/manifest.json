@@ -1,0 +1,2974 @@
+{
+  "entries" : {
+    "00027606" : {
+      "processedAt" : "2026-09-19T19:40:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/002/7606/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "00060293" : {
+      "processedAt" : "2026-09-19T19:42:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/006/0293/front_fr.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "00320590" : {
+      "processedAt" : "2026-09-19T19:48:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/032/0590/front_tr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "0041388003092" : {
+      "processedAt" : "2026-09-19T19:47:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/004/138/800/3092/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0041388210216" : {
+      "processedAt" : "2026-09-19T19:47:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/004/138/821/0216/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0045924615701" : {
+      "processedAt" : "2026-09-19T19:43:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/004/592/461/5701/front_tr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0050051119114" : {
+      "processedAt" : "2026-09-19T19:46:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/005/005/111/9114/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0050051122084" : {
+      "processedAt" : "2026-09-19T19:46:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/005/005/112/2084/front_en.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "0050051275131" : {
+      "processedAt" : "2026-09-19T19:47:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/005/005/127/5131/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "0056599671978" : {
+      "processedAt" : "2026-09-19T19:42:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/005/659/967/1978/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "00611903" : {
+      "processedAt" : "2026-09-19T19:41:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/061/1903/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "0062600063731" : {
+      "processedAt" : "2026-09-19T19:42:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/006/260/006/3731/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "00673037" : {
+      "processedAt" : "2026-09-19T19:48:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/067/3037/front_es.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "0070481010300" : {
+      "processedAt" : "2026-09-19T19:42:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/007/048/101/0300/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0070501113424" : {
+      "processedAt" : "2026-09-19T19:43:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/007/050/111/3424/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0072151421119" : {
+      "processedAt" : "2026-09-19T19:44:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/007/215/142/1119/front_en.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "0075486091125" : {
+      "processedAt" : "2026-09-19T19:43:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/007/548/609/1125/front_en.18.400.jpg",
+      "verdict" : "hand"
+    },
+    "0083078421144" : {
+      "processedAt" : "2026-09-19T19:46:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/008/307/842/1144/front_en.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "0083800034284" : {
+      "processedAt" : "2026-09-19T19:45:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/008/380/003/4284/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "0302990532364" : {
+      "processedAt" : "2026-09-19T19:42:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/030/299/053/2364/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "0381371164509" : {
+      "processedAt" : "2026-09-19T19:43:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/038/137/116/4509/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "04663441" : {
+      "processedAt" : "2026-09-19T19:43:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/466/3441/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0574660085563" : {
+      "processedAt" : "2026-09-19T19:46:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/057/466/008/5563/front_ro.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "0610696515797" : {
+      "processedAt" : "2026-09-19T19:46:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/061/069/651/5797/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "06147198" : {
+      "processedAt" : "2026-09-19T19:45:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/614/7198/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0637740948370" : {
+      "processedAt" : "2026-09-19T19:46:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/063/774/094/8370/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0637740948387" : {
+      "processedAt" : "2026-09-19T19:46:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/063/774/094/8387/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0637740948394" : {
+      "processedAt" : "2026-09-19T19:46:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/063/774/094/8394/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0637740949148" : {
+      "processedAt" : "2026-09-19T19:46:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/063/774/094/9148/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0637740949155" : {
+      "processedAt" : "2026-09-19T19:46:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/063/774/094/9155/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0637740949414" : {
+      "processedAt" : "2026-09-19T19:46:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/063/774/094/9414/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0637740949421" : {
+      "processedAt" : "2026-09-19T19:47:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/063/774/094/9421/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0673914115674" : {
+      "processedAt" : "2026-09-19T19:44:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/067/391/411/5674/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "0681131002493" : {
+      "processedAt" : "2026-09-19T19:43:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/068/113/100/2493/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "0690864505263" : {
+      "processedAt" : "2026-09-19T19:45:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/069/086/450/5263/front_tr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "0697013011828" : {
+      "processedAt" : "2026-09-19T19:49:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/069/701/301/1828/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "0714847735489" : {
+      "processedAt" : "2026-09-19T19:45:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/071/484/773/5489/front_en.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "0718334337432" : {
+      "processedAt" : "2026-09-19T19:48:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/071/833/433/7432/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "0750850658998" : {
+      "processedAt" : "2026-09-19T19:49:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/075/085/065/8998/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0772618061000" : {
+      "processedAt" : "2026-09-19T19:42:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/077/261/806/1000/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0772618075007" : {
+      "processedAt" : "2026-09-19T19:42:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/077/261/807/5007/front_en.14.400.jpg",
+      "verdict" : "clean"
+    },
+    "07812133" : {
+      "processedAt" : "2026-09-19T19:41:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/781/2133/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "0792850259997" : {
+      "processedAt" : "2026-09-19T19:48:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/079/285/025/9997/front_en.15.400.jpg",
+      "verdict" : "clean"
+    },
+    "0792850260009" : {
+      "processedAt" : "2026-09-19T19:48:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/079/285/026/0009/front_fr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "0792850649620" : {
+      "processedAt" : "2026-09-19T19:47:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/079/285/064/9620/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "0792850892309" : {
+      "processedAt" : "2026-09-19T19:46:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/079/285/089/2309/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0792850897687" : {
+      "processedAt" : "2026-09-19T19:46:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/079/285/089/7687/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0792850897748" : {
+      "processedAt" : "2026-09-19T19:46:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/079/285/089/7748/front_en.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "0810035921351" : {
+      "processedAt" : "2026-09-19T19:44:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/081/003/592/1351/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "0810208300143" : {
+      "processedAt" : "2026-09-19T19:45:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/081/020/830/0143/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "0810400037267" : {
+      "processedAt" : "2026-09-19T19:46:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/081/040/003/7267/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "0813277012108" : {
+      "processedAt" : "2026-09-19T19:44:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/081/327/701/2108/front_en.6.400.jpg",
+      "verdict" : "hand"
+    },
+    "0835374001144" : {
+      "processedAt" : "2026-09-19T19:47:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/083/537/400/1144/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0850022820656" : {
+      "processedAt" : "2026-09-19T19:46:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/085/002/282/0656/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "0850062527065" : {
+      "processedAt" : "2026-09-19T19:44:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/085/006/252/7065/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "0859871004453" : {
+      "processedAt" : "2026-09-19T19:43:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/085/987/100/4453/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "0860121000408" : {
+      "processedAt" : "2026-09-19T19:43:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/086/012/100/0408/front_en.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "08716491" : {
+      "processedAt" : "2026-09-19T19:47:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/000/871/6491/front_fr.7.400.jpg",
+      "verdict" : "hand"
+    },
+    "13045812" : {
+      "processedAt" : "2026-09-19T19:44:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/001/304/5812/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "2000000152355" : {
+      "processedAt" : "2026-09-19T19:46:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/200/000/015/2355/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "2000000157869" : {
+      "processedAt" : "2026-09-19T19:44:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/200/000/015/7869/front_es.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "20057060" : {
+      "processedAt" : "2026-09-19T19:39:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/005/7060/front_fr.24.400.jpg",
+      "verdict" : "clean"
+    },
+    "20179069" : {
+      "processedAt" : "2026-09-19T19:48:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/017/9069/front_en.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "20231460" : {
+      "processedAt" : "2026-09-19T19:43:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/023/1460/front_fr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "20277246" : {
+      "processedAt" : "2026-09-19T19:40:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/027/7246/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "20283131" : {
+      "processedAt" : "2026-09-19T19:40:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/028/3131/front_fr.8.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "20382933" : {
+      "processedAt" : "2026-09-19T19:43:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/038/2933/front_de.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "20434182" : {
+      "processedAt" : "2026-09-19T19:40:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/043/4182/front_fr.6.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "2050001419545" : {
+      "processedAt" : "2026-09-19T19:44:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/205/000/141/9545/front_es.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "2050002941045" : {
+      "processedAt" : "2026-09-19T19:46:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/205/000/294/1045/front_en.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "20516536" : {
+      "processedAt" : "2026-09-19T19:45:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/051/6536/front_nl.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "2200267164042" : {
+      "processedAt" : "2026-09-19T19:49:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/220/026/716/4042/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "2200291116956" : {
+      "processedAt" : "2026-09-19T19:44:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/220/029/111/6956/front_de.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "22130518" : {
+      "processedAt" : "2026-09-19T19:48:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/213/0518/front_de.24.400.jpg",
+      "verdict" : "clean"
+    },
+    "26023038" : {
+      "processedAt" : "2026-09-19T19:42:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/602/3038/front_fr.19.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "26023458" : {
+      "processedAt" : "2026-09-19T19:40:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/602/3458/front_fr.7.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "26023717" : {
+      "processedAt" : "2026-09-19T19:40:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/002/602/3717/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3040690661546" : {
+      "processedAt" : "2026-09-19T19:47:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/304/069/066/1546/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3040690666206" : {
+      "processedAt" : "2026-09-19T19:47:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/304/069/066/6206/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3040690666213" : {
+      "processedAt" : "2026-09-19T19:47:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/304/069/066/6213/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3040690666237" : {
+      "processedAt" : "2026-09-19T19:47:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/304/069/066/6237/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3045204802354" : {
+      "processedAt" : "2026-09-19T19:44:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/304/520/480/2354/front_fr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "3045204802859" : {
+      "processedAt" : "2026-09-19T19:44:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/304/520/480/2859/front_fr.11.400.jpg",
+      "verdict" : "hand"
+    },
+    "3058320048117" : {
+      "processedAt" : "2026-09-19T19:46:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/305/832/004/8117/front_fr.7.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3160920402005" : {
+      "processedAt" : "2026-09-19T19:44:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/316/092/040/2005/front_fr.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178040433809" : {
+      "processedAt" : "2026-09-19T19:40:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/043/3809/front_fr.5.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3178040554931" : {
+      "processedAt" : "2026-09-19T19:39:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/055/4931/front_fr.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178040687790" : {
+      "processedAt" : "2026-09-19T19:46:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/068/7790/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178040694156" : {
+      "processedAt" : "2026-09-19T19:49:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/069/4156/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178040695160" : {
+      "processedAt" : "2026-09-19T19:45:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/069/5160/front_fr.16.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178040699021" : {
+      "processedAt" : "2026-09-19T19:46:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/069/9021/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178041302111" : {
+      "processedAt" : "2026-09-19T19:46:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/130/2111/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178041302135" : {
+      "processedAt" : "2026-09-19T19:45:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/130/2135/front_fr.8.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3178041307116" : {
+      "processedAt" : "2026-09-19T19:46:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/130/7116/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178041308410" : {
+      "processedAt" : "2026-09-19T19:46:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/130/8410/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3178041315494" : {
+      "processedAt" : "2026-09-19T19:46:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/317/804/131/5494/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3215660760127" : {
+      "processedAt" : "2026-09-19T19:47:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/321/566/076/0127/front_fr.5.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3245678599235" : {
+      "processedAt" : "2026-09-19T19:40:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/324/567/859/9235/front_fr.14.400.jpg",
+      "verdict" : "clean"
+    },
+    "3245678622582" : {
+      "processedAt" : "2026-09-19T19:47:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/324/567/862/2582/front_fr.12.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3250390448730" : {
+      "processedAt" : "2026-09-19T19:41:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/325/039/044/8730/front_fr.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "3250392620844" : {
+      "processedAt" : "2026-09-19T19:41:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/325/039/262/0844/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3251241034775" : {
+      "processedAt" : "2026-09-19T19:47:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/325/124/103/4775/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3251241042053" : {
+      "processedAt" : "2026-09-19T19:47:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/325/124/104/2053/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3256224359203" : {
+      "processedAt" : "2026-09-19T19:49:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/325/622/435/9203/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3256224363316" : {
+      "processedAt" : "2026-09-19T19:49:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/325/622/436/3316/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3257984523521" : {
+      "processedAt" : "2026-09-19T19:49:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/325/798/452/3521/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3263855723228" : {
+      "processedAt" : "2026-09-19T19:47:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/326/385/572/3228/front_fr.5.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3264680004117" : {
+      "processedAt" : "2026-09-19T19:46:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/326/468/000/4117/front_fr.18.400.jpg",
+      "verdict" : "clean"
+    },
+    "3264680042003" : {
+      "processedAt" : "2026-09-19T19:44:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/326/468/004/2003/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "3266191023595" : {
+      "processedAt" : "2026-09-19T19:48:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/326/619/102/3595/front_fr.13.400.jpg",
+      "verdict" : "clean"
+    },
+    "3282770072815" : {
+      "processedAt" : "2026-09-19T19:47:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/277/007/2815/front_fr.21.400.jpg",
+      "verdict" : "clean"
+    },
+    "3282770141214" : {
+      "processedAt" : "2026-09-19T19:43:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/277/014/1214/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3282770390179" : {
+      "processedAt" : "2026-09-19T19:42:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/277/039/0179/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3282770396331" : {
+      "processedAt" : "2026-09-19T19:42:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/277/039/6331/front_it.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3282770396874" : {
+      "processedAt" : "2026-09-19T19:43:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/277/039/6874/front_it.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "3282779042673" : {
+      "processedAt" : "2026-09-19T19:43:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/277/904/2673/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3282779348850" : {
+      "processedAt" : "2026-09-19T19:40:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/277/934/8850/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3282779416139" : {
+      "processedAt" : "2026-09-19T19:47:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/277/941/6139/front_fr.19.400.jpg",
+      "verdict" : "clean"
+    },
+    "3283950011006" : {
+      "processedAt" : "2026-09-19T19:41:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/395/001/1006/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3283950910910" : {
+      "processedAt" : "2026-09-19T19:45:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/395/091/0910/front_fr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "3283950914819" : {
+      "processedAt" : "2026-09-19T19:45:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/395/091/4819/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3283950914826" : {
+      "processedAt" : "2026-09-19T19:45:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/328/395/091/4826/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3329310002113" : {
+      "processedAt" : "2026-09-19T19:45:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/332/931/000/2113/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3329310012495" : {
+      "processedAt" : "2026-09-19T19:44:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/332/931/001/2495/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3331300090987" : {
+      "processedAt" : "2026-09-19T19:42:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/130/009/0987/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "3331300096460" : {
+      "processedAt" : "2026-09-19T19:44:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/130/009/6460/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "3331849020391" : {
+      "processedAt" : "2026-09-19T19:40:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/184/902/0391/front_fr.24.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3337872410345" : {
+      "processedAt" : "2026-09-19T19:41:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/241/0345/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337872411083" : {
+      "processedAt" : "2026-09-19T19:41:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/241/1083/front_en.21.400.jpg",
+      "verdict" : "hand"
+    },
+    "3337872412684" : {
+      "processedAt" : "2026-09-19T19:47:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/241/2684/front_fr.13.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337872414145" : {
+      "processedAt" : "2026-09-19T19:47:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/241/4145/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337872414527" : {
+      "processedAt" : "2026-09-19T19:43:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/241/4527/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337875597333" : {
+      "processedAt" : "2026-09-19T19:41:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/559/7333/front_it.40.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337875698696" : {
+      "processedAt" : "2026-09-19T19:43:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/569/8696/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337875702478" : {
+      "processedAt" : "2026-09-19T19:41:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/570/2478/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "3337875722827" : {
+      "processedAt" : "2026-09-19T19:41:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/572/2827/front_en.22.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337875743563" : {
+      "processedAt" : "2026-09-19T19:41:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/574/3563/front_fr.12.400.jpg",
+      "verdict" : "hand"
+    },
+    "3337875766326" : {
+      "processedAt" : "2026-09-19T19:47:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/576/6326/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337875917872" : {
+      "processedAt" : "2026-09-19T19:43:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/591/7872/front_en.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337875932349" : {
+      "processedAt" : "2026-09-19T19:44:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/593/2349/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3337875952866" : {
+      "processedAt" : "2026-09-19T19:41:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/333/787/595/2866/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3401353738461" : {
+      "processedAt" : "2026-09-19T19:42:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/340/135/373/8461/front_fr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "3401360106994" : {
+      "processedAt" : "2026-09-19T19:40:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/340/136/010/6994/front_fr.18.400.jpg",
+      "verdict" : "clean"
+    },
+    "3401395376706" : {
+      "processedAt" : "2026-09-19T19:41:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/340/139/537/6706/front_ru.11.400.jpg",
+      "verdict" : "hand"
+    },
+    "3401395376935" : {
+      "processedAt" : "2026-09-19T19:41:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/340/139/537/6935/front_en.12.400.jpg",
+      "verdict" : "hand"
+    },
+    "3401396991779" : {
+      "processedAt" : "2026-09-19T19:41:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/340/139/699/1779/front_es.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "3401397163496" : {
+      "processedAt" : "2026-09-19T19:40:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/340/139/716/3496/front_fr.10.400.jpg",
+      "verdict" : "clean"
+    },
+    "3401573670053" : {
+      "processedAt" : "2026-09-19T19:41:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/340/157/367/0053/front_en.8.400.jpg",
+      "verdict" : "hand"
+    },
+    "3401575645851" : {
+      "processedAt" : "2026-09-19T19:41:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/340/157/564/5851/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3415900030427" : {
+      "processedAt" : "2026-09-19T19:48:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/341/590/003/0427/front_fr.11.400.jpg",
+      "verdict" : "hand"
+    },
+    "3415900031486" : {
+      "processedAt" : "2026-09-19T19:46:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/341/590/003/1486/front_fr.27.400.jpg",
+      "verdict" : "hand"
+    },
+    "3464660002007" : {
+      "processedAt" : "2026-09-19T19:39:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/346/466/000/2007/front_fr.7.400.jpg",
+      "verdict" : "hand"
+    },
+    "3468080009332" : {
+      "processedAt" : "2026-09-19T19:43:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/346/808/000/9332/front_fr.17.400.jpg",
+      "verdict" : "clean"
+    },
+    "3468080411234" : {
+      "processedAt" : "2026-09-19T19:49:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/346/808/041/1234/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3473311503008" : {
+      "processedAt" : "2026-09-19T19:45:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/347/331/150/3008/front_fr.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "3499320015431" : {
+      "processedAt" : "2026-09-19T19:42:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/349/932/001/5431/front_en.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3499320018357" : {
+      "processedAt" : "2026-09-19T19:40:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/349/932/001/8357/front_de.7.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3504105035808" : {
+      "processedAt" : "2026-09-19T19:41:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/350/410/503/5808/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "3504105036751" : {
+      "processedAt" : "2026-09-19T19:42:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/350/410/503/6751/front_it.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3515450016527" : {
+      "processedAt" : "2026-09-19T19:40:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/351/545/001/6527/front_fr.15.400.jpg",
+      "verdict" : "hand"
+    },
+    "3517360005066" : {
+      "processedAt" : "2026-09-19T19:42:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/351/736/000/5066/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3517360008661" : {
+      "processedAt" : "2026-09-19T19:39:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/351/736/000/8661/front_fr.8.400.jpg",
+      "verdict" : "hand"
+    },
+    "3518301023132" : {
+      "processedAt" : "2026-09-19T19:47:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/351/830/102/3132/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3522930003717" : {
+      "processedAt" : "2026-09-19T19:48:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/352/293/000/3717/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3522930004349" : {
+      "processedAt" : "2026-09-19T19:45:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/352/293/000/4349/front_tr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3522930004639" : {
+      "processedAt" : "2026-09-19T19:48:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/352/293/000/4639/front_fr.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "3537090018853" : {
+      "processedAt" : "2026-09-19T19:42:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/353/709/001/8853/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3549620009033" : {
+      "processedAt" : "2026-09-19T19:45:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/354/962/000/9033/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "3549621020426" : {
+      "processedAt" : "2026-09-19T19:47:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/354/962/102/0426/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3549629000024" : {
+      "processedAt" : "2026-09-19T19:48:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/354/962/900/0024/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3560070623693" : {
+      "processedAt" : "2026-09-19T19:47:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/356/007/062/3693/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3560070878888" : {
+      "processedAt" : "2026-09-19T19:47:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/356/007/087/8888/front_fr.5.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3560070881253" : {
+      "processedAt" : "2026-09-19T19:46:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/356/007/088/1253/front_fr.19.400.jpg",
+      "verdict" : "clean"
+    },
+    "3560071132774" : {
+      "processedAt" : "2026-09-19T19:48:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/356/007/113/2774/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3560071162115" : {
+      "processedAt" : "2026-09-19T19:39:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/356/007/116/2115/front_fr.33.400.jpg",
+      "verdict" : "clean"
+    },
+    "3564700555521" : {
+      "processedAt" : "2026-09-19T19:41:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/356/470/055/5521/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "3564700701058" : {
+      "processedAt" : "2026-09-19T19:39:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/356/470/070/1058/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574660149807" : {
+      "processedAt" : "2026-09-19T19:41:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/014/9807/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574660219623" : {
+      "processedAt" : "2026-09-19T19:40:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/021/9623/front_fr.19.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574660258288" : {
+      "processedAt" : "2026-09-19T19:47:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/025/8288/front_en.16.400.jpg",
+      "verdict" : "hand"
+    },
+    "3574660260052" : {
+      "processedAt" : "2026-09-19T19:48:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/026/0052/front_fr.20.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574660600124" : {
+      "processedAt" : "2026-09-19T19:47:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/060/0124/front_sv.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661215341" : {
+      "processedAt" : "2026-09-19T19:49:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/121/5341/front_fr.7.400.jpg",
+      "verdict" : "hand"
+    },
+    "3574661287201" : {
+      "processedAt" : "2026-09-19T19:39:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/128/7201/front_fr.14.400.jpg",
+      "verdict" : "hand"
+    },
+    "3574661287898" : {
+      "processedAt" : "2026-09-19T19:48:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/128/7898/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661332611" : {
+      "processedAt" : "2026-09-19T19:40:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/133/2611/front_en.8.400.jpg",
+      "verdict" : "hand"
+    },
+    "3574661365305" : {
+      "processedAt" : "2026-09-19T19:47:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/136/5305/front_fr.21.400.jpg",
+      "verdict" : "hand"
+    },
+    "3574661373577" : {
+      "processedAt" : "2026-09-19T19:43:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/137/3577/front_en.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661450933" : {
+      "processedAt" : "2026-09-19T19:41:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/145/0933/front_tr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "3574661685960" : {
+      "processedAt" : "2026-09-19T19:47:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/168/5960/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661685977" : {
+      "processedAt" : "2026-09-19T19:47:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/168/5977/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661686509" : {
+      "processedAt" : "2026-09-19T19:48:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/168/6509/front_tr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661687018" : {
+      "processedAt" : "2026-09-19T19:47:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/168/7018/front_de.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661687032" : {
+      "processedAt" : "2026-09-19T19:48:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/168/7032/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "3574661687049" : {
+      "processedAt" : "2026-09-19T19:47:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/168/7049/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661748368" : {
+      "processedAt" : "2026-09-19T19:48:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/174/8368/front_tr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661799797" : {
+      "processedAt" : "2026-09-19T19:44:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/179/9797/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3574661875255" : {
+      "processedAt" : "2026-09-19T19:44:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/357/466/187/5255/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3596710332571" : {
+      "processedAt" : "2026-09-19T19:49:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/359/671/033/2571/front_fr.6.400.jpg",
+      "verdict" : "hand"
+    },
+    "3600520297118" : {
+      "processedAt" : "2026-09-19T19:39:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/029/7118/front_fr.8.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3600522365044" : {
+      "processedAt" : "2026-09-19T19:40:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/236/5044/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600522365884" : {
+      "processedAt" : "2026-09-19T19:49:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/236/5884/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600523461103" : {
+      "processedAt" : "2026-09-19T19:42:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/346/1103/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600523473960" : {
+      "processedAt" : "2026-09-19T19:40:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/347/3960/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600523473977" : {
+      "processedAt" : "2026-09-19T19:46:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/347/3977/front_tr.15.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600523732548" : {
+      "processedAt" : "2026-09-19T19:45:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/373/2548/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600523775637" : {
+      "processedAt" : "2026-09-19T19:40:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/377/5637/front_tr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600523996933" : {
+      "processedAt" : "2026-09-19T19:40:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/399/6933/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600524069728" : {
+      "processedAt" : "2026-09-19T19:43:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/406/9728/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600524122737" : {
+      "processedAt" : "2026-09-19T19:40:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/412/2737/front_tr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600524165161" : {
+      "processedAt" : "2026-09-19T19:41:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/052/416/5161/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600531648725" : {
+      "processedAt" : "2026-09-19T19:42:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/053/164/8725/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600540009012" : {
+      "processedAt" : "2026-09-19T19:46:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/000/9012/front_fr.7.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3600541144019" : {
+      "processedAt" : "2026-09-19T19:46:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/114/4019/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600541295742" : {
+      "processedAt" : "2026-09-19T19:46:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/129/5742/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600541358485" : {
+      "processedAt" : "2026-09-19T19:41:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/135/8485/front_es.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600541729452" : {
+      "processedAt" : "2026-09-19T19:49:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/172/9452/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "3600541729476" : {
+      "processedAt" : "2026-09-19T19:41:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/172/9476/front_en.10.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600541738508" : {
+      "processedAt" : "2026-09-19T19:40:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/173/8508/front_fr.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "3600541744554" : {
+      "processedAt" : "2026-09-19T19:41:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/174/4554/front_en.26.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600541958418" : {
+      "processedAt" : "2026-09-19T19:47:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/195/8418/front_fr.5.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3600542067720" : {
+      "processedAt" : "2026-09-19T19:42:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/206/7720/front_fr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600542097024" : {
+      "processedAt" : "2026-09-19T19:44:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/209/7024/front_fr.5.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3600542133425" : {
+      "processedAt" : "2026-09-19T19:49:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/213/3425/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600542385312" : {
+      "processedAt" : "2026-09-19T19:45:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/238/5312/front_en.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "3600542385329" : {
+      "processedAt" : "2026-09-19T19:45:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/238/5329/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600542385336" : {
+      "processedAt" : "2026-09-19T19:44:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/238/5336/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600542520263" : {
+      "processedAt" : "2026-09-19T19:43:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/252/0263/front_fr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600542520454" : {
+      "processedAt" : "2026-09-19T19:43:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/054/252/0454/front_fr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "3600550038071" : {
+      "processedAt" : "2026-09-19T19:41:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/003/8071/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600550216592" : {
+      "processedAt" : "2026-09-19T19:43:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/021/6592/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600550240276" : {
+      "processedAt" : "2026-09-19T19:47:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/024/0276/front_fr.10.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600550258301" : {
+      "processedAt" : "2026-09-19T19:47:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/025/8301/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600550972153" : {
+      "processedAt" : "2026-09-19T19:44:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/097/2153/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600550975369" : {
+      "processedAt" : "2026-09-19T19:49:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/097/5369/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600551020419" : {
+      "processedAt" : "2026-09-19T19:39:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/102/0419/front_fr.20.400.jpg",
+      "verdict" : "hand"
+    },
+    "3600551125206" : {
+      "processedAt" : "2026-09-19T19:43:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/112/5206/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3600551125275" : {
+      "processedAt" : "2026-09-19T19:43:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/112/5275/front_fr.18.400.jpg",
+      "verdict" : "hand"
+    },
+    "3600551156699" : {
+      "processedAt" : "2026-09-19T19:41:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/055/115/6699/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3605970360757" : {
+      "processedAt" : "2026-09-19T19:39:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/360/597/036/0757/front_en.23.400.jpg",
+      "verdict" : "hand"
+    },
+    "3614051468664" : {
+      "processedAt" : "2026-09-19T19:46:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/361/405/146/8664/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3614270429835" : {
+      "processedAt" : "2026-09-19T19:45:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/361/427/042/9835/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3614272400467" : {
+      "processedAt" : "2026-09-19T19:40:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/361/427/240/0467/front_fr.13.400.jpg",
+      "verdict" : "clean"
+    },
+    "3660005551241" : {
+      "processedAt" : "2026-09-19T19:47:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/366/000/555/1241/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3660005795300" : {
+      "processedAt" : "2026-09-19T19:43:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/366/000/579/5300/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3661434003424" : {
+      "processedAt" : "2026-09-19T19:44:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/366/143/400/3424/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3661500521975" : {
+      "processedAt" : "2026-09-19T19:45:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/366/150/052/1975/front_fr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "3662217004867" : {
+      "processedAt" : "2026-09-19T19:39:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/366/221/700/4867/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3662361002146" : {
+      "processedAt" : "2026-09-19T19:43:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/366/236/100/2146/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3700036902947" : {
+      "processedAt" : "2026-09-19T19:42:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/003/690/2947/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3700276346280" : {
+      "processedAt" : "2026-09-19T19:43:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/027/634/6280/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3700446411596" : {
+      "processedAt" : "2026-09-19T19:45:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/044/641/1596/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3700454229541" : {
+      "processedAt" : "2026-09-19T19:45:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/045/422/9541/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3700562300156" : {
+      "processedAt" : "2026-09-19T19:45:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/056/230/0156/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3700928800153" : {
+      "processedAt" : "2026-09-19T19:41:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/092/880/0153/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "3701063802873" : {
+      "processedAt" : "2026-09-19T19:45:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/106/380/2873/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3701129805008" : {
+      "processedAt" : "2026-09-19T19:42:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/112/980/5008/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "3701129807255" : {
+      "processedAt" : "2026-09-19T19:44:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/112/980/7255/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3701129812426" : {
+      "processedAt" : "2026-09-19T19:46:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/370/112/981/2426/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3760020733100" : {
+      "processedAt" : "2026-09-19T19:46:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/002/073/3100/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3760020736118" : {
+      "processedAt" : "2026-09-19T19:46:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/002/073/6118/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3760171121023" : {
+      "processedAt" : "2026-09-19T19:46:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/017/112/1023/front_fr.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "3760209542356" : {
+      "processedAt" : "2026-09-19T19:43:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/020/954/2356/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3760211481421" : {
+      "processedAt" : "2026-09-19T19:43:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/021/148/1421/front_fr.14.400.jpg",
+      "verdict" : "clean"
+    },
+    "3760215879576" : {
+      "processedAt" : "2026-09-19T19:40:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/021/587/9576/front_tr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3760239242035" : {
+      "processedAt" : "2026-09-19T19:45:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/023/924/2035/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "3760354680019" : {
+      "processedAt" : "2026-09-19T19:42:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/035/468/0019/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3760354680248" : {
+      "processedAt" : "2026-09-19T19:42:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/376/035/468/0248/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "3770016038577" : {
+      "processedAt" : "2026-09-19T19:44:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/377/001/603/8577/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "3770020070006" : {
+      "processedAt" : "2026-09-19T19:45:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/377/002/007/0006/front_fr.13.400.jpg",
+      "verdict" : "clean"
+    },
+    "3770020070013" : {
+      "processedAt" : "2026-09-19T19:45:19Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/377/002/007/0013/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "3770020070020" : {
+      "processedAt" : "2026-09-19T19:45:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/377/002/007/0020/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4000196020956" : {
+      "processedAt" : "2026-09-19T19:48:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/019/602/0956/front_de.10.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005800001192" : {
+      "processedAt" : "2026-09-19T19:39:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/000/1192/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005800027932" : {
+      "processedAt" : "2026-09-19T19:43:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/002/7932/front_fr.7.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005800137655" : {
+      "processedAt" : "2026-09-19T19:39:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/013/7655/front_es.6.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005800268748" : {
+      "processedAt" : "2026-09-19T19:46:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/026/8748/front_fr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005800294778" : {
+      "processedAt" : "2026-09-19T19:40:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/029/4778/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005800383519" : {
+      "processedAt" : "2026-09-19T19:48:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/038/3519/front_en.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005808183234" : {
+      "processedAt" : "2026-09-19T19:45:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/818/3234/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808189625" : {
+      "processedAt" : "2026-09-19T19:42:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/818/9625/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808221691" : {
+      "processedAt" : "2026-09-19T19:40:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/822/1691/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808368341" : {
+      "processedAt" : "2026-09-19T19:47:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/836/8341/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808373734" : {
+      "processedAt" : "2026-09-19T19:47:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/837/3734/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808425365" : {
+      "processedAt" : "2026-09-19T19:43:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/842/5365/front_de.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808515592" : {
+      "processedAt" : "2026-09-19T19:40:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/851/5592/front_es.14.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808613380" : {
+      "processedAt" : "2026-09-19T19:47:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/861/3380/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005808638512" : {
+      "processedAt" : "2026-09-19T19:47:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/863/8512/front_fr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808669233" : {
+      "processedAt" : "2026-09-19T19:41:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/866/9233/front_ru.10.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808801053" : {
+      "processedAt" : "2026-09-19T19:47:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/880/1053/front_en.27.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005808824830" : {
+      "processedAt" : "2026-09-19T19:45:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/882/4830/front_vi.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808846610" : {
+      "processedAt" : "2026-09-19T19:48:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/884/6610/front_fr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005808916887" : {
+      "processedAt" : "2026-09-19T19:41:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/891/6887/front_nb.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808999675" : {
+      "processedAt" : "2026-09-19T19:39:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/899/9675/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005808999712" : {
+      "processedAt" : "2026-09-19T19:40:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/580/899/9712/front_fr.11.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900009135" : {
+      "processedAt" : "2026-09-19T19:39:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/000/9135/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005900107589" : {
+      "processedAt" : "2026-09-19T19:40:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/010/7589/front_fr.6.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4005900132444" : {
+      "processedAt" : "2026-09-19T19:43:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/013/2444/front_it.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900246905" : {
+      "processedAt" : "2026-09-19T19:43:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/024/6905/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900249401" : {
+      "processedAt" : "2026-09-19T19:43:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/024/9401/front_de.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900253668" : {
+      "processedAt" : "2026-09-19T19:43:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/025/3668/front_en.18.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900289056" : {
+      "processedAt" : "2026-09-19T19:41:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/028/9056/front_tr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900308832" : {
+      "processedAt" : "2026-09-19T19:48:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/030/8832/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005900325846" : {
+      "processedAt" : "2026-09-19T19:46:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/032/5846/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900370525" : {
+      "processedAt" : "2026-09-19T19:43:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/037/0525/front_en.10.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005900370556" : {
+      "processedAt" : "2026-09-19T19:43:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/037/0556/front_nb.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005900419453" : {
+      "processedAt" : "2026-09-19T19:40:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/041/9453/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900462060" : {
+      "processedAt" : "2026-09-19T19:43:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/046/2060/front_en.16.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005900525017" : {
+      "processedAt" : "2026-09-19T19:40:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/052/5017/front_en.8.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4005900525352" : {
+      "processedAt" : "2026-09-19T19:40:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/052/5352/front_en.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900546272" : {
+      "processedAt" : "2026-09-19T19:40:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/054/6272/front_en.9.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4005900597243" : {
+      "processedAt" : "2026-09-19T19:43:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/059/7243/front_fr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900602114" : {
+      "processedAt" : "2026-09-19T19:43:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/060/2114/front_nb.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005900605498" : {
+      "processedAt" : "2026-09-19T19:43:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/060/5498/front_nb.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005900666031" : {
+      "processedAt" : "2026-09-19T19:42:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/066/6031/front_nl.10.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900695826" : {
+      "processedAt" : "2026-09-19T19:43:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/069/5826/front_en.6.400.jpg",
+      "verdict" : "hand"
+    },
+    "4005900701473" : {
+      "processedAt" : "2026-09-19T19:48:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/070/1473/front_nl.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900836151" : {
+      "processedAt" : "2026-09-19T19:42:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/083/6151/front_en.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4005900897848" : {
+      "processedAt" : "2026-09-19T19:40:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/089/7848/front_tr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4005900986139" : {
+      "processedAt" : "2026-09-19T19:47:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/590/098/6139/front_en.16.400.jpg",
+      "verdict" : "clean"
+    },
+    "4006000002033" : {
+      "processedAt" : "2026-09-19T19:46:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/600/000/2033/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4006000037660" : {
+      "processedAt" : "2026-09-19T19:47:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/600/003/7660/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4006000064123" : {
+      "processedAt" : "2026-09-19T19:48:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/600/006/4123/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4006000076638" : {
+      "processedAt" : "2026-09-19T19:42:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/600/007/6638/front_tr.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "4006000111827" : {
+      "processedAt" : "2026-09-19T19:48:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/600/011/1827/front_es.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4006000252650" : {
+      "processedAt" : "2026-09-19T19:46:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/400/600/025/2650/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4010355583154" : {
+      "processedAt" : "2026-09-19T19:41:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/401/035/558/3154/front_de.14.400.jpg",
+      "verdict" : "clean"
+    },
+    "4012273123009" : {
+      "processedAt" : "2026-09-19T19:47:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/401/227/312/3009/front_fr.32.400.jpg",
+      "verdict" : "clean"
+    },
+    "4012400800612" : {
+      "processedAt" : "2026-09-19T19:43:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/401/240/080/0612/front_es.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4012400800711" : {
+      "processedAt" : "2026-09-19T19:43:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/401/240/080/0711/front_fr.8.400.jpg",
+      "verdict" : "hand"
+    },
+    "4016208854846" : {
+      "processedAt" : "2026-09-19T19:48:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/401/620/885/4846/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4021457614134" : {
+      "processedAt" : "2026-09-19T19:47:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/402/145/761/4134/front_fr.11.400.jpg",
+      "verdict" : "clean"
+    },
+    "4021457645022" : {
+      "processedAt" : "2026-09-19T19:47:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/402/145/764/5022/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4038288103690" : {
+      "processedAt" : "2026-09-19T19:48:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/403/828/810/3690/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4040943003528" : {
+      "processedAt" : "2026-09-19T19:41:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/404/094/300/3528/front_en.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4040943005324" : {
+      "processedAt" : "2026-09-19T19:42:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/404/094/300/5324/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4040943006161" : {
+      "processedAt" : "2026-09-19T19:40:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/404/094/300/6161/front_en.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4049639411609" : {
+      "processedAt" : "2026-09-19T19:41:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/404/963/941/1609/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4049639412903" : {
+      "processedAt" : "2026-09-19T19:41:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/404/963/941/2903/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4049639419728" : {
+      "processedAt" : "2026-09-19T19:40:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/404/963/941/9728/front_en.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4049639449503" : {
+      "processedAt" : "2026-09-19T19:41:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/404/963/944/9503/front_en.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4049639451803" : {
+      "processedAt" : "2026-09-19T19:40:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/404/963/945/1803/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4056489234081" : {
+      "processedAt" : "2026-09-19T19:47:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/405/648/923/4081/front_fr.10.400.jpg",
+      "verdict" : "clean"
+    },
+    "4056489323099" : {
+      "processedAt" : "2026-09-19T19:39:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/405/648/932/3099/front_it.6.400.jpg",
+      "verdict" : "hand"
+    },
+    "4058172192449" : {
+      "processedAt" : "2026-09-19T19:48:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/405/817/219/2449/front_de.10.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4058172319976" : {
+      "processedAt" : "2026-09-19T19:47:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/405/817/231/9976/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4058172420641" : {
+      "processedAt" : "2026-09-19T19:46:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/405/817/242/0641/front_ro.12.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4058172618994" : {
+      "processedAt" : "2026-09-19T19:48:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/405/817/261/8994/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4065331005298" : {
+      "processedAt" : "2026-09-19T19:44:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/533/100/5298/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4066447106251" : {
+      "processedAt" : "2026-09-19T19:43:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/644/710/6251/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4066447434040" : {
+      "processedAt" : "2026-09-19T19:42:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/644/743/4040/front_de.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4066447502725" : {
+      "processedAt" : "2026-09-19T19:43:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/644/750/2725/front_de.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "4066447785845" : {
+      "processedAt" : "2026-09-19T19:44:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/644/778/5845/front_de.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "4066447814958" : {
+      "processedAt" : "2026-09-19T19:42:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/644/781/4958/front_it.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4066447967678" : {
+      "processedAt" : "2026-09-19T19:45:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/644/796/7678/front_de.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4068134078254" : {
+      "processedAt" : "2026-09-19T19:48:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/813/407/8254/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4068134094438" : {
+      "processedAt" : "2026-09-19T19:48:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/813/409/4438/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4068706887949" : {
+      "processedAt" : "2026-09-19T19:45:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/406/870/688/7949/front_fr.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4084200772901" : {
+      "processedAt" : "2026-09-19T19:39:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/408/420/077/2901/front_en.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "4103040909763" : {
+      "processedAt" : "2026-09-19T19:48:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/410/304/090/9763/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "42269663" : {
+      "processedAt" : "2026-09-19T19:40:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/004/226/9663/front_de.18.400.jpg",
+      "verdict" : "clean"
+    },
+    "42360698" : {
+      "processedAt" : "2026-09-19T19:44:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/004/236/0698/front_en.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "42420125" : {
+      "processedAt" : "2026-09-19T19:40:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/004/242/0125/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "42485346" : {
+      "processedAt" : "2026-09-19T19:48:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/004/248/5346/front_de.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "4260167189161" : {
+      "processedAt" : "2026-09-19T19:48:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/426/016/718/9161/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4260558061601" : {
+      "processedAt" : "2026-09-19T19:42:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/426/055/806/1601/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4262351040296" : {
+      "processedAt" : "2026-09-19T19:45:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/426/235/104/0296/front_de.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4262351040319" : {
+      "processedAt" : "2026-09-19T19:46:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/426/235/104/0319/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4262351040340" : {
+      "processedAt" : "2026-09-19T19:40:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/426/235/104/0340/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4262351040364" : {
+      "processedAt" : "2026-09-19T19:45:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/426/235/104/0364/front_de.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4305615609997" : {
+      "processedAt" : "2026-09-19T19:47:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/430/561/560/9997/front_de.20.400.jpg",
+      "verdict" : "clean"
+    },
+    "4305615610054" : {
+      "processedAt" : "2026-09-19T19:48:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/430/561/561/0054/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4305615826097" : {
+      "processedAt" : "2026-09-19T19:43:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/430/561/582/6097/front_de.10.400.jpg",
+      "verdict" : "clean"
+    },
+    "4305615826103" : {
+      "processedAt" : "2026-09-19T19:43:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/430/561/582/6103/front_de.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "4305615827452" : {
+      "processedAt" : "2026-09-19T19:43:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/430/561/582/7452/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4305615911052" : {
+      "processedAt" : "2026-09-19T19:48:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/430/561/591/1052/front_en.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "4311501630808" : {
+      "processedAt" : "2026-09-19T19:48:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/431/150/163/0808/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4335619112025" : {
+      "processedAt" : "2026-09-19T19:44:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/433/561/911/2025/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4562323640104" : {
+      "processedAt" : "2026-09-19T19:45:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/456/232/364/0104/front_en.11.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "4743318143293" : {
+      "processedAt" : "2026-09-19T19:44:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/474/331/814/3293/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4751015928006" : {
+      "processedAt" : "2026-09-19T19:46:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/475/101/592/8006/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4806518334578" : {
+      "processedAt" : "2026-09-19T19:44:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/480/651/833/4578/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "4820185227315" : {
+      "processedAt" : "2026-09-19T19:48:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/482/018/522/7315/front_en.14.400.jpg",
+      "verdict" : "clean"
+    },
+    "4823110302859" : {
+      "processedAt" : "2026-09-19T19:47:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/482/311/030/2859/front_uk.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "4894532991501" : {
+      "processedAt" : "2026-09-19T19:42:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/489/453/299/1501/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "4894819702707" : {
+      "processedAt" : "2026-09-19T19:42:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/489/481/970/2707/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "50064861" : {
+      "processedAt" : "2026-09-19T19:46:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/005/006/4861/front_en.23.400.jpg",
+      "verdict" : "clean"
+    },
+    "5011451104907" : {
+      "processedAt" : "2026-09-19T19:41:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/501/145/110/4907/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5012008411103" : {
+      "processedAt" : "2026-09-19T19:47:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/501/200/841/1103/front_fr.5.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "5015833316070" : {
+      "processedAt" : "2026-09-19T19:49:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/501/583/331/6070/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "5017634237080" : {
+      "processedAt" : "2026-09-19T19:45:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/501/763/423/7080/front_nl.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "5017634256739" : {
+      "processedAt" : "2026-09-19T19:44:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/501/763/425/6739/front_fr.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "5021320154353" : {
+      "processedAt" : "2026-09-19T19:40:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/502/132/015/4353/front_en.13.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "5060955140805" : {
+      "processedAt" : "2026-09-19T19:42:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/506/095/514/0805/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5060955140997" : {
+      "processedAt" : "2026-09-19T19:40:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/506/095/514/0997/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5060955141178" : {
+      "processedAt" : "2026-09-19T19:41:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/506/095/514/1178/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5060968412944" : {
+      "processedAt" : "2026-09-19T19:46:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/506/096/841/2944/front_fr.17.400.jpg",
+      "verdict" : "clean"
+    },
+    "5099821001810" : {
+      "processedAt" : "2026-09-19T19:44:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/509/982/100/1810/front_en.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "5202663170396" : {
+      "processedAt" : "2026-09-19T19:42:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/520/266/317/0396/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "5285009295045" : {
+      "processedAt" : "2026-09-19T19:44:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/528/500/929/5045/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5397256457500" : {
+      "processedAt" : "2026-09-19T19:45:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/539/725/645/7500/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5410091710897" : {
+      "processedAt" : "2026-09-19T19:46:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/541/009/171/0897/front_fr.10.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "5609221310278" : {
+      "processedAt" : "2026-09-19T19:46:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/560/922/131/0278/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5900017040998" : {
+      "processedAt" : "2026-09-19T19:41:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/001/704/0998/front_en.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "5900116053578" : {
+      "processedAt" : "2026-09-19T19:48:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/011/605/3578/front_pl.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5900116091990" : {
+      "processedAt" : "2026-09-19T19:45:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/011/609/1990/front_en.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "5900116106908" : {
+      "processedAt" : "2026-09-19T19:41:10Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/011/610/6908/front_pl.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5900117008393" : {
+      "processedAt" : "2026-09-19T19:40:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/011/700/8393/front_pl.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5900525062789" : {
+      "processedAt" : "2026-09-19T19:40:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/052/506/2789/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "5900525078698" : {
+      "processedAt" : "2026-09-19T19:41:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/052/507/8698/front_tr.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "5900525078759" : {
+      "processedAt" : "2026-09-19T19:40:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/052/507/8759/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "5900717082557" : {
+      "processedAt" : "2026-09-19T19:48:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/071/708/2557/front_en.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "5901501089059" : {
+      "processedAt" : "2026-09-19T19:42:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/150/108/9059/front_pl.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "5901887030355" : {
+      "processedAt" : "2026-09-19T19:44:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/188/703/0355/front_en.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "5901887032199" : {
+      "processedAt" : "2026-09-19T19:48:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/188/703/2199/front_hr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "5901887037231" : {
+      "processedAt" : "2026-09-19T19:44:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/188/703/7231/front_en.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "5901887042211" : {
+      "processedAt" : "2026-09-19T19:42:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/188/704/2211/front_tr.7.400.jpg",
+      "verdict" : "hand"
+    },
+    "5901887048190" : {
+      "processedAt" : "2026-09-19T19:48:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/188/704/8190/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "5901887056225" : {
+      "processedAt" : "2026-09-19T19:41:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/188/705/6225/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "5901887946212" : {
+      "processedAt" : "2026-09-19T19:45:18Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/188/794/6212/front_en.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "5901887946243" : {
+      "processedAt" : "2026-09-19T19:44:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/188/794/6243/front_en.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "5902357004890" : {
+      "processedAt" : "2026-09-19T19:48:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/235/700/4890/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "5902539710427" : {
+      "processedAt" : "2026-09-19T19:44:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/253/971/0427/front_fr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "5902811786904" : {
+      "processedAt" : "2026-09-19T19:48:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/281/178/6904/front_pl.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "5903794199934" : {
+      "processedAt" : "2026-09-19T19:44:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/379/419/9934/front_en.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "5907377528067" : {
+      "processedAt" : "2026-09-19T19:49:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/590/737/752/8067/front_en.9.400.jpg",
+      "verdict" : "hand"
+    },
+    "5943048002788" : {
+      "processedAt" : "2026-09-19T19:45:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/594/304/800/2788/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "6132321304810" : {
+      "processedAt" : "2026-09-19T19:44:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/613/232/130/4810/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "6181100536553" : {
+      "processedAt" : "2026-09-19T19:48:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/618/110/053/6553/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "6291107225654" : {
+      "processedAt" : "2026-09-19T19:47:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/629/110/722/5654/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "6291107225661" : {
+      "processedAt" : "2026-09-19T19:46:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/629/110/722/5661/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "6422068000596" : {
+      "processedAt" : "2026-09-19T19:47:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/642/206/800/0596/front_ro.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "6931583605884" : {
+      "processedAt" : "2026-09-19T19:45:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/693/158/360/5884/front_fr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "6974998720971" : {
+      "processedAt" : "2026-09-19T19:44:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/697/499/872/0971/front_fr.6.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "7032069103432" : {
+      "processedAt" : "2026-09-19T19:43:41Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/703/206/910/3432/front_nb.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "7319861018509" : {
+      "processedAt" : "2026-09-19T19:40:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/731/986/101/8509/front_sv.14.400.jpg",
+      "verdict" : "clean"
+    },
+    "7340011429265" : {
+      "processedAt" : "2026-09-19T19:43:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/734/001/142/9265/front_en.10.400.jpg",
+      "verdict" : "hand"
+    },
+    "7340011429319" : {
+      "processedAt" : "2026-09-19T19:43:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/734/001/142/9319/front_da.17.400.jpg",
+      "verdict" : "hand"
+    },
+    "7340191125582" : {
+      "processedAt" : "2026-09-19T19:43:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/734/019/112/5582/front_nb.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7340191139626" : {
+      "processedAt" : "2026-09-19T19:43:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/734/019/113/9626/front_nb.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7350087738338" : {
+      "processedAt" : "2026-09-19T19:40:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/735/008/773/8338/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "7350104244811" : {
+      "processedAt" : "2026-09-19T19:46:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/735/010/424/4811/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "7350104244835" : {
+      "processedAt" : "2026-09-19T19:47:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/735/010/424/4835/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "7350104248130" : {
+      "processedAt" : "2026-09-19T19:48:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/735/010/424/8130/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "7350104248147" : {
+      "processedAt" : "2026-09-19T19:49:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/735/010/424/8147/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "7350104248536" : {
+      "processedAt" : "2026-09-19T19:42:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/735/010/424/8536/front_tr.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "7350104249618" : {
+      "processedAt" : "2026-09-19T19:46:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/735/010/424/9618/front_en.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "7501054500193" : {
+      "processedAt" : "2026-09-19T19:41:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/750/105/450/0193/front_es.12.400.jpg",
+      "verdict" : "hand"
+    },
+    "7501056326166" : {
+      "processedAt" : "2026-09-19T19:40:13Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/750/105/632/6166/front_es.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "7506078928565" : {
+      "processedAt" : "2026-09-19T19:41:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/750/607/892/8565/front_es.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7613269343820" : {
+      "processedAt" : "2026-09-19T19:47:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/761/326/934/3820/front_it.17.400.jpg",
+      "verdict" : "clean"
+    },
+    "7629999091795" : {
+      "processedAt" : "2026-09-19T19:44:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/762/999/909/1795/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7630028634173" : {
+      "processedAt" : "2026-09-19T19:44:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/763/002/863/4173/front_fr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "7630028634371" : {
+      "processedAt" : "2026-09-19T19:39:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/763/002/863/4371/front_it.21.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "7640105474684" : {
+      "processedAt" : "2026-09-19T19:42:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/010/547/4684/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490026" : {
+      "processedAt" : "2026-09-19T19:42:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0026/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490057" : {
+      "processedAt" : "2026-09-19T19:41:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0057/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490101" : {
+      "processedAt" : "2026-09-19T19:45:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0101/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490118" : {
+      "processedAt" : "2026-09-19T19:46:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0118/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490187" : {
+      "processedAt" : "2026-09-19T19:41:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0187/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490262" : {
+      "processedAt" : "2026-09-19T19:42:22Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0262/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490279" : {
+      "processedAt" : "2026-09-19T19:44:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0279/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490286" : {
+      "processedAt" : "2026-09-19T19:41:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0286/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490330" : {
+      "processedAt" : "2026-09-19T19:45:49Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0330/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490422" : {
+      "processedAt" : "2026-09-19T19:48:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0422/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490583" : {
+      "processedAt" : "2026-09-19T19:46:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0583/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490613" : {
+      "processedAt" : "2026-09-19T19:45:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0613/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490620" : {
+      "processedAt" : "2026-09-19T19:45:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0620/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490637" : {
+      "processedAt" : "2026-09-19T19:45:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0637/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490651" : {
+      "processedAt" : "2026-09-19T19:45:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0651/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490675" : {
+      "processedAt" : "2026-09-19T19:42:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0675/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490699" : {
+      "processedAt" : "2026-09-19T19:42:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0699/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490712" : {
+      "processedAt" : "2026-09-19T19:45:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0712/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490750" : {
+      "processedAt" : "2026-09-19T19:42:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0750/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490798" : {
+      "processedAt" : "2026-09-19T19:42:26Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0798/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183490859" : {
+      "processedAt" : "2026-09-19T19:45:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/0859/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183491009" : {
+      "processedAt" : "2026-09-19T19:45:52Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/1009/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "7640183491191" : {
+      "processedAt" : "2026-09-19T19:42:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/764/018/349/1191/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "7798130373882" : {
+      "processedAt" : "2026-09-19T19:45:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/779/813/037/3882/front_en.23.400.jpg",
+      "verdict" : "clean"
+    },
+    "7891010009250" : {
+      "processedAt" : "2026-09-19T19:41:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/789/101/000/9250/front_en.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "7896235354185" : {
+      "processedAt" : "2026-09-19T19:49:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/789/623/535/4185/front_pt.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8000137016884" : {
+      "processedAt" : "2026-09-19T19:39:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/800/013/701/6884/front_en.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "8001120595096" : {
+      "processedAt" : "2026-09-19T19:39:40Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/800/112/059/5096/front_it.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8001120704467" : {
+      "processedAt" : "2026-09-19T19:39:38Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/800/112/070/4467/front_it.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "8001120704788" : {
+      "processedAt" : "2026-09-19T19:39:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/800/112/070/4788/front_it.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8001120772794" : {
+      "processedAt" : "2026-09-19T19:39:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/800/112/077/2794/front_it.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8002410067279" : {
+      "processedAt" : "2026-09-19T19:44:57Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/800/241/006/7279/front_fr.6.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8004395000036" : {
+      "processedAt" : "2026-09-19T19:41:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/800/439/500/0036/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8015700166897" : {
+      "processedAt" : "2026-09-19T19:41:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/801/570/016/6897/front_it.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8017990167752" : {
+      "processedAt" : "2026-09-19T19:46:21Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/801/799/016/7752/front_it.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8021983810631" : {
+      "processedAt" : "2026-09-19T19:42:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/802/198/381/0631/front_it.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8029041109147" : {
+      "processedAt" : "2026-09-19T19:42:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/802/904/110/9147/front_it.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8051772485757" : {
+      "processedAt" : "2026-09-19T19:42:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/805/177/248/5757/front_it.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8053630590009" : {
+      "processedAt" : "2026-09-19T19:39:36Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/805/363/059/0009/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8053630590016" : {
+      "processedAt" : "2026-09-19T19:39:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/805/363/059/0016/front_en.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "8054615474024" : {
+      "processedAt" : "2026-09-19T19:42:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/805/461/547/4024/front_it.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8059016840195" : {
+      "processedAt" : "2026-09-19T19:39:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/805/901/684/0195/front_it.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8410412020299" : {
+      "processedAt" : "2026-09-19T19:48:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/841/041/202/0299/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8410412490351" : {
+      "processedAt" : "2026-09-19T19:44:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/841/041/249/0351/front_de.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8429420245297" : {
+      "processedAt" : "2026-09-19T19:40:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/842/942/024/5297/front_de.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8431876349610" : {
+      "processedAt" : "2026-09-19T19:43:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/843/187/634/9610/front_en.19.400.jpg",
+      "verdict" : "clean"
+    },
+    "8436025300221" : {
+      "processedAt" : "2026-09-19T19:45:30Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/843/602/530/0221/front_fr.10.400.jpg",
+      "verdict" : "hand"
+    },
+    "8436097096367" : {
+      "processedAt" : "2026-09-19T19:40:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/843/609/709/6367/front_fr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8436559713238" : {
+      "processedAt" : "2026-09-19T19:47:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/843/655/971/3238/front_es.12.400.jpg",
+      "verdict" : "hand"
+    },
+    "8480000157164" : {
+      "processedAt" : "2026-09-19T19:49:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/848/000/015/7164/front_es.15.400.jpg",
+      "verdict" : "clean"
+    },
+    "8480010184396" : {
+      "processedAt" : "2026-09-19T19:48:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/848/001/018/4396/front_es.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "8480010207170" : {
+      "processedAt" : "2026-09-19T19:49:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/848/001/020/7170/front_es.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8681410000358" : {
+      "processedAt" : "2026-09-19T19:48:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/141/000/0358/front_tr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8681511096892" : {
+      "processedAt" : "2026-09-19T19:48:47Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/151/109/6892/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8681717006800" : {
+      "processedAt" : "2026-09-19T19:45:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/171/700/6800/front_tr.6.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8681925608742" : {
+      "processedAt" : "2026-09-19T19:44:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/192/560/8742/front_tr.11.400.jpg",
+      "verdict" : "clean"
+    },
+    "8682276602496" : {
+      "processedAt" : "2026-09-19T19:49:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/227/660/2496/front_tr.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "8682276605350" : {
+      "processedAt" : "2026-09-19T19:44:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/227/660/5350/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8682397031960" : {
+      "processedAt" : "2026-09-19T19:42:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/239/703/1960/front_tr.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "8682773091250" : {
+      "processedAt" : "2026-09-19T19:42:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/277/309/1250/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8682773091960" : {
+      "processedAt" : "2026-09-19T19:42:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/277/309/1960/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8682983380427" : {
+      "processedAt" : "2026-09-19T19:48:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/298/338/0427/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8683036297181" : {
+      "processedAt" : "2026-09-19T19:44:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/303/629/7181/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8683130052129" : {
+      "processedAt" : "2026-09-19T19:42:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/313/005/2129/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8683130085066" : {
+      "processedAt" : "2026-09-19T19:46:51Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/313/008/5066/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8683130085080" : {
+      "processedAt" : "2026-09-19T19:46:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/313/008/5080/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8683130085127" : {
+      "processedAt" : "2026-09-19T19:46:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/313/008/5127/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8683130085158" : {
+      "processedAt" : "2026-09-19T19:47:03Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/313/008/5158/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8683420170045" : {
+      "processedAt" : "2026-09-19T19:44:37Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/342/017/0045/front_fr.19.400.jpg",
+      "verdict" : "hand"
+    },
+    "8683517124067" : {
+      "processedAt" : "2026-09-19T19:41:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/351/712/4067/front_tr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8683561170133" : {
+      "processedAt" : "2026-09-19T19:41:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/356/117/0133/front_en.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8683675682201" : {
+      "processedAt" : "2026-09-19T19:42:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/367/568/2201/front_tr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "8684149134127" : {
+      "processedAt" : "2026-09-19T19:40:34Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/414/913/4127/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8684225266063" : {
+      "processedAt" : "2026-09-19T19:41:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/422/526/6063/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8684225891883" : {
+      "processedAt" : "2026-09-19T19:48:43Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/422/589/1883/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8684225891937" : {
+      "processedAt" : "2026-09-19T19:42:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/422/589/1937/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8684225891951" : {
+      "processedAt" : "2026-09-19T19:42:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/422/589/1951/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8684232440340" : {
+      "processedAt" : "2026-09-19T19:44:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/423/244/0340/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8684252207343" : {
+      "processedAt" : "2026-09-19T19:41:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/425/220/7343/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8684252211814" : {
+      "processedAt" : "2026-09-19T19:47:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/425/221/1814/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8684252215560" : {
+      "processedAt" : "2026-09-19T19:41:46Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/425/221/5560/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8684576001023" : {
+      "processedAt" : "2026-09-19T19:42:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/868/457/600/1023/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8690131774097" : {
+      "processedAt" : "2026-09-19T19:40:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/013/177/4097/front_tr.7.400.jpg",
+      "verdict" : "hand"
+    },
+    "8690506473860" : {
+      "processedAt" : "2026-09-19T19:39:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/050/647/3860/front_tr.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8690506492076" : {
+      "processedAt" : "2026-09-19T19:48:29Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/050/649/2076/front_tr.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "8690506520052" : {
+      "processedAt" : "2026-09-19T19:49:00Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/050/652/0052/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8690595214177" : {
+      "processedAt" : "2026-09-19T19:40:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/059/521/4177/front_tr.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "8690637879531" : {
+      "processedAt" : "2026-09-19T19:46:31Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/063/787/9531/front_tr.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "8697420539887" : {
+      "processedAt" : "2026-09-19T19:42:35Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/742/053/9887/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8697853217857" : {
+      "processedAt" : "2026-09-19T19:42:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/785/321/7857/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8697916017424" : {
+      "processedAt" : "2026-09-19T19:44:56Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/791/601/7424/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8697916020158" : {
+      "processedAt" : "2026-09-19T19:45:11Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/791/602/0158/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8699118061205" : {
+      "processedAt" : "2026-09-19T19:49:04Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/911/806/1205/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8699211771018" : {
+      "processedAt" : "2026-09-19T19:45:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/921/177/1018/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8699490317655" : {
+      "processedAt" : "2026-09-19T19:48:28Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/949/031/7655/front_en.6.400.jpg",
+      "verdict" : "clean"
+    },
+    "8699490317662" : {
+      "processedAt" : "2026-09-19T19:48:27Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/949/031/7662/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8699512011899" : {
+      "processedAt" : "2026-09-19T19:40:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/951/201/1899/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8699943340001" : {
+      "processedAt" : "2026-09-19T19:49:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/994/334/0001/front_tr.9.400.jpg",
+      "verdict" : "clean"
+    },
+    "8699956514185" : {
+      "processedAt" : "2026-09-19T19:41:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/869/995/651/4185/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8710276400412" : {
+      "processedAt" : "2026-09-19T19:49:15Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/027/640/0412/front_nl.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8710444220828" : {
+      "processedAt" : "2026-09-19T19:43:12Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/044/422/0828/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8710447474426" : {
+      "processedAt" : "2026-09-19T19:41:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/044/747/4426/front_en.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "8710729015842" : {
+      "processedAt" : "2026-09-19T19:48:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/072/901/5842/front_nl.15.400.jpg",
+      "verdict" : "clean"
+    },
+    "8713745786383" : {
+      "processedAt" : "2026-09-19T19:47:07Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/374/578/6383/front_fr.14.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8714100597347" : {
+      "processedAt" : "2026-09-19T19:46:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/410/059/7347/front_nl.14.400.jpg",
+      "verdict" : "clean"
+    },
+    "8715342036885" : {
+      "processedAt" : "2026-09-19T19:44:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/534/203/6885/front_it.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8717591561989" : {
+      "processedAt" : "2026-09-19T19:46:53Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/759/156/1989/front_nl.13.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8717612811116" : {
+      "processedAt" : "2026-09-19T19:48:14Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/761/281/1116/front_fr.7.400.jpg",
+      "verdict" : "hand"
+    },
+    "8719134096279" : {
+      "processedAt" : "2026-09-19T19:48:02Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/913/409/6279/front_fr.4.400.jpg",
+      "verdict" : "hand"
+    },
+    "8719179784872" : {
+      "processedAt" : "2026-09-19T19:48:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/917/978/4872/front_nl.15.400.jpg",
+      "verdict" : "clean"
+    },
+    "8719238065621" : {
+      "processedAt" : "2026-09-19T19:45:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/923/806/5621/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8719324667999" : {
+      "processedAt" : "2026-09-19T19:49:05Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/932/466/7999/front_en.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8719497834952" : {
+      "processedAt" : "2026-09-19T19:45:33Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/949/783/4952/front_fr.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "8719874190008" : {
+      "processedAt" : "2026-09-19T19:45:32Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/871/987/419/0008/front_fr.9.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8720289261542" : {
+      "processedAt" : "2026-09-19T19:47:01Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/872/028/926/1542/front_en.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "8720964894164" : {
+      "processedAt" : "2026-09-19T19:44:59Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/872/096/489/4164/front_en.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "8721073626417" : {
+      "processedAt" : "2026-09-19T19:45:06Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/872/107/362/6417/front_fr.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8806133615317" : {
+      "processedAt" : "2026-09-19T19:40:48Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/613/361/5317/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8809301767566" : {
+      "processedAt" : "2026-09-19T19:44:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/930/176/7566/front_fr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8809328326098" : {
+      "processedAt" : "2026-09-19T19:44:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/932/832/6098/front_tr.3.400.jpg",
+      "verdict" : "hand"
+    },
+    "8809389032150" : {
+      "processedAt" : "2026-09-19T19:44:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/938/903/2150/front_en.7.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8809414192170" : {
+      "processedAt" : "2026-09-19T19:40:08Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/941/419/2170/front_en.11.400.jpg",
+      "verdict" : "clean"
+    },
+    "8809416470511" : {
+      "processedAt" : "2026-09-19T19:41:17Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/941/647/0511/front_en.15.400.jpg",
+      "verdict" : "clean"
+    },
+    "8809576261592" : {
+      "processedAt" : "2026-09-19T19:43:09Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/957/626/1592/front_en.3.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8809625244002" : {
+      "processedAt" : "2026-09-19T19:44:24Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/962/524/4002/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8809647110538" : {
+      "processedAt" : "2026-09-19T19:44:54Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/964/711/0538/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8809689376640" : {
+      "processedAt" : "2026-09-19T19:40:23Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/968/937/6640/front_tr.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8809783322635" : {
+      "processedAt" : "2026-09-19T19:40:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/880/978/332/2635/front_en.4.400.jpg",
+      "verdict" : "clean"
+    },
+    "8852660636875" : {
+      "processedAt" : "2026-09-19T19:43:58Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/885/266/063/6875/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "8857123331137" : {
+      "processedAt" : "2026-09-19T19:45:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/885/712/333/1137/front_fr.4.400.jpg",
+      "verdict" : "badCoverage"
+    },
+    "8859362515620" : {
+      "processedAt" : "2026-09-19T19:44:16Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/885/936/251/5620/front_en.12.400.jpg",
+      "verdict" : "clean"
+    },
+    "8901138500061" : {
+      "processedAt" : "2026-09-19T19:41:25Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/890/113/850/0061/front_ru.20.400.jpg",
+      "verdict" : "clean"
+    },
+    "8906065541378" : {
+      "processedAt" : "2026-09-19T19:41:45Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/890/606/554/1378/front_en.5.400.jpg",
+      "verdict" : "hand"
+    },
+    "8906087778462" : {
+      "processedAt" : "2026-09-19T19:43:50Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/890/608/777/8462/front_en.7.400.jpg",
+      "verdict" : "clean"
+    },
+    "8906171510039" : {
+      "processedAt" : "2026-09-19T19:43:44Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/890/617/151/0039/front_en.8.400.jpg",
+      "verdict" : "clean"
+    },
+    "8908027247007" : {
+      "processedAt" : "2026-09-19T19:40:42Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/890/802/724/7007/front_en.5.400.jpg",
+      "verdict" : "clean"
+    },
+    "9002154733118" : {
+      "processedAt" : "2026-09-19T19:39:39Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/900/215/473/3118/front_it.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "9316542149048" : {
+      "processedAt" : "2026-09-19T19:40:55Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/931/654/214/9048/front_en.3.400.jpg",
+      "verdict" : "clean"
+    },
+    "96214329" : {
+      "processedAt" : "2026-09-19T19:44:20Z",
+      "sourceURL" : "https://images.openbeautyfacts.org/images/products/000/009/621/4329/front_en.3.400.jpg",
+      "verdict" : "hand"
+    }
+  }
+}
