@@ -7,19 +7,28 @@ import SkinCareKit
 /// Risposte precostituite per (tag, pagina); registra le chiamate.
 final class FakeSearch: OBFSearching {
     private let pages: Mutex<[String: Result<OBFSearchResponse, any Error>]>
+    private let products: Mutex<[String: OBFProduct]>
     private let calls = Mutex<[String]>([])
 
-    init(_ pages: [String: Result<OBFSearchResponse, any Error>]) {
+    init(_ pages: [String: Result<OBFSearchResponse, any Error>], products: [String: OBFProduct] = [:]) {
         self.pages = Mutex(pages)
+        self.products = Mutex(products)
     }
 
     var recordedCalls: [String] { calls.withLock { $0 } }
+    /// Solo le chiamate di ricerca (senza i recuperi del credito foto).
+    var searchCalls: [String] { recordedCalls.filter { !$0.hasPrefix("product:") } }
 
     func search(categoryTag: String, page: Int) async throws -> OBFSearchResponse {
         let key = "\(categoryTag)#\(page)"
         calls.withLock { $0.append(key) }
         guard let result = pages.withLock({ $0[key] }) else { throw OBFClientError.httpStatus(404) }
         return try result.get()
+    }
+
+    func product(code: String) async throws -> OBFProduct? {
+        calls.withLock { $0.append("product:\(code)") }
+        return products.withLock { $0[code] }
     }
 }
 
@@ -97,7 +106,7 @@ struct CatalogAssemblerTests {
             options: AssemblerOptions(perCategory: 20, maxPagesPerCategory: 2), now: { now }
         )
         let result = try await assembler.build()
-        #expect(search.recordedCalls == ["cleansers#1", "cleansers#2"])
+        #expect(search.searchCalls == ["cleansers#1", "cleansers#2"])
         #expect(result.catalog.products.count == 10)
         #expect(result.reports.first?.pagesFetched == 2)
     }
@@ -110,7 +119,7 @@ struct CatalogAssemblerTests {
             options: AssemblerOptions(perCategory: 20, maxPagesPerCategory: 3), now: { now }
         )
         _ = try await assembler.build()
-        #expect(search.recordedCalls == ["cleansers#1"])
+        #expect(search.searchCalls == ["cleansers#1"])
     }
 
     @Test("the catalog carries schema 1, the build time and the license block")
@@ -137,5 +146,22 @@ struct CatalogAssemblerTests {
         await #expect(throws: OBFClientError.httpStatus(503)) {
             try await assembler.build()
         }
+    }
+
+    @Test("when the search page lacks image metadata, the photo credit is recovered from the product endpoint")
+    func creditRecoveredFromProductEndpoint() async throws {
+        let page = try syntheticPage(from: 0, count: 5, pageCount: 1) // products without `images`
+        let detailJSON = """
+        {"code":"90000","product_name":"Prodotto 0","images":{"1":{"uploader":"jean-yves"},"front_it":{"imgid":"1","rev":"3"}}}
+        """
+        let detail = try OBFDecoder.product(from: Data(detailJSON.utf8))
+        let search = FakeSearch(["cleansers#1": .success(page)], products: ["90000": detail])
+        let assembler = CatalogAssembler(search: search, categories: categories(["cleansers"]), now: { now })
+        let result = try await assembler.build()
+        let first = try #require(result.catalog.products.first { $0.id == "90000" })
+        #expect(first.image.credit.uploader == "jean-yves")
+        let others = result.catalog.products.filter { $0.id != "90000" }
+        #expect(others.allSatisfy { $0.image.credit.uploader == OBFMapper.fallbackUploader })
+        #expect(search.recordedCalls.filter { $0.hasPrefix("product:") }.count == 5)
     }
 }

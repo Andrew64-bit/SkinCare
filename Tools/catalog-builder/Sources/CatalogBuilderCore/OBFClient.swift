@@ -2,6 +2,8 @@ import Foundation
 
 public protocol OBFSearching: Sendable {
     func search(categoryTag: String, page: Int) async throws -> OBFSearchResponse
+    /// Dettaglio di un prodotto (usato per recuperare l'autore della foto quando la ricerca non lo dà).
+    func product(code: String) async throws -> OBFProduct?
 }
 
 public enum OBFClientError: Error, Equatable, Sendable {
@@ -65,5 +67,23 @@ public struct OBFClient: OBFSearching {
         guard let http = response as? HTTPURLResponse else { throw OBFClientError.notHTTP }
         guard http.statusCode == 200 else { throw OBFClientError.httpStatus(http.statusCode) }
         return try OBFDecoder.searchResponse(from: data)
+    }
+
+    /// Dettaglio prodotto (solo `images` + codice): serve a recuperare l'autore della foto quando la ricerca
+    /// risponde `images: {}`. 404 → nil; altri errori HTTP → errore.
+    public func product(code: String) async throws -> OBFProduct? {
+        try await rateLimiter.waitTurn()
+        var components = URLComponents(
+            url: baseURL.appending(path: "api/v2/product/\(code)"), resolvingAgainstBaseURL: false
+        )!
+        components.queryItems = [URLQueryItem(name: "fields", value: "images,code")]
+        var request = URLRequest(url: components.url!, timeoutInterval: 60)
+        request.setValue(userAgent, forHTTPHeaderField: "User-Agent")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        let (data, response) = try await session.data(for: request)
+        guard let http = response as? HTTPURLResponse else { throw OBFClientError.notHTTP }
+        if http.statusCode == 404 { return nil }
+        guard http.statusCode == 200 else { throw OBFClientError.httpStatus(http.statusCode) }
+        return try OBFDecoder.productResponse(from: data).product
     }
 }

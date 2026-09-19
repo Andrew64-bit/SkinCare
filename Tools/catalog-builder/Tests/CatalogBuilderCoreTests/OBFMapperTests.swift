@@ -188,4 +188,66 @@ struct OBFMapperTests {
         #expect(try quantity("30mk") == nil)
         #expect(try quantity("1,5 L") == "1,5 L")
     }
+
+    // MARK: - Round 3 (P5)
+
+    private let inci5 = "\"ingredients_text\":\"Aqua, Glycerin, Parfum, Limonene, Linalool\""
+
+    @Test("a list whose first token is a 110-character glued run is rejected (preview must start at ingredient 1)")
+    func gluedFirstTokenRejected() throws {
+        let glued = String(repeating: "Aqua Glycerin Paraffinum Liquidum ", count: 4)
+        let json = """
+        {"code":"1","product_name":"Crema","brands":"B",\(image),
+         "ingredients_text":"\(glued), Cera Microcristallina, Panthenol, Parfum, Limonene, Linalool"}
+        """
+        #expect(try mapped(json) == nil)
+    }
+
+    @Test("a list with only one known ingredient among the first four is rejected")
+    func oneKnownAmongFourRejected() throws {
+        let json = """
+        {"code":"1","product_name":"Crema","brands":"B",\(image),
+         "ingredients_text":"Aqua, Zorbium Extractum, Frobnicate Dust, Quux Powder, Glycerin, Parfum"}
+        """
+        #expect(try mapped(json) == nil)
+    }
+
+    @Test("brands in all caps or all lowercase are capitalised per word, hyphens included")
+    func brandCaseNormalised() throws {
+        func brand(_ raw: String) throws -> String? {
+            try mapped("{\"code\":\"1\",\"product_name\":\"Crema\",\"brands\":\"\(raw)\",\(image),\(inci5)}")?.brand
+        }
+        #expect(try brand("NIVEA") == "Nivea")
+        #expect(try brand("neutrogena") == "Neutrogena")
+        #expect(try brand("LA ROCHE-POSAY") == "La Roche-Posay")
+        #expect(try brand("La-roche-posay") == "La-Roche-Posay")
+        #expect(try brand("CeraVe") == "CeraVe")
+        #expect(try brand("L'Oréal Paris") == "L'Oréal Paris")
+    }
+
+    @Test("quantity units are normalised: gr → g, mL/ML → ml, l → L")
+    func quantityUnitsNormalised() throws {
+        func quantity(_ raw: String) throws -> String? {
+            let json = "{\"code\":\"1\",\"product_name\":\"Crema\",\"brands\":\"B\",\(image),\(inci5),\"quantity\":\"\(raw)\"}"
+            return try mapped(json)?.quantity
+        }
+        #expect(try quantity("28 gr") == "28 g")
+        #expect(try quantity("200 mL") == "200 ml")
+        #expect(try quantity("1 l") == "1 L")
+        #expect(try quantity("4,7 ml") == "4,7 ml")
+    }
+
+    @Test("products whose name reveals another kind of product are excluded from the category")
+    func categoryExclusions() throws {
+        let cleansers = Categories.v1[1]
+        let antiAging = Categories.v1[4]
+        func name(_ raw: String, in category: CategorySpec) throws -> Product? {
+            let json = "{\"code\":\"1\",\"product_name\":\"\(raw)\",\"brands\":\"B\",\(image),\(inci5)}"
+            return OBFMapper.map(try OBFDecoder.product(from: Data(json.utf8)), category: category)
+        }
+        #expect(try name("Dissolvant express acétone", in: cleansers) == nil)
+        #expect(try name("Solvente per unghie", in: cleansers) == nil)
+        #expect(try name("Savon surgras", in: antiAging) == nil)
+        #expect(try name("Gel nettoyant purifiant", in: cleansers) != nil)
+    }
 }

@@ -20,6 +20,8 @@ public struct CategoryReport: Sendable, Equatable {
 public struct AssemblyResult: Sendable {
     public var catalog: Catalog
     public var reports: [CategoryReport]
+    /// Crediti foto recuperati dall'endpoint prodotto (la ricerca a volte risponde `images: {}`).
+    public var creditsRecovered = 0
 }
 
 /// Costruisce il catalogo: per ogni categoria (in ordine) scarica pagine ordinate per popolarità finché
@@ -78,12 +80,23 @@ public struct CatalogAssembler: Sendable {
             reports.append(report)
         }
 
+        // Autore della foto: dove la ricerca non lo dà, una richiesta di dettaglio per prodotto (nel rate
+        // limit). Un errore qui non fa fallire la costruzione: resta il credito generico ai contributori.
+        var creditsRecovered = 0
+        for index in products.indices where products[index].image.credit.uploader == OBFMapper.fallbackUploader {
+            if let detail = try? await search.product(code: products[index].id),
+               let uploader = detail.frontImageUploader {
+                products[index].image.credit.uploader = uploader
+                creditsRecovered += 1
+            }
+        }
+
         let catalog = Catalog(
             schemaVersion: Catalog.currentSchemaVersion,
             generatedAt: now(),
             source: Self.sourceInfo,
             products: products
         )
-        return AssemblyResult(catalog: catalog, reports: reports)
+        return AssemblyResult(catalog: catalog, reports: reports, creditsRecovered: creditsRecovered)
     }
 }

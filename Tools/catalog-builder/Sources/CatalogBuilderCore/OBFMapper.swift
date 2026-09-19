@@ -17,7 +17,32 @@ public enum OBFMapper {
         if let ingredientsN, ingredientsN < minimumIngredientTokens { return false }
         let tokens = DescriptionComposer.ingredientTokens(from: text, max: 12)
         guard tokens.count >= minimumIngredientTokens else { return false }
-        return tokens.prefix(4).contains { INCIVocabulary.isKnown($0) }
+        // Integrità dei primi 4: se un token grezzo è stato scartato dai filtri, l'anteprima non partirebbe
+        // dal primo ingrediente della lista (token incollati senza virgole, rumore OCR).
+        let raw = DescriptionComposer.rawIngredientTokens(from: text, max: 4)
+        guard Array(tokens.prefix(raw.count)) == raw else { return false }
+        return tokens.prefix(4).filter { INCIVocabulary.isKnown($0) }.count >= 2
+    }
+
+    /// Nome che rivela un prodotto di altro tipo (es. solvente per unghie fra i detergenti).
+    static func belongsElsewhere(_ name: String, category: CategorySpec) -> Bool {
+        let folded = name.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: nil)
+        return category.excludedNameKeywords.contains { folded.contains($0) }
+    }
+
+    /// «NIVEA» → «Nivea», «neutrogena» → «Neutrogena», «LA ROCHE-POSAY» → «La Roche-Posay»,
+    /// «La-roche-posay» → «La-Roche-Posay»; le grafie miste volute («CeraVe», «L'Oréal») restano.
+    static func normalizedBrand(_ raw: String) -> String {
+        var text = raw.trimmingCharacters(in: .whitespaces)
+        if text.range(of: #"\p{Ll}"#, options: .regularExpression) == nil {
+            text = text.lowercased()
+        }
+        return text.split(separator: " ", omittingEmptySubsequences: false).map { word in
+            word.split(separator: "-", omittingEmptySubsequences: false).map { part -> String in
+                guard let first = part.first, first.isLowercase else { return String(part) }
+                return first.uppercased() + part.dropFirst()
+            }.joined(separator: "-")
+        }.joined(separator: " ")
     }
 
     /// Nome con almeno 3 caratteri e una lettera latina, e diverso dal barcode.
@@ -36,19 +61,35 @@ public enum OBFMapper {
         guard let match = quantityPattern.firstMatch(in: raw, range: range),
               let number = Range(match.range(at: 1), in: raw),
               let unit = Range(match.range(at: 2), in: raw) else { return nil }
-        return "\(raw[number]) \(raw[unit])"
+        return "\(raw[number]) \(normalizedUnit(String(raw[unit])))"
+    }
+
+    private static func normalizedUnit(_ unit: String) -> String {
+        let folded = unit.lowercased().replacingOccurrences(of: ".", with: "").replacingOccurrences(of: " ", with: "")
+        switch folded {
+        case "gr", "g": return "g"
+        case "ml": return "ml"
+        case "cl": return "cl"
+        case "l": return "L"
+        case "kg": return "kg"
+        case "oz": return "oz"
+        case "floz": return "fl oz"
+        default: return unit
+        }
     }
 
     public static func map(
         _ dto: OBFProduct, category: CategorySpec, baseURL: URL = OBFClient.defaultBaseURL
     ) -> Product? {
         guard let name = dto.bestName, isPlausibleName(name, code: dto.code),
-              let brand = dto.firstBrand,
+              !belongsElsewhere(name, category: category),
+              let rawBrand = dto.firstBrand,
               let url400 = dto.imageFrontURL,
               let ingredients = dto.bestIngredientsText,
               isPlausibleIngredientList(ingredients, ingredientsN: dto.ingredientsN) else {
             return nil
         }
+        let brand = normalizedBrand(rawBrand)
         let quantity = sanitizedQuantity(dto.quantity)
         let composed = DescriptionComposer.compose(
             genericName: dto.italianGenericName,

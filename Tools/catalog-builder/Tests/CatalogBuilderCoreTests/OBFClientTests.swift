@@ -102,4 +102,21 @@ struct OBFClientTests {
             try await client.search(categoryTag: "facial-creams", page: 1)
         }
     }
+
+    @Test("the product endpoint is fetched with the images field and decoded")
+    func productEndpoint() async throws {
+        let base = uniqueBase()
+        let body = try fixture("product_8001120704788")
+        StubURLProtocol.register(prefix: base.absoluteString + "/api/v2/product/8001120704788") { _ in
+            StubReply(status: 200, body: body)
+        }
+        let client = OBFClient(
+            userAgent: Self.userAgent, rateLimiter: RateLimiter(minimumInterval: 0),
+            session: StubURLProtocol.makeSession(), baseURL: base
+        )
+        let product = try await client.product(code: "8001120704788")
+        #expect(product?.frontImageUploader == "gla01")
+        let request = try #require(StubURLProtocol.requests(prefix: base.absoluteString + "/api/v2/product/8001120704788").first)
+        #expect(request.url?.query()?.contains("fields=images") == true)
+    }
 }

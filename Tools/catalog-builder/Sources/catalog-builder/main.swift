@@ -51,6 +51,7 @@ enum CLI {
                 print("\(report.tag): pagine \(report.pagesFetched), visti \(report.productsSeen), "
                     + "selezionati \(report.productsSelected)")
             }
+            print("crediti foto recuperati dall'endpoint prodotto: \(result.creditsRecovered)")
             let data = try CatalogCodec.encode(result.catalog)
             let url = URL(fileURLWithPath: out)
             try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)

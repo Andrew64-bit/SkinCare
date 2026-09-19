@@ -161,4 +161,22 @@ struct DescriptionComposerTests {
         )
         #expect(result.ingredientsPreview == "Aqua, Linalool, Citral")
     }
+
+    @Test("multi-part and multi-word synonyms are reduced when every part is a known ingredient name")
+    func multiPartSynonyms() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "aqua/water/eau, Butyrospermum Parkii Butter/Shea Butter, Aqua/ water, Caprylic/Capric Triglyceride"
+        )
+        #expect(result.ingredientsPreview == "aqua, Butyrospermum Parkii Butter, Aqua, Caprylic/Capric Triglyceride")
+    }
+
+    @Test("doubled periods inside a token are collapsed")
+    func doubledPeriods() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Aqua, Alcohol Denat.., Parfum, Limonene"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Alcohol Denat., Parfum, Limonene")
+    }
 }
