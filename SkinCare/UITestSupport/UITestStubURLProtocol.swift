@@ -43,6 +43,15 @@ nonisolated final class UITestStubURLProtocol: URLProtocol {
         client.urlProtocolDidFinishLoading(self)
     }
 
+    static func stableHash(_ text: String) -> UInt64 {
+        var hash: UInt64 = 14_695_981_039_346_656_037
+        for byte in text.utf8 {
+            hash ^= UInt64(byte)
+            hash = hash &* 1_099_511_628_211
+        }
+        return hash
+    }
+
     static func remoteCatalogData() -> Data? {
         guard var catalog = try? BundledCatalog.load() else { return nil }
         catalog.generatedAt = remoteGeneratedAt
@@ -52,7 +61,8 @@ nonisolated final class UITestStubURLProtocol: URLProtocol {
     /// Quadrato colorato (colore derivato dall'URL) con un riquadro chiaro al centro: deterministico,
     /// leggero e senza testo (un testo chiaro su pastello farebbe scattare l'audit di contrasto).
     static func imageData(for url: URL) -> Data {
-        let hue = CGFloat(abs(url.absoluteString.hashValue % 360)) / 360
+        // Hash stabile (FNV-1a): `hashValue` ha un seme casuale per processo e cambierebbe la tinta a ogni avvio.
+        let hue = CGFloat(stableHash(url.absoluteString) % 360) / 360
         let size = CGSize(width: 200, height: 200)
         return UIGraphicsImageRenderer(size: size).pngData { context in
             UIColor(hue: hue, saturation: 0.35, brightness: 0.92, alpha: 1).setFill()

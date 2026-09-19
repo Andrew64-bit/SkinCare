@@ -49,3 +49,28 @@ Catture nostre: `rounds/round-2/ours-{light,dark,light-axl}.png`. Mappe cieche: 
 P2 A=ours B=bar · P4 A=ours B=bar. Critici P1/P2/P4 e P5 (round 2) lanciati a contesto fresco.
 
 ESITO P3: VINTO — round 1, alla cieca (dark + AX-L), nessuna modifica necessaria.
+
+Verdetti round 2:
+
+| Pezzo | Mappa | Sceglie | Esito | Gap più grande |
+|---|---|---|---|---|
+| P1 riga | A=bar B=ours | A | perso | descrizione = paragrafo nello stesso grigio della marca, righe 126–162 pt; chiesto `lineLimit(2)` + `.secondary` (entrambi vietati dall'audit) → tradotto in gerarchia: marca in colore pieno, descrizione in due righe brevi attenuate senza troncamenti |
+| P2 struttura | A=ours B=bar | B | perso | pannello-scrim dietro occhiello e titolo («adesivo sulla foto») → testo direttamente su gradiente a tutta larghezza, in basso a sinistra, 16 pt |
+| P4 immagini | A=ours B=bar | B | perso | tessera senza confine (foto bianca si dissolve nella card) → fondo `tertiarySystemFill` + filetto 0,5 pt `separator` |
+| P5 dati | — | — | FAIL | 8/10 coerenti; 19/120 anteprime con token incollati/OCR, 18 crediti generici (`images: {}` nella ricerca), 4 sinonimi, 5 categorie implausibili, 7 marche non normalizzate |
+
+Builder round 2 (P1+P2+P4, un agente, commit 57e65c8): hero senza pannello, gradiente `.clear → .black 0.75`
+da y 0 (la base y 0,5 / 0,6 chiesta dal critico falliva il contrasto dell'occhiello: misurato 2,9:1, poi
+5,2:1 dopo l'estensione); tessere `tertiarySystemFill` + `strokeBorder(separator, 0.5)`; riga: titolo e
+marca `Color(.label)` (marca `.subheadline.medium`), descrizione in 2 righe footnote attenuate («Crema viso,
+400 ml.» + «Ingredienti principali: …»), nessun lineLimit. Suite UI 8/8. Altezze riga invariate
+(163/127/127 pt): senza troncamento non c'è margine.
+Builder P5 round 2 → 3 (commit c7d80b5 + 8ddb15c): integrità dei primi 4 token, ≥ 2 ingredienti noti fra i
+primi 4, sinonimi a più parti, marche e unità normalizzate, esclusioni per categoria (solventi unghie,
+saponi), autore della foto dall'endpoint prodotto (19 recuperati: crediti generici 0/120). 61 test builder,
+41 Kit, QUALITY=PASS.
+
+## Round 3 — 2026-09-19 (commit 57e65c8) — ultimo round (cap)
+
+Cattura nostra: `rounds/round-3/ours-light.png`. Mappe cieche: P1 A=bar B=ours · P2 A=ours B=bar ·
+P4 A=ours B=bar. Critici P1/P2/P4 e P5 (round 3) lanciati a contesto fresco.
