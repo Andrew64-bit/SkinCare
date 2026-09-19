@@ -38,8 +38,11 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
 
 VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, note in questa sezione)
 
+- 2026-09-19: `./scripts/check_done.sh` →
+  `DONE=PASS · kit 42 test · builder 66 test · snapshot 120 prodotti · UI 8/10 passati, 0 falliti, 2 saltati · gauntlet vinti 2/5 · remoto n/d · 2026-09-19T15:29:05Z`
+
 ## In corso
-- `./scripts/check_done.sh` → DONE=PASS, poi step 7 (repo pubblico, Pages, workflow).
+- Step 7: repo pubblico `Andrew64-bit/SkinCare`, Pages su `/docs`, `REQUIRE_REMOTE=1 ./scripts/check_done.sh`.
 
 ## Da fare
 - Step 7: repo pubblico `Andrew64-bit/SkinCare`, Pages su `/docs`, verifica `REQUIRE_REMOTE=1`.
