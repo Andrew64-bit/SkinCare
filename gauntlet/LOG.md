@@ -12,7 +12,7 @@ Catture nostre: `rounds/round-1/ours-{light,dark,light-axl,dark-axl}.png` (rete 
 |---|---|---|---|---|
 | P1 riga | A=bar B=ours | A | **perso** | Miniature aspect-fit, non ritagliate, larghezza variabile (46–51 pt), sfondi fotografici che invadono la riga → un unico riquadro fisso 72×72, `scaledToFill`, `RoundedRectangle(12, continuous)`, sfondo `secondarySystemFill`, allineato al titolo |
 | P2 struttura | A=bar B=ours | A | **perso** | La prima schermata è titolo grande + card di attribuzione «da piè di pagina» e poi una sezione indistinta → spostare l'attribuzione (scheda «i» / fine lista) e aprire con una card «in evidenza» a tutta larghezza (~200 pt, foto con gradiente, titolo in overlay) sotto il titolo |
-| P3 scuro + AX-L | A=ours B=bar | A | **VINTO** | (gap attribuito al bar: il testo dell'hero senza sfondo garantito si lava sulla neve ad AX-L; il pulsante flottante copre i titoli) |
+| P3 scuro (standard) + AX-L (chiaro) | A=ours B=bar | A | **VINTO** | (gap attribuito al bar: il testo dell'hero senza sfondo garantito si lava sulla neve ad AX-L; il pulsante flottante copre i titoli) |
 | P4 immagini | A=ours B=bar | B | **perso** | Stesso gap di P1: riquadro 64×64 fisso, `scaledToFill` + clip, `secondarySystemFill`, raggio 12, 12 pt dal testo |
 | P5 dati | — | — | in corso | critico dati su 10 prodotti campionati + scansione sistematica |
 
@@ -94,7 +94,7 @@ davvero mostrata — rilevante per CC BY-SA), primi 4 ingredienti solo in alfabe
 
 ESITO P1: CAP — altezze riga variabili per l'anteprima ingredienti a capo; lineLimit vietato dall'audit.
 ESITO P2: VINTO — round 3, alla cieca (struttura: titolo, hero a margini, sezioni).
-ESITO P3: VINTO — round 1, alla cieca (modalità scura e Dynamic Type AX-L).
+ESITO P3: VINTO — round 1, alla cieca (modalità scura a taglia standard + Dynamic Type AX-L in chiaro; la coppia scura AX-L esiste ma non è stata giudicata).
 ESITO P4: CAP — miniature quadrate 72 pt; prossimo passo riquadro 4:5 centrato.
 ESITO P5: CAP — 16/120 anteprime con rumore OCR; crediti foto corretti post-cap.
 

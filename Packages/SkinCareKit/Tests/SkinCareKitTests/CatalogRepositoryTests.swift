@@ -152,4 +152,17 @@ struct CatalogRepositoryTests {
         _ = await repo.refreshIfNeeded()
         #expect(remote.receivedETags == ["\"e7\""])
     }
+
+    @Test("refreshIfNeeded called before load waits for the stored state instead of refreshing blindly")
+    func refreshWaitsForLoad() async throws {
+        let (store, dir) = makeStore()
+        defer { try? FileManager.default.removeItem(at: dir) }
+        try await store.save(StoredCatalog(catalog: newer(by: 1), etag: nil, lastCheckedAt: now.addingTimeInterval(-3600)))
+        let remote = FakeRemote(.success(.notModified))
+        let repo = makeRepository(store: store, remote: remote)
+        let outcome = await repo.refreshIfNeeded() // nessun load() esplicito prima
+        #expect(outcome == .skipped(.checkedRecently))
+        #expect(remote.callCount == 0)
+        #expect(repo.catalog == newer(by: 1))
+    }
 }

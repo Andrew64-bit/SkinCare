@@ -61,7 +61,7 @@ struct AttributionView: View {
     private func licenseRow(_ title: String, _ detail: String) -> some View {
         VStack(alignment: .leading, spacing: 2) {
             Text(title).font(.subheadline.weight(.semibold))
-            Text(detail).font(.footnote).foregroundStyle(.secondary)
+            Text(detail).font(.footnote).foregroundStyle(ProductRow.mutedText)
         }
     }
 }

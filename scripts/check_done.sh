@@ -3,6 +3,8 @@
 # Stampa DONE=PASS solo se TUTTE le verifiche passano nello stesso run. Scrive solo in build/check.
 # Nessuna pipe sulle righe che decidono l'esito (lezione: `| tail` maschera l'exit code).
 # REQUIRE_REMOTE=1 rende bloccante anche il controllo del catalogo remoto (dopo la pubblicazione).
+# Niente `-e`: ogni verifica è dentro un if/else che aggiorna `status`, così il run arriva in fondo e
+# riporta TUTTI i fallimenti in una volta; l'esito finale dipende solo da `status`.
 set -uo pipefail
 cd "$(dirname "$0")/.."
 OUT="build/check"

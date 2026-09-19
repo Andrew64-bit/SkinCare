@@ -20,6 +20,7 @@ public final class CatalogRepository {
     private let refreshInterval: TimeInterval
     private let now: @Sendable () -> Date
     private var etag: String?
+    private var loadTask: Task<Void, Never>?
 
     public init(
         bundled: Catalog,
@@ -37,8 +38,19 @@ public final class CatalogRepository {
     }
 
     /// Pubblica il più recente fra lo snapshot incluso e il catalogo salvato (un aggiornamento dell'app
-    /// può portare uno snapshot più nuovo di quello scaricato in precedenza).
+    /// può portare uno snapshot più nuovo di quello scaricato in precedenza). Idempotente: la lettura
+    /// dello store avviene una sola volta e chi chiama `refreshIfNeeded` prima di `load` la attende.
     public func load() async {
+        if let loadTask {
+            await loadTask.value
+            return
+        }
+        let task = Task { await self.readStore() }
+        loadTask = task
+        await task.value
+    }
+
+    private func readStore() async {
         if let stored = await store.load(), stored.catalog.generatedAt >= bundled.generatedAt {
             catalog = stored.catalog
             etag = stored.etag
@@ -52,6 +64,7 @@ public final class CatalogRepository {
 
     public func refreshIfNeeded() async -> RefreshOutcome {
         guard remote != nil else { return .skipped(.noRemote) }
+        await load()
         if let lastCheckedAt, now().timeIntervalSince(lastCheckedAt) < refreshInterval {
             return .skipped(.checkedRecently)
         }
@@ -60,6 +73,7 @@ public final class CatalogRepository {
 
     public func refresh() async -> RefreshOutcome {
         guard let remote else { return .skipped(.noRemote) }
+        await load()
         guard !isRefreshing else { return .skipped(.alreadyRefreshing) }
         isRefreshing = true
         defer { isRefreshing = false }

@@ -32,18 +32,26 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
   builder: plausibilità INCI, tokenizer esteso, quantità/marche normalizzate, esclusioni per categoria,
   credito foto dall'endpoint prodotto e dalla lingua dell'URL (crediti generici 0/120).
 
+- 2026-09-19: step 6 — verificatore indipendente a contesto fresco: PASS, 0 difetti bloccanti, 8 note;
+  applicate: corsa all'avvio (`refreshIfNeeded` ora attende `load()`, test nel Kit), colore della scheda
+  licenze, dicitura P3 nel registro, commento sul `set -uo` di `check_done.sh`.
+
+VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, note in questa sezione)
+
 ## In corso
-- Step 6: verificatore a contesto fresco → `check_done.sh` → DONE=PASS.
+- `./scripts/check_done.sh` → DONE=PASS, poi step 7 (repo pubblico, Pages, workflow).
 
 ## Da fare
-- Step 2: `catalog-builder` + generazione `catalog.json` (≥ 60 prodotti).
-- Step 3: app (project.yml, viste, ImageLoader, attribuzione, stub rete DEBUG).
-- Step 4: test UI + `scripts/check_done.sh` (ogni check visto fallire).
-- Step 5: gauntlet P1–P5 (cap 3 round ciascuno) con catture del bar in `gauntlet/reference/`.
-- Step 6: verificatore a contesto fresco → `DONE=PASS`.
-- Step 7: repo pubblico `Andrew64-bit/SkinCare`, Pages, Action settimanale, URL nell'app.
+- Step 7: repo pubblico `Andrew64-bit/SkinCare`, Pages su `/docs`, verifica `REQUIRE_REMOTE=1`.
+- Dopo: gap residui del gauntlet (miniature 4:5 centrate; validazione dizionario INCI completo, es. CosIng;
+  ritmo delle righe), schermata dettaglio (App Store 4.2), privacy policy pubblica, mailbox di progetto.
 
 ## Decisioni prese
+- «Trattamento viso anti-età» nelle descrizioni è il nome della categoria tassonomica OBF
+  (`anti-aging-face-care-products`), non un claim dell'app; le descrizioni restano composte solo da campi
+  dichiarati (categoria, marca, formato, ingredienti).
+- Il recupero dell'autore della foto dall'endpoint prodotto costa fino a una richiesta per prodotto
+  (~6,5 s ciascuna, entro i limiti OBF): accettato nel job settimanale, da monitorare.
 - Audit di accessibilità: colori espliciti (`Color(.label)` per intestazioni, `label` al 70 % per testi
   attenuati: `secondaryLabel` si ferma a 3,5:1), nessun `lineLimit` (testo tagliato), niente `Label`
   con titolo nascosto in toolbar, niente `ProgressView` nella miniatura, attribuzione come riga e non
