@@ -8,8 +8,12 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
   repo inizializzato su `feat/product-list`, fixture OBF reali salvate in
   `Tools/catalog-builder/Tests/CatalogBuilderTests/Fixtures/`.
 
+- 2026-09-19: step 1 — `SkinCareKit` in TDD: modelli, `CatalogCodec` (validazione, dedup, soglia),
+  `CatalogStore` (atomico, escluso da backup, corrotto → cancellato), `RemoteCatalogSource` (ETag/304),
+  `CatalogRepository` (bundle vs store, refresh giornaliero tutto-o-niente). 31 test verdi, lint pulito.
+
 ## In corso
-- Step 1: `SkinCareKit` in TDD (modelli, decode/validazione, store, remote source, repository).
+- Step 2: `Tools/catalog-builder` (client OBF, DTO, mapper, composer, rate limiter) + `CatalogQuality`.
 
 ## Da fare
 - Step 2: `catalog-builder` + generazione `catalog.json` (≥ 60 prodotti).
