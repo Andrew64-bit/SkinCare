@@ -47,11 +47,22 @@ VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, n
   `REQUIRE_REMOTE=1 ./scripts/check_done.sh` →
   `DONE=PASS · kit 42 test · builder 66 test · snapshot 120 prodotti · UI 8/10 passati, 0 falliti, 2 saltati · gauntlet vinti 2/5 · remoto ok · 2026-09-19T15:34:48Z`
 
+- 2026-09-19: **v0.2 — ricerca** (piano approvato): `ProductSearch` nel Kit (10 test), barra `.searchable`
+  con filtro locale (nome, marca, categoria, barcode; senza maiuscole/accenti; AND fra parole), stato vuoto
+  utile, card in evidenza nascosta in ricerca, attribuzione sempre presente; 3 test UI nuovi; catalogo a
+  fino a 100 prodotti per categoria (**484**, deduplica varianti, 120 crediti foto recuperati, 15 min di
+  build); gauntlet P6: round 1 annullato (bar in stato vuoto, rilevato dal verificatore), round 2 perso
+  contro la ricerca di Contatti → CAP con gap residuo (riga compatta con corrispondenza evidenziata).
+  Verificatore v0.2: FAIL solo per il registro P6, corretto (round annullato, round 2 rifatto); il codice era
+  già PASS su tutti i punti; nessun secondo passaggio del verificatore per il cap di turni.
+  `REQUIRE_REMOTE=1 ./scripts/check_done.sh` →
+  `DONE=PASS · kit 52 test · builder 67 test · snapshot 484 prodotti · UI 11/14 passati, 0 falliti, 3 saltati · gauntlet vinti 2/6 · remoto ok · 2026-09-19T18:27:43Z`
+
 ## In corso
-- Nulla: v0.1 consegnata.
+- Nulla: v0.2 consegnata e pushata.
 
 ## Da fare
-- Prossimi passi: gap residui del gauntlet (miniature 4:5 centrate; validazione dizionario INCI completo, es. CosIng;
+- Prossimi passi: riga compatta in ricerca con corrispondenza in grassetto (gap P6); gap residui del gauntlet (miniature 4:5 centrate; validazione dizionario INCI completo, es. CosIng;
   ritmo delle righe), schermata dettaglio (App Store 4.2), privacy policy pubblica, mailbox di progetto.
 
 ## Decisioni prese
