@@ -115,4 +115,12 @@ formato/mercato) → deduplica per marca+nome+formato aggiunta al builder (test)
 **Round 2.** Bar = ricerca dell'app **Contatti** di sistema (stesso simulatore, contatti di esempio
 precaricati): coppia risultati («ha» → Anna Haro, Hank M. Zakroff · nostra «nivea») e coppia stati vuoti
 («zzzzqqqq» in entrambe). `rounds/P6/round-2/` e `rounds/P6-empty/round-2/`, mappe cieche A=ours B=bar in
-entrambe. Prompt del critico senza premesse sul contenuto delle catture. Verdetto: in corso.
+entrambe. Prompt del critico senza premesse sul contenuto delle catture. Verdetto: **B (bar)** → perso.
+Motivo: campo agganciato sopra la tastiera, righe di una sola riga sotto un'intestazione «matches», stato
+vuoto leggero e centrato; da noi campo in alto, righe di quattro righe senza evidenza della corrispondenza,
+card «nessun risultato» pesante più la riga di licenza (che però resta: obbligo ODbL/CC BY-SA in ogni stato).
+Gap residuo (prossimo passo): durante la ricerca usare una riga compatta — titolo con la parte
+corrispondente in grassetto (`AttributedString`), una riga «marca · formato», senza ingredienti — due righe
+per risultato invece di quattro, senza troncamenti (regole audit).
+
+ESITO P6: CAP — round 1 annullato (bar in stato vuoto), round 2 perso contro la ricerca di Contatti; gap residuo: riga compatta con corrispondenza evidenziata.
