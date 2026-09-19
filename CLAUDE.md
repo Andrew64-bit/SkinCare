@@ -47,3 +47,8 @@ di questo repo. Il piano approvato e la definition of done sono in
   mio edit è saltato perché il file era cambiato sotto. Regola: prima di toccare il checkout dopo il
   ritorno di un builder, fermarlo esplicitamente (`TaskStop`) e verificare `pgrep -f xcodebuild`; nei
   prompt dei builder vietare i comandi in background.
+- 2026-09-19 (commit su run rosso): il commit era condizionato a `grep -q "passed after" log`, ma quella
+  stringa la stampa OGNI singolo test verde, quindi la condizione era vera anche con un test fallito e ho
+  committato un run rosso. Regola: l'esito di un comando di verifica si legge SOLO dal suo exit code salvato
+  in una variabile (`swift test …; TEST=$?`), mai da un grep sul log; il log serve solo a mostrare i dettagli.
+

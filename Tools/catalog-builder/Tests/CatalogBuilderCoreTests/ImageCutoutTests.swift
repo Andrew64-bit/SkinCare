@@ -34,12 +34,17 @@ struct ImageCutoutTests {
 
     /// Immagine 300×200 con un rettangolo rosso 100×60 in (50,70) e maschera che lo copre esattamente.
     private func syntheticImageAndMask() -> (CIImage, CIImage) {
+        // Colori con spazio sRGB esplicito: `CIColor(red:green:blue:)` è Generic RGB e il suo rosso puro
+        // convertito in sRGB ha verde ≈ 0,15 (il test lo aveva scambiato per un difetto della composizione).
+        let sRGB = CGColorSpace(name: CGColorSpace.sRGB)!
+        func color(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> CIImage {
+            CIImage(color: CIColor(red: red, green: green, blue: blue, alpha: 1, colorSpace: sRGB)!)
+        }
         let frame = CGRect(x: 0, y: 0, width: 300, height: 200)
         let rect = CGRect(x: 50, y: 70, width: 100, height: 60)
-        let image = CIImage(color: CIColor(red: 0.2, green: 0.4, blue: 0.9)).cropped(to: frame)
-        let subject = CIImage(color: CIColor(red: 1, green: 0, blue: 0)).cropped(to: rect)
-        let mask = CIImage(color: CIColor(red: 1, green: 1, blue: 1)).cropped(to: rect)
-            .composited(over: CIImage(color: CIColor(red: 0, green: 0, blue: 0)).cropped(to: frame))
+        let image = color(0.2, 0.4, 0.9).cropped(to: frame)
+        let subject = color(1, 0, 0).cropped(to: rect)
+        let mask = color(1, 1, 1).cropped(to: rect).composited(over: color(0, 0, 0).cropped(to: frame))
         return (subject.composited(over: image), mask)
     }
 
@@ -57,9 +62,13 @@ struct ImageCutoutTests {
         #expect(alpha(399, 399) == 0)
         #expect(alpha(200, 200) == 1)                 // centro: soggetto opaco
         #expect(alpha(200, 40) == 0)                  // sopra il soggetto (margine + bordo): trasparente
-        let red = try #require(bitmap.colorAt(x: 200, y: 200)?.usingColorSpace(.sRGB))
-        #expect(red.redComponent > 0.9, "\(red)")
-        #expect(red.greenComponent < 0.1, "\(red)")
+        // Byte grezzi: `colorAt` riporta in Generic RGB e la conversione a sRGB sposta il rosso puro
+        // (verde ≈ 0,15) — un artefatto della lettura, non della composizione.
+        let data = try #require(bitmap.bitmapData)
+        let offset = 200 * bitmap.bytesPerRow + 200 * (bitmap.bitsPerPixel / 8)
+        #expect(data[offset] >= 230, "rosso")
+        #expect(data[offset + 1] <= 25, "verde")
+        #expect(data[offset + 2] <= 25, "blu")
     }
 
     // MARK: - Integrazione Vision su una foto reale (fixture CC BY-SA, vedi Fixtures/README.md)
