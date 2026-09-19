@@ -107,7 +107,11 @@ Impostazioni di sistema** (stesso simulatore, query «Wi» digitata, risultati r
 (`testCaptureSearchScreens`, `TEST_RUNNER_SKINCARE_BAR_CAPTURE=1`), perché il pannello del simulatore di
 Claude richiede `sudo xcode-select`. Nostra: rete reale, query «nivea».
 
-Round 1: `rounds/P6/round-1/` (ours-search, bar-search), mappa cieca A=ours B=bar. Critico in corso.
+Round 1: `rounds/P6/round-1/` (ours-search, bar-search), mappa cieca A=ours B=bar. Critico: **A** → **VINTO**
+(«risultati raggruppati, con intestazione di sezione, foto e dettagli distintivi sopra la tastiera; il bar
+mostra solo uno stato vuoto per due lettere»).
 Osservazione dalla nostra cattura: tre «Nivea Creme» quasi identiche (barcode diversi per formato/mercato)
 → deduplica per marca+nome+formato aggiunta al builder (test), attiva dal catalogo rigenerato.
+
+ESITO P6: VINTO — round 1, alla cieca (ricerca: campo, risultati raggruppati, stato vuoto).
 
