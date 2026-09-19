@@ -164,4 +164,27 @@ struct CatalogAssemblerTests {
         #expect(others.allSatisfy { $0.image.credit.uploader == OBFMapper.fallbackUploader })
         #expect(search.recordedCalls.filter { $0.hasPrefix("product:") }.count == 5)
     }
+
+    @Test("products with the same brand, name and quantity are collapsed: the first (most scanned) stays")
+    func duplicateVariantsCollapsed() async throws {
+        let products = (0..<3).map { index in
+            """
+            {"code":"7000\(index)","product_name":"Nivea Creme","brands":"Nivea","quantity":"150 ml",
+             "ingredients_text":"Aqua, Paraffinum Liquidum, Cera Microcristallina, Glycerin, Parfum",
+             "image_front_url":"https://images.openbeautyfacts.org/p/\(index)/front.400.jpg","last_modified_t":1780000000}
+            """
+        } + ["""
+            {"code":"70009","product_name":"Nivea Creme","brands":"Nivea","quantity":"30 ml",
+             "ingredients_text":"Aqua, Paraffinum Liquidum, Cera Microcristallina, Glycerin, Parfum",
+             "image_front_url":"https://images.openbeautyfacts.org/p/9/front.400.jpg","last_modified_t":1780000000}
+            """]
+        let json = """
+        {"count":4,"page":1,"page_count":1,"page_size":100,"products":[\(products.joined(separator: ","))]}
+        """
+        let page = try OBFDecoder.searchResponse(from: Data(json.utf8))
+        let search = FakeSearch(["facial-creams#1": .success(page)])
+        let assembler = CatalogAssembler(search: search, categories: categories(["facial-creams"]), now: { now })
+        let result = try await assembler.build()
+        #expect(result.catalog.products.map(\.id) == ["70000", "70009"])
+    }
 }

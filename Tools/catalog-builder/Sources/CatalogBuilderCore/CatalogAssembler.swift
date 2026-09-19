@@ -55,9 +55,22 @@ public struct CatalogAssembler: Sendable {
         self.baseURL = baseURL
     }
 
+    /// Stesso prodotto con barcode diversi (mercati, confezioni): marca + nome + formato normalizzati.
+    /// Le pagine sono ordinate per popolarità, quindi resta la variante più scansionata.
+    static func variantKey(of product: Product) -> String {
+        func fold(_ text: String) -> String {
+            text.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: nil)
+                .lowercased()
+                .split(whereSeparator: { $0.isWhitespace })
+                .joined(separator: " ")
+        }
+        return "\(fold(product.brand))|\(fold(product.name))|\(fold(product.quantity ?? ""))"
+    }
+
     public func build() async throws -> AssemblyResult {
         var products: [Product] = []
         var selectedIDs = Set<String>()
+        var selectedVariants = Set<String>()
         var reports: [CategoryReport] = []
 
         for category in categories {
@@ -69,7 +82,8 @@ public struct CatalogAssembler: Sendable {
                 report.productsSeen += response.products.count
                 for dto in response.products where report.productsSelected < options.perCategory {
                     guard let product = OBFMapper.map(dto, category: category, baseURL: baseURL),
-                          selectedIDs.insert(product.id).inserted else { continue }
+                          selectedIDs.insert(product.id).inserted,
+                          selectedVariants.insert(Self.variantKey(of: product)).inserted else { continue }
                     products.append(product)
                     report.productsSelected += 1
                 }

@@ -230,15 +230,20 @@ final class ProductListUITests: XCTestCase {
     /// Catture per il gauntlet P6 (bar: ricerca del sample Landmarks; nostra: rete reale), come allegati.
     func testCaptureSearchScreens() throws {
         try XCTSkipUnless(ProcessInfo.processInfo.environment["SKINCARE_BAR_CAPTURE"] == "1", "catture: SKINCARE_BAR_CAPTURE=1")
-        let bar = XCUIApplication(bundleIdentifier: "com.example.apple-samplecode.Landmarks")
+        // Bar: la ricerca dell'app Impostazioni di sistema (stesso simulatore, risultati reali digitando).
+        // La ricerca del sample Landmarks vive nella colonna laterale dello split view e su iPhone non
+        // mostra risultati: non è confrontabile.
+        let bar = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
         bar.launch()
         sleep(3)
-        let back = bar.navigationBars.buttons.firstMatch
-        if back.exists { back.tap() }
-        let barField = bar.searchFields.firstMatch
+        var barField = bar.searchFields.firstMatch
+        if !barField.waitForExistence(timeout: 5) {
+            bar.swipeDown()
+            barField = bar.searchFields.firstMatch
+        }
         XCTAssertTrue(barField.waitForExistence(timeout: 10), "ricerca del bar assente")
         barField.tap()
-        barField.typeText("Mount")
+        barField.typeText("Wi")
         sleep(3)
         attach(bar.screenshot(), name: "bar-search")
         bar.terminate()
