@@ -1,0 +1,21 @@
+# Xcode / SwiftPM
+build/
+DerivedData/
+.build/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+.swiftpm/
+Packages/*/.build/
+Tools/*/.build/
+*.xcresult
+
+# macOS
+.DS_Store
+
+# Gauntlet: nel repo restano solo gauntlet/reference e gauntlet/rounds
+gauntlet/tmp/
+
+# Segreti (non previsti)
+.env

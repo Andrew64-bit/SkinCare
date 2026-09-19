@@ -1,0 +1,30 @@
+excluded:
+  - build
+  - .build
+  - DerivedData
+  - SkinCare.xcodeproj
+  - Packages/SkinCareKit/.build
+  - Tools/catalog-builder/.build
+  - gauntlet
+line_length:
+  warning: 130
+  error: 170
+  ignores_urls: true
+  ignores_comments: true
+identifier_name:
+  min_length: 2
+  excluded: [id, x, y, i, n, ok, it, en, fr, de, es, to]
+type_body_length:
+  warning: 300
+function_body_length:
+  warning: 70
+file_length:
+  warning: 500
+opt_in_rules:
+  - empty_count
+  - closure_spacing
+  - first_where
+  - sorted_first_last
+  - contains_over_first_not_nil
+disabled_rules:
+  - todo
