@@ -55,6 +55,12 @@ VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, n
   ritmo delle righe), schermata dettaglio (App Store 4.2), privacy policy pubblica, mailbox di progetto.
 
 ## Decisioni prese
+- v0.2 (ricerca): prompt della barra «Cerca» invece di «Cerca prodotto o marca» (un segnaposto lungo viene
+  segnalato dall'audit come tagliabile); il suggerimento «prova con la marca o il nome» vive nello stato
+  vuoto. Deduplica delle varianti (marca+nome+formato) aggiunta al builder benché il piano prevedesse «nessuna
+  modifica di codice»: senza, la ricerca mostrava tre «Nivea Creme» identiche. Bar del gauntlet P6 sostituito
+  con la ricerca di Contatti (Landmarks: ricerca nella sidebar senza risultati su iPhone; Impostazioni: senza
+  indice nel simulatore).
 - «Trattamento viso anti-età» nelle descrizioni è il nome della categoria tassonomica OBF
   (`anti-aging-face-care-products`), non un claim dell'app; le descrizioni restano composte solo da campi
   dichiarati (categoria, marca, formato, ingredienti).
@@ -79,6 +85,8 @@ VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, n
 - Categorie v1: facial-creams, cleansers, sunscreen, face-masks, anti-aging-face-care-products, lip-balms.
 
 ## Cap turni (piano)
+- v0.2 (ricerca): cap 20 turni superato di circa 5 (round P6 annullato e rifatto, catalogo ricostruito due
+  volte per includere la deduplica). Proseguito per non lasciare branch e catalogo a metà; registrato qui.
 - Step 0–4 ≤ 35 turni · gauntlet ≤ 25 · verifica+pubblicazione ≤ 10.
 - **Sforamento registrato**: gli step 0–4 hanno usato circa 55 turni (≈ 20 oltre il cap), quasi tutti
   nella diagnosi dell'audit di accessibilità (6 cause distinte trovate per bisezione con il lab).

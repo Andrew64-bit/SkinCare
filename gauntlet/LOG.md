@@ -100,18 +100,19 @@ ESITO P5: CAP — 16/120 anteprime con rumore OCR; crediti foto corretti post-ca
 
 ## v0.2 — P6 ricerca (cap 2 round) — 2026-09-19
 
-Bar scelto nel piano: la ricerca del sample Landmarks. Verificato sul simulatore: il suo `.searchable` sta
-nella colonna laterale dello split view e su iPhone non produce risultati (la cattura mostrava solo il campo
-«Mount» sopra Landmarks/Map/Collections) → non confrontabile. **Bar sostituito con la ricerca dell'app
-Impostazioni di sistema** (stesso simulatore, query «Wi» digitata, risultati reali). Catture via XCUITest
+Bar del piano: la ricerca del sample Landmarks. Sul simulatore il suo `.searchable` vive nella colonna
+laterale dello split view e su iPhone non mostra risultati → non confrontabile. Catture via XCUITest
 (`testCaptureSearchScreens`, `TEST_RUNNER_SKINCARE_BAR_CAPTURE=1`), perché il pannello del simulatore di
-Claude richiede `sudo xcode-select`. Nostra: rete reale, query «nivea».
+Claude richiede `sudo xcode-select`. Nostra: rete reale.
 
-Round 1: `rounds/P6/round-1/` (ours-search, bar-search), mappa cieca A=ours B=bar. Critico: **A** → **VINTO**
-(«risultati raggruppati, con intestazione di sezione, foto e dettagli distintivi sopra la tastiera; il bar
-mostra solo uno stato vuoto per due lettere»).
-Osservazione dalla nostra cattura: tre «Nivea Creme» quasi identiche (barcode diversi per formato/mercato)
-→ deduplica per marca+nome+formato aggiunta al builder (test), attiva dal catalogo rigenerato.
+**Round 1 — annullato.** Bar = ricerca dell'app Impostazioni con «Wi»: nel simulatore Impostazioni non ha
+indice di ricerca e la cattura era «No Results for “Wi”». Il critico aveva scelto A (nostra) proprio perché
+«B mostra solo uno stato vuoto»: confronto non valido (nostri risultati contro uno stato vuoto altrui, nostro
+stato vuoto mai giudicato). Rilevato dal verificatore indipendente; il verdetto non conta.
+Osservazione utile dalla nostra cattura: tre «Nivea Creme» quasi identiche (barcode diversi per
+formato/mercato) → deduplica per marca+nome+formato aggiunta al builder (test), attiva dal catalogo rigenerato.
 
-ESITO P6: VINTO — round 1, alla cieca (ricerca: campo, risultati raggruppati, stato vuoto).
-
+**Round 2.** Bar = ricerca dell'app **Contatti** di sistema (stesso simulatore, contatti di esempio
+precaricati): coppia risultati («ha» → Anna Haro, Hank M. Zakroff · nostra «nivea») e coppia stati vuoti
+(«zzzzqqqq» in entrambe). `rounds/P6/round-2/` e `rounds/P6-empty/round-2/`, mappe cieche A=ours B=bar in
+entrambe. Prompt del critico senza premesse sul contenuto delle catture. Verdetto: in corso.

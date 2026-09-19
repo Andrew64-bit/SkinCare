@@ -230,10 +230,10 @@ final class ProductListUITests: XCTestCase {
     /// Catture per il gauntlet P6 (bar: ricerca del sample Landmarks; nostra: rete reale), come allegati.
     func testCaptureSearchScreens() throws {
         try XCTSkipUnless(ProcessInfo.processInfo.environment["SKINCARE_BAR_CAPTURE"] == "1", "catture: SKINCARE_BAR_CAPTURE=1")
-        // Bar: la ricerca dell'app Impostazioni di sistema (stesso simulatore, risultati reali digitando).
-        // La ricerca del sample Landmarks vive nella colonna laterale dello split view e su iPhone non
-        // mostra risultati: non è confrontabile.
-        let bar = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
+        // Bar: la ricerca dell'app Contatti di sistema (stesso simulatore, contatti di esempio precaricati:
+        // «ha» → Anna Haro, Hank Zakroff). Impostazioni non ha indice di ricerca nel simulatore e la ricerca
+        // del sample Landmarks vive nella colonna laterale dello split view: nessuna delle due dà risultati.
+        let bar = XCUIApplication(bundleIdentifier: "com.apple.MobileAddressBook")
         bar.launch()
         sleep(3)
         var barField = bar.searchFields.firstMatch
@@ -243,9 +243,12 @@ final class ProductListUITests: XCTestCase {
         }
         XCTAssertTrue(barField.waitForExistence(timeout: 10), "ricerca del bar assente")
         barField.tap()
-        barField.typeText("Wi")
+        barField.typeText("ha")
         sleep(3)
         attach(bar.screenshot(), name: "bar-search")
+        barField.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 2) + "zzzzqqqq")
+        sleep(3)
+        attach(bar.screenshot(), name: "bar-empty")
         bar.terminate()
 
         let ours = XCUIApplication()
@@ -254,7 +257,10 @@ final class ProductListUITests: XCTestCase {
         search("nivea", in: ours)
         sleep(6)
         attach(ours.screenshot(), name: "ours-search")
-        search("", in: ours)
+        clearSearch(in: ours)
+        search("zzzzqqqq", in: ours)
+        sleep(2)
+        attach(ours.screenshot(), name: "ours-empty")
     }
 
     private func attach(_ screenshot: XCUIScreenshot, name: String) {
