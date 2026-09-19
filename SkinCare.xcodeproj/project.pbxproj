@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04AED0DE296BD6946043309E /* SkinCareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70B608CC6567C0A88F723DB3 /* SkinCareKit */; };
+		136B555B1D98A3CD770B091F /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECDDC6745304D4EBB1BCDEF /* AppConfig.swift */; };
+		1B68AFDCE28715B54C6AF7F6 /* ProductListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E588AA31F3C156048B32A0 /* ProductListUITests.swift */; };
+		2AC6645E7692560926C0ADD5 /* AttributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13BD4C9DF4CD071BF621228 /* AttributionView.swift */; };
+		44EE5898DD953B7146620B2A /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A3D1BB67DAD3BB5EF9AD /* AppEnvironment.swift */; };
+		46BE16B02C78A475C35467C7 /* ProductImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C8CF9AEE182C60DB6F543 /* ProductImageView.swift */; };
+		496999B9377C8CB7733CFAB2 /* AuditLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92079E584525A00D765D79 /* AuditLabView.swift */; };
+		75AA4C369A2BEF58FDA409DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769C17DEAEF403EBBE688CC7 /* Assets.xcassets */; };
+		799D57765997FB19B3E8224B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F40F250F3247DC7B3A8996 /* ImageLoader.swift */; };
+		B7973F30300BE1F8CF856FE2 /* SkinCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433FF5BB0FDF5D4890B5867 /* SkinCareApp.swift */; };
+		C896C2E01EF1329206FB051C /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801924F34E21D4A0FCE078C /* ProductListView.swift */; };
+		CE1A1A38E46649153FDA9C4F /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D12CA610F3AB3A30BBEAB /* ProductRow.swift */; };
+		DA2F5AFAF7A1728F33C4B3A4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A8ABE5937BF069C42C77B55C /* PrivacyInfo.xcprivacy */; };
+		FE27D895CC232474A9C7EC5A /* UITestStubURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694C084A3225413708CDFAA /* UITestStubURLProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E26805799EEB7018C7D4B0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D2985A511819479ED384FDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA93830F7E5CA04D4EAF205A;
+			remoteInfo = SkinCare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		011EE75A5C6A75A24234E143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		01F40F250F3247DC7B3A8996 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		053C8CF9AEE182C60DB6F543 /* ProductImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageView.swift; sourceTree = "<group>"; };
+		126D366116217ABE19821D7C /* SkinCareUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SkinCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4433FF5BB0FDF5D4890B5867 /* SkinCareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinCareApp.swift; sourceTree = "<group>"; };
+		4F92079E584525A00D765D79 /* AuditLabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditLabView.swift; sourceTree = "<group>"; };
+		512D12CA610F3AB3A30BBEAB /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		67FA89B872C74B92E2D57C22 /* SkinCareKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SkinCareKit; path = Packages/SkinCareKit; sourceTree = SOURCE_ROOT; };
+		769C17DEAEF403EBBE688CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77E588AA31F3C156048B32A0 /* ProductListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListUITests.swift; sourceTree = "<group>"; };
+		9801924F34E21D4A0FCE078C /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		A10D527EAA6A5E73AD1516B5 /* SkinCare.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SkinCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8ABE5937BF069C42C77B55C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D13BD4C9DF4CD071BF621228 /* AttributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionView.swift; sourceTree = "<group>"; };
+		E512A3D1BB67DAD3BB5EF9AD /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		E694C084A3225413708CDFAA /* UITestStubURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestStubURLProtocol.swift; sourceTree = "<group>"; };
+		EECDDC6745304D4EBB1BCDEF /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		726C39E6FA7FE14B5C948223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AED0DE296BD6946043309E /* SkinCareKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18C0DAF20C579ACF884C78A6 = {
+			isa = PBXGroup;
+			children = (
+				4D2E2A3FE2551F6B11209C65 /* Packages */,
+				298FFD88FA995AB38151FBBB /* SkinCare */,
+				3BF7307AE5DC5805F3CCF912 /* SkinCareUITests */,
+				DEEA1F2F8E70B51D57FFBF54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		298FFD88FA995AB38151FBBB /* SkinCare */ = {
+			isa = PBXGroup;
+			children = (
+				EECDDC6745304D4EBB1BCDEF /* AppConfig.swift */,
+				E512A3D1BB67DAD3BB5EF9AD /* AppEnvironment.swift */,
+				01F40F250F3247DC7B3A8996 /* ImageLoader.swift */,
+				011EE75A5C6A75A24234E143 /* Info.plist */,
+				4433FF5BB0FDF5D4890B5867 /* SkinCareApp.swift */,
+				9677C874EECB83C92B82E394 /* Resources */,
+				7B5C8F035D1D2957FA779366 /* UITestSupport */,
+				56FD2C2B0E38FC5EC608D589 /* Views */,
+			);
+			path = SkinCare;
+			sourceTree = "<group>";
+		};
+		3BF7307AE5DC5805F3CCF912 /* SkinCareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				77E588AA31F3C156048B32A0 /* ProductListUITests.swift */,
+			);
+			path = SkinCareUITests;
+			sourceTree = "<group>";
+		};
+		4D2E2A3FE2551F6B11209C65 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				67FA89B872C74B92E2D57C22 /* SkinCareKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		56FD2C2B0E38FC5EC608D589 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D13BD4C9DF4CD071BF621228 /* AttributionView.swift */,
+				053C8CF9AEE182C60DB6F543 /* ProductImageView.swift */,
+				9801924F34E21D4A0FCE078C /* ProductListView.swift */,
+				512D12CA610F3AB3A30BBEAB /* ProductRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B5C8F035D1D2957FA779366 /* UITestSupport */ = {
+			isa = PBXGroup;
+			children = (
+				4F92079E584525A00D765D79 /* AuditLabView.swift */,
+				E694C084A3225413708CDFAA /* UITestStubURLProtocol.swift */,
+			);
+			path = UITestSupport;
+			sourceTree = "<group>";
+		};
+		9677C874EECB83C92B82E394 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				769C17DEAEF403EBBE688CC7 /* Assets.xcassets */,
+				A8ABE5937BF069C42C77B55C /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DEEA1F2F8E70B51D57FFBF54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10D527EAA6A5E73AD1516B5 /* SkinCare.app */,
+				126D366116217ABE19821D7C /* SkinCareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C361A692407D866C4ABE27D /* SkinCareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9548282E27998AE8337E1F /* Build configuration list for PBXNativeTarget "SkinCareUITests" */;
+			buildPhases = (
+				F78778351A90B885E8937E66 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1CA07EFC928437D4269D415 /* PBXTargetDependency */,
+			);
+			name = SkinCareUITests;
+			packageProductDependencies = (
+			);
+			productName = SkinCareUITests;
+			productReference = 126D366116217ABE19821D7C /* SkinCareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CA93830F7E5CA04D4EAF205A /* SkinCare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BCDD02780F7C2FC84B3BFF8 /* Build configuration list for PBXNativeTarget "SkinCare" */;
+			buildPhases = (
+				0DE6C77BF7907F78B6DBBEDC /* Sources */,
+				1AE9AACF1125F31C56B8DA19 /* Resources */,
+				726C39E6FA7FE14B5C948223 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkinCare;
+			packageProductDependencies = (
+				70B608CC6567C0A88F723DB3 /* SkinCareKit */,
+			);
+			productName = SkinCare;
+			productReference = A10D527EAA6A5E73AD1516B5 /* SkinCare.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D2985A511819479ED384FDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					6C361A692407D866C4ABE27D = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = CA93830F7E5CA04D4EAF205A;
+					};
+					CA93830F7E5CA04D4EAF205A = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 92457C078612EB28A0782594 /* Build configuration list for PBXProject "SkinCare" */;
+			developmentRegion = it;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				it,
+			);
+			mainGroup = 18C0DAF20C579ACF884C78A6;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				32371A09E59E719436E7F3EB /* XCLocalSwiftPackageReference "Packages/SkinCareKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DEEA1F2F8E70B51D57FFBF54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA93830F7E5CA04D4EAF205A /* SkinCare */,
+				6C361A692407D866C4ABE27D /* SkinCareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AE9AACF1125F31C56B8DA19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75AA4C369A2BEF58FDA409DA /* Assets.xcassets in Resources */,
+				DA2F5AFAF7A1728F33C4B3A4 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DE6C77BF7907F78B6DBBEDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				136B555B1D98A3CD770B091F /* AppConfig.swift in Sources */,
+				44EE5898DD953B7146620B2A /* AppEnvironment.swift in Sources */,
+				2AC6645E7692560926C0ADD5 /* AttributionView.swift in Sources */,
+				496999B9377C8CB7733CFAB2 /* AuditLabView.swift in Sources */,
+				799D57765997FB19B3E8224B /* ImageLoader.swift in Sources */,
+				46BE16B02C78A475C35467C7 /* ProductImageView.swift in Sources */,
+				C896C2E01EF1329206FB051C /* ProductListView.swift in Sources */,
+				CE1A1A38E46649153FDA9C4F /* ProductRow.swift in Sources */,
+				B7973F30300BE1F8CF856FE2 /* SkinCareApp.swift in Sources */,
+				FE27D895CC232474A9C7EC5A /* UITestStubURLProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F78778351A90B885E8937E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B68AFDCE28715B54C6AF7F6 /* ProductListUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1CA07EFC928437D4269D415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA93830F7E5CA04D4EAF205A /* SkinCare */;
+			targetProxy = 8E26805799EEB7018C7D4B0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C99F7800F49894CF8FD00A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreavannozzi.SkinCareUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SkinCare;
+			};
+			name = Release;
+		};
+		B2357D5C4DF19097B29C03A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SkinCare/Info.plist;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreavannozzi.SkinCare;
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B40B24FAAD46A5070C1243B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		BA209BD7780A9402A0088874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		BC552B649D0EDE7B515C1173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SkinCare/Info.plist;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreavannozzi.SkinCare;
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F9647FD11E097C7F57B268D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreavannozzi.SkinCareUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SkinCare;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BCDD02780F7C2FC84B3BFF8 /* Build configuration list for PBXNativeTarget "SkinCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2357D5C4DF19097B29C03A0 /* Debug */,
+				BC552B649D0EDE7B515C1173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		92457C078612EB28A0782594 /* Build configuration list for PBXProject "SkinCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40B24FAAD46A5070C1243B6 /* Debug */,
+				BA209BD7780A9402A0088874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CC9548282E27998AE8337E1F /* Build configuration list for PBXNativeTarget "SkinCareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9647FD11E097C7F57B268D3 /* Debug */,
+				3C99F7800F49894CF8FD00A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		32371A09E59E719436E7F3EB /* XCLocalSwiftPackageReference "Packages/SkinCareKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/SkinCareKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70B608CC6567C0A88F723DB3 /* SkinCareKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SkinCareKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2D2985A511819479ED384FDF /* Project object */;
+}

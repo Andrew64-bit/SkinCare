@@ -105,4 +105,22 @@ struct DescriptionComposerTests {
         )
         #expect(result.ingredientsPreview == "Aqua, Butyrospermum Parkii Butter, CI 77891")
     }
+
+    @Test("multilingual label prefixes such as '/Ingrediente:/Съставки (INCI):/' are dropped from the first token")
+    func multilingualLabelsStripped() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Maschera viso", brand: "Cien", quantity: "17ml",
+            ingredientsText: "/Ingrediente:/Ingrediente:/Съставки (INCI):/EvoTariká: Aqua, Glycerin, Kaolin, Parfum, Limonene"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Glycerin, Kaolin, Parfum")
+    }
+
+    @Test("a token that is only a label ('Ingredients:') is dropped, not shown")
+    func labelOnlyTokenDropped() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Ingredients:, Aqua, Glycerin, Parfum"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Glycerin, Parfum")
+    }
 }

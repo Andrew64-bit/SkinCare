@@ -17,8 +17,16 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
   120 prodotti, 6 categorie × 20, `QUALITY=PASS`, 33 s, 12 richieste a OBF. `BundledCatalog` nel Kit
   con 3 test sullo snapshot (41 test verdi nel Kit). Lint pulito.
 
+- 2026-09-19: step 3+4 — app SwiftUI (iOS 18, xcodegen, `SkinCareKit` locale): lista per categorie,
+  riga con miniatura/titolo/marca/descrizione, attribuzione come prima riga (apre la scheda licenze),
+  menu contestuale «Apri su Open Beauty Facts» + credito foto, `ImageLoader` con URLCache, stub di rete
+  solo DEBUG via `launchEnvironment`. 8 test UI verdi (righe ≥ 20, immagini `loaded`, refresh remoto
+  visibile, offline con placeholder, attribuzione+scheda, menu, audit accessibilità, AX-L) + 2 test
+  diagnostici saltati di default (`TEST_RUNNER_SKINCARE_AUDIT_LAB=1`). `scripts/check_done.sh` scritto e
+  visto fallire su gauntlet/verificatore. Catture del bar Landmarks in `gauntlet/reference/` (4).
+
 ## In corso
-- Step 3: app (project.yml → xcodegen, viste, ImageLoader, attribuzione, stub rete DEBUG).
+- Step 5: gauntlet P1–P5 (builder ≠ critico, cieco, cap 3 round).
 
 ## Da fare
 - Step 2: `catalog-builder` + generazione `catalog.json` (≥ 60 prodotti).
@@ -29,6 +37,10 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
 - Step 7: repo pubblico `Andrew64-bit/SkinCare`, Pages, Action settimanale, URL nell'app.
 
 ## Decisioni prese
+- Audit di accessibilità: colori espliciti (`Color(.label)` per intestazioni, `label` al 70 % per testi
+  attenuati: `secondaryLabel` si ferma a 3,5:1), nessun `lineLimit` (testo tagliato), niente `Label`
+  con titolo nascosto in toolbar, niente `ProgressView` nella miniatura, attribuzione come riga e non
+  come header/footer di sezione (in una lista lunga l'audit la segnala come testo tagliabile).
 - Descrizioni sempre in italiano: il nome generico OBF si usa solo se italiano (`generic_name_it` o
   `lang == it`), altrimenti «{categoria} di {marca}». Selezione: nome ≥ 3, marca, foto fronte, INCI con
   ≥ 2 ingredienti riconoscibili (separatori `, ; • · |` a capo; sinonimi «A / B» → A; etichette

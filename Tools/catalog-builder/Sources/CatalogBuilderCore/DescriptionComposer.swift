@@ -59,8 +59,15 @@ public enum DescriptionComposer {
             .components(separatedBy: separators)
             .map { raw -> String in
                 var token = raw.replacingOccurrences(of: "*", with: "")
+                // Etichette residue («/Ingrediente:/Съставки (INCI): Aqua»): resta solo ciò che segue l'ultimo «:».
+                if let label = token.range(of: ":", options: .backwards) {
+                    token = String(token[label.upperBound...])
+                }
                 if let synonym = token.range(of: " / ") {
                     token = String(token[..<synonym.lowerBound])
+                }
+                while token.hasPrefix("/") || token.hasPrefix("-") {
+                    token.removeFirst()
                 }
                 token = token
                     .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)

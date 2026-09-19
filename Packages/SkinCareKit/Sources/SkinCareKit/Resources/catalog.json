@@ -1,5 +1,5 @@
 {
-  "generatedAt" : "2026-09-19T13:10:02Z",
+  "generatedAt" : "2026-09-19T13:30:45Z",
   "products" : [
     {
       "brand" : "Mixa",
@@ -1156,7 +1156,7 @@
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di Lovea, 150 ml. Ingredienti principali: Ingredients/Coctab : Aqua (Water) Dibutyl Adipate, Polyglyceryl-6 Stearate, Cocos Nucifera (Coconut) Oil, Gardenia Taitensis Flower Extract.",
+      "description" : "Protezione solare di Lovea, 150 ml. Ingredienti principali: Aqua (Water) Dibutyl Adipate, Polyglyceryl-6 Stearate, Glyceryl Stearate, Cocos Nucifera (Coconut) Oil.",
       "id" : "3506770001010",
       "image" : {
         "credit" : {
@@ -1167,7 +1167,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/350/677/000/1010/front_fr.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/350/677/000/1010/front_fr.4.400.jpg"
       },
-      "ingredientsPreview" : "Ingredients/Coctab : Aqua (Water) Dibutyl Adipate, Polyglyceryl-6 Stearate, Cocos Nucifera (Coconut) Oil, Gardenia Taitensis Flower Extract",
+      "ingredientsPreview" : "Aqua (Water) Dibutyl Adipate, Polyglyceryl-6 Stearate, Glyceryl Stearate, Cocos Nucifera (Coconut) Oil",
       "lastModified" : "2025-08-19T14:01:50Z",
       "name" : "Spray Hydratant 50+",
       "quantity" : "150 ml",
@@ -1363,7 +1363,7 @@
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di Nivea, 200 ml. Ingredienti principali: Ingedients: Aqua, Homosalate, Glycerin, Alcohal Denat..",
+      "description" : "Protezione solare di Nivea, 200 ml. Ingredienti principali: Aqua, Homosalate, Glycerin, Alcohal Denat..",
       "id" : "4005900246905",
       "image" : {
         "credit" : {
@@ -1374,7 +1374,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/400/590/024/6905/front_de.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/400/590/024/6905/front_de.4.400.jpg"
       },
-      "ingredientsPreview" : "Ingedients: Aqua, Homosalate, Glycerin, Alcohal Denat.",
+      "ingredientsPreview" : "Aqua, Homosalate, Glycerin, Alcohal Denat.",
       "lastModified" : "2025-02-04T16:53:08Z",
       "name" : "Nivea sun Schutz & Pflege",
       "quantity" : "200 ml",
@@ -1685,7 +1685,7 @@
         "id" : "face-masks",
         "label" : "Maschere viso"
       },
-      "description" : "Maschera viso di Cien, 17ml. Ingredienti principali: /Ingrediente:/Ingrediente:/СьCтaвки (INCI):/EvoTariká: Aqua, Glycerin, Sodium Hyaluronate, Xanthan Gum.",
+      "description" : "Maschera viso di Cien, 17ml. Ingredienti principali: Aqua, Glycerin, Sodium Hyaluronate, Xanthan Gum.",
       "id" : "4335619112025",
       "image" : {
         "credit" : {
@@ -1696,7 +1696,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/433/561/911/2025/front_en.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/433/561/911/2025/front_en.4.400.jpg"
       },
-      "ingredientsPreview" : "/Ingrediente:/Ingrediente:/СьCтaвки (INCI):/EvoTariká: Aqua, Glycerin, Sodium Hyaluronate, Xanthan Gum",
+      "ingredientsPreview" : "Aqua, Glycerin, Sodium Hyaluronate, Xanthan Gum",
       "lastModified" : "2026-05-16T14:18:35Z",
       "name" : "Sheet Mask Aloe Vera",
       "quantity" : "17ml",
@@ -2398,7 +2398,7 @@
         "id" : "lip-balms",
         "label" : "Balsami labbra"
       },
-      "description" : "Balsamo labbra di himalaya, 10g. Ingredienti principali: OILS: Eranda (Ricinus communis) Sd. 10 mg, Garijara (Daucus carota) Sd. 10 mg, Godhuma (Triticum sativum) Gr. 10 mg, Hyamaraka (Wrightia tinctoria) Lf. 10 mg.",
+      "description" : "Balsamo labbra di himalaya, 10g. Ingredienti principali: Eranda (Ricinus communis) Sd. 10 mg, Garijara (Daucus carota) Sd. 10 mg, Godhuma (Triticum sativum) Gr. 10 mg, Hyamaraka (Wrightia tinctoria) Lf. 10 mg.",
       "id" : "8901138509231",
       "image" : {
         "credit" : {
@@ -2409,7 +2409,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/890/113/850/9231/front_en.18.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/890/113/850/9231/front_en.18.400.jpg"
       },
-      "ingredientsPreview" : "OILS: Eranda (Ricinus communis) Sd. 10 mg, Garijara (Daucus carota) Sd. 10 mg, Godhuma (Triticum sativum) Gr. 10 mg, Hyamaraka (Wrightia tinctoria) Lf. 10 mg",
+      "ingredientsPreview" : "Eranda (Ricinus communis) Sd. 10 mg, Garijara (Daucus carota) Sd. 10 mg, Godhuma (Triticum sativum) Gr. 10 mg, Hyamaraka (Wrightia tinctoria) Lf. 10 mg",
       "lastModified" : "2026-06-21T05:33:05Z",
       "name" : "Lip Balm",
       "quantity" : "10g",
@@ -2489,7 +2489,7 @@
         "id" : "lip-balms",
         "label" : "Balsami labbra"
       },
-      "description" : "Balsamo labbra di Lidl, 4,8 g. Ingredienti principali: Carl-Friedrich - Gauss-Str. 2, DE-50259 Pulheim, Carl-Friedrich-Gauss-Str. 2, DE-50259 Pulheim.",
+      "description" : "Balsamo labbra di Lidl, 4,8 g. Ingredienti principali: Carl-Friedrich - Gauss-Str. 2, DE-50259 Pulheim, vt GmbH, Carl-Friedrich-Gauss-Str. 2.",
       "id" : "20760403",
       "image" : {
         "credit" : {
@@ -2500,7 +2500,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/000/002/076/0403/front_hu.37.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/000/002/076/0403/front_hu.37.400.jpg"
       },
-      "ingredientsPreview" : "Carl-Friedrich - Gauss-Str. 2, DE-50259 Pulheim, Carl-Friedrich-Gauss-Str. 2, DE-50259 Pulheim",
+      "ingredientsPreview" : "Carl-Friedrich - Gauss-Str. 2, DE-50259 Pulheim, vt GmbH, Carl-Friedrich-Gauss-Str. 2",
       "lastModified" : "2026-01-31T09:39:47Z",
       "name" : "Tápláló ajakápoló",
       "quantity" : "4,8 g",
@@ -2535,7 +2535,7 @@
         "id" : "lip-balms",
         "label" : "Balsami labbra"
       },
-      "description" : "Balsamo labbra di Carrefour, 2 × 4 g. Ingredienti principali: Ingredients, Hydrogenated Vegetable Oil, Synthetic Wax, Cera Alba.",
+      "description" : "Balsamo labbra di Carrefour, 2 × 4 g. Ingredienti principali: Paraffinum Liquidum, Hydrogenated Vegetable Oil, Synthetic Wax, Cera Alba.",
       "id" : "3560070881253",
       "image" : {
         "credit" : {
@@ -2546,7 +2546,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/356/007/088/1253/front_fr.19.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/356/007/088/1253/front_fr.19.400.jpg"
       },
-      "ingredientsPreview" : "Ingredients, Hydrogenated Vegetable Oil, Synthetic Wax, Cera Alba",
+      "ingredientsPreview" : "Paraffinum Liquidum, Hydrogenated Vegetable Oil, Synthetic Wax, Cera Alba",
       "lastModified" : "2026-03-25T16:19:31Z",
       "name" : "Stick lèvres hydratant",
       "quantity" : "2 × 4 g",

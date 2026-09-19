@@ -1,0 +1,65 @@
+name: SkinCare
+options:
+  bundleIdPrefix: com.andreavannozzi
+  developmentLanguage: it
+  deploymentTarget:
+    iOS: "18.0"
+  xcodeVersion: "26.2"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: ""
+packages:
+  SkinCareKit:
+    path: Packages/SkinCareKit
+targets:
+  SkinCare:
+    type: application
+    platform: iOS
+    sources:
+      - path: SkinCare
+    dependencies:
+      - package: SkinCareKit
+    info:
+      path: SkinCare/Info.plist
+      properties:
+        CFBundleDisplayName: SkinCare
+        CFBundleShortVersionString: "0.1.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.andreavannozzi.SkinCare
+        SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+        SWIFT_APPROACHABLE_CONCURRENCY: YES
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_KEY_UIUserInterfaceStyle: Automatic
+  SkinCareUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: SkinCareUITests
+    dependencies:
+      - target: SkinCare
+    settings:
+      base:
+        TEST_TARGET_NAME: SkinCare
+        PRODUCT_BUNDLE_IDENTIFIER: com.andreavannozzi.SkinCareUITests
+schemes:
+  SkinCare:
+    build:
+      targets:
+        SkinCare: all
+        SkinCareUITests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - SkinCareUITests
