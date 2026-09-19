@@ -40,6 +40,21 @@ final class ProductListUITests: XCTestCase {
         app.descendants(matching: .any)["catalog.attribution"]
     }
 
+    /// L'attribuzione è l'ultima sezione della lista e le celle di una List nascono solo quando entrano nello
+    /// schermo: scorre verso il basso (al massimo 20 gesti) finché la riga non esiste, poi la restituisce.
+    /// Gesto veloce: con l'inerzia percorre ~5 volte la distanza di quello predefinito (120 righe ≈ 14 000 pt,
+    /// 20 gesti predefiniti si fermano a metà lista).
+    private func scrollToAttribution(in app: XCUIApplication) -> XCUIElement {
+        let line = attribution(in: app)
+        var swipes = 0
+        while !line.exists && swipes < 40 {
+            app.swipeUp(velocity: .fast)
+            swipes += 1
+        }
+        XCTContext.runActivity(named: "attribuzione raggiunta dopo \(swipes) gesti (esiste: \(line.exists))") { _ in }
+        return line
+    }
+
     /// Scorre la lista raccogliendo gli identificatori delle righe finché ne vede almeno `minimum`.
     private func distinctRows(in app: XCUIApplication, minimum: Int) -> Set<String> {
         var seen = Set<String>()
@@ -82,8 +97,12 @@ final class ProductListUITests: XCTestCase {
 
     func testRemoteRefreshUpdatesAttributionDate() {
         let app = launch(.stubbed)
-        XCTAssertTrue(attribution(in: app).waitForExistence(timeout: 10))
-        wait(for: attribution(in: app), value: Self.remoteGeneratedAt)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        // Il pulsante «i» espone la data del catalogo corrente: dopo il refresh dallo stub deve essere quella remota.
+        wait(for: app.buttons["attribution.button"], value: Self.remoteGeneratedAt)
+        let line = scrollToAttribution(in: app)
+        XCTAssertTrue(line.waitForExistence(timeout: 10))
+        wait(for: line, value: Self.remoteGeneratedAt)
     }
 
     // MARK: - Offline
@@ -100,7 +119,8 @@ final class ProductListUITests: XCTestCase {
 
     func testAttributionLineAndSheet() {
         let app = launch(.stubbed)
-        let line = attribution(in: app)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        let line = scrollToAttribution(in: app)
         XCTAssertTrue(line.waitForExistence(timeout: 10))
         XCTAssertTrue(line.label.contains("Open Beauty Facts"), line.label)
         app.buttons["attribution.button"].tap()

@@ -47,6 +47,9 @@ public struct OBFProduct: Decodable, Sendable {
     public var labelsTags: [String]?
     public var lastModifiedT: Int?
     public var uniqueScansN: Int?
+    /// Numero di ingredienti riconosciuti dal parser di OBF (assente se il testo non è stato analizzato).
+    public var ingredientsN: Int?
+    public var unknownIngredientsN: Int?
     public var images: [String: OBFImageEntry]
 
     enum CodingKeys: String, CodingKey {
@@ -70,6 +73,8 @@ public struct OBFProduct: Decodable, Sendable {
         case labelsTags = "labels_tags"
         case lastModifiedT = "last_modified_t"
         case uniqueScansN = "unique_scans_n"
+        case ingredientsN = "ingredients_n"
+        case unknownIngredientsN = "unknown_ingredients_n"
     }
 
     public init(from decoder: any Decoder) throws {
@@ -97,6 +102,8 @@ public struct OBFProduct: Decodable, Sendable {
         labelsTags = try? container.decodeIfPresent([String].self, forKey: .labelsTags)
         lastModifiedT = (try? container.decodeIfPresent(LenientInt.self, forKey: .lastModifiedT))??.value
         uniqueScansN = (try? container.decodeIfPresent(LenientInt.self, forKey: .uniqueScansN))??.value
+        ingredientsN = (try? container.decodeIfPresent(LenientInt.self, forKey: .ingredientsN))??.value
+        unknownIngredientsN = (try? container.decodeIfPresent(LenientInt.self, forKey: .unknownIngredientsN))??.value
         images = (try? container.decodeIfPresent(LenientDictionary<OBFImageEntry>.self, forKey: .images))??.values ?? [:]
     }
 

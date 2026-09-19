@@ -40,6 +40,7 @@ struct OBFClientTests {
         #expect(fields.contains("product_name"))
         #expect(fields.contains("image_front_url"))
         #expect(fields.contains("ingredients_text"))
+        #expect(fields.contains("ingredients_n"))
     }
 
     @Test("every request carries the identifying User-Agent")

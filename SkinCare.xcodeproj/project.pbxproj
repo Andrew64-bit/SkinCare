@@ -16,6 +16,7 @@
 		496999B9377C8CB7733CFAB2 /* AuditLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92079E584525A00D765D79 /* AuditLabView.swift */; };
 		75AA4C369A2BEF58FDA409DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769C17DEAEF403EBBE688CC7 /* Assets.xcassets */; };
 		799D57765997FB19B3E8224B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F40F250F3247DC7B3A8996 /* ImageLoader.swift */; };
+		851A4DA67518DE04F5B43B6A /* FeaturedProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F1EAB5A505F1F0A9DB503 /* FeaturedProductCard.swift */; };
 		B7973F30300BE1F8CF856FE2 /* SkinCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433FF5BB0FDF5D4890B5867 /* SkinCareApp.swift */; };
 		C896C2E01EF1329206FB051C /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801924F34E21D4A0FCE078C /* ProductListView.swift */; };
 		CE1A1A38E46649153FDA9C4F /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D12CA610F3AB3A30BBEAB /* ProductRow.swift */; };
@@ -44,6 +45,7 @@
 		67FA89B872C74B92E2D57C22 /* SkinCareKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SkinCareKit; path = Packages/SkinCareKit; sourceTree = SOURCE_ROOT; };
 		769C17DEAEF403EBBE688CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E588AA31F3C156048B32A0 /* ProductListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListUITests.swift; sourceTree = "<group>"; };
+		914F1EAB5A505F1F0A9DB503 /* FeaturedProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductCard.swift; sourceTree = "<group>"; };
 		9801924F34E21D4A0FCE078C /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		A10D527EAA6A5E73AD1516B5 /* SkinCare.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SkinCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8ABE5937BF069C42C77B55C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D13BD4C9DF4CD071BF621228 /* AttributionView.swift */,
+				914F1EAB5A505F1F0A9DB503 /* FeaturedProductCard.swift */,
 				053C8CF9AEE182C60DB6F543 /* ProductImageView.swift */,
 				9801924F34E21D4A0FCE078C /* ProductListView.swift */,
 				512D12CA610F3AB3A30BBEAB /* ProductRow.swift */,
@@ -247,6 +250,7 @@
 				44EE5898DD953B7146620B2A /* AppEnvironment.swift in Sources */,
 				2AC6645E7692560926C0ADD5 /* AttributionView.swift in Sources */,
 				496999B9377C8CB7733CFAB2 /* AuditLabView.swift in Sources */,
+				851A4DA67518DE04F5B43B6A /* FeaturedProductCard.swift in Sources */,
 				799D57765997FB19B3E8224B /* ImageLoader.swift in Sources */,
 				46BE16B02C78A475C35467C7 /* ProductImageView.swift in Sources */,
 				C896C2E01EF1329206FB051C /* ProductListView.swift in Sources */,

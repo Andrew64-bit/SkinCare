@@ -27,6 +27,7 @@ struct OBFModelsTests {
         #expect(nivea.uniqueScansN == 59)
         #expect(nivea.lastModifiedT != nil)
         #expect(nivea.bestIngredientsText?.isEmpty == false)
+        #expect(nivea.ingredientsN == 22)
     }
 
     @Test("the front image uploader is resolved through images[front_xx].imgid → images[imgid].uploader")

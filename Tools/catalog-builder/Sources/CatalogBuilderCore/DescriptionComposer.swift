@@ -54,6 +54,12 @@ public enum DescriptionComposer {
         if let label = body.range(of: leadingLabelPattern, options: [.regularExpression, .caseInsensitive]) {
             body.removeSubrange(label)
         }
+        // Codice iniziale senza etichetta («2050519 10 - Aqua…»).
+        if let code = body.range(of: #"^\s*\d[\d\s\-–]*"#, options: .regularExpression) {
+            body.removeSubrange(code)
+        }
+        // «Aqua. Glycerin»: un punto seguito da spazio e maiuscola separa due ingredienti.
+        body = body.replacingOccurrences(of: #"\.\s+(?=\p{Lu})"#, with: ", ", options: .regularExpression)
         let shouting = body.range(of: "[a-z]", options: .regularExpression) == nil
         let tokens = body
             .components(separatedBy: separators)
@@ -66,16 +72,24 @@ public enum DescriptionComposer {
                 if let synonym = token.range(of: " / ") {
                     token = String(token[..<synonym.lowerBound])
                 }
-                while token.hasPrefix("/") || token.hasPrefix("-") {
-                    token.removeFirst()
-                }
                 token = token
                     .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
                     .trimmingCharacters(in: .whitespacesAndNewlines)
+                while token.hasPrefix("/") || token.hasPrefix("-") {
+                    token.removeFirst()
+                }
+                // Sinonimo compatto di due sole parole («Aqua/Water», «Parfum/Fragrance»): resta la prima.
+                // I nomi INCI con una parola dopo («Caprylic/Capric Triglyceride») restano interi.
+                if let synonym = token.range(of: #"^\p{L}+/\p{L}+$"#, options: .regularExpression),
+                   let slash = token[synonym].firstIndex(of: "/") {
+                    token = String(token[..<slash])
+                }
                 return shouting ? token.capitalized : token
             }
             .filter { token in
-                !token.isEmpty && token.count <= 60 && token.range(of: "[A-Za-z]", options: .regularExpression) != nil
+                !token.isEmpty && token.count <= 60
+                    && token.range(of: "[A-Za-z]", options: .regularExpression) != nil
+                    && token.range(of: #"[\[\]?°]"#, options: .regularExpression) == nil
             }
         return Array(tokens.prefix(max))
     }

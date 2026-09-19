@@ -123,4 +123,42 @@ struct DescriptionComposerTests {
         )
         #expect(result.ingredientsPreview == "Aqua, Glycerin, Parfum")
     }
+
+    @Test("a leading numeric code ('2050519 10 - Aqua, …') is stripped even without a label")
+    func leadingNumericCodeStripped() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "2050519 10 - Aqua, Glycerin, Parfum, Limonene"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Glycerin, Parfum, Limonene")
+    }
+
+    @Test("a period followed by a capitalised word separates ingredients ('Aqua. Glycerin')")
+    func periodSeparator() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Aqua. Glycerin. Alcohol Denat., Parfum"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Glycerin, Alcohol Denat., Parfum")
+    }
+
+    @Test("a two-word slash synonym without spaces keeps the first name; INCI names with a trailing word are kept whole")
+    func compactSynonym() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Aqua/Water, Caprylic/Capric Triglyceride, Parfum/Fragrance, "
+                + "Dimethicone/Vinyl Dimethicone Crosspolymer"
+        )
+        #expect(result.ingredientsPreview
+            == "Aqua, Caprylic/Capric Triglyceride, Parfum, Dimethicone/Vinyl Dimethicone Crosspolymer")
+    }
+
+    @Test("tokens with stray brackets, degree signs or question marks are dropped")
+    func junkTokensDropped() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Aqua, ?cerin, Parfum°, Limonene], Linalool, Citral"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Linalool, Citral")
+    }
 }

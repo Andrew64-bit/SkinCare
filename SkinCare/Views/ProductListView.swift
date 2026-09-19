@@ -26,8 +26,30 @@ struct ProductListView: View {
     var body: some View {
         NavigationStack {
             List {
-                // Attribuzione e data del catalogo come prima riga: sempre visibile all'avvio e tocca per le
-                // licenze. (Come intestazione o piè di sezione l'audit la segnalava come testo tagliato.)
+                // Primo prodotto del catalogo in evidenza, a tutta larghezza subito sotto il titolo grande.
+                if let featured = repository.catalog.products.first {
+                    Section {
+                        FeaturedProductCard(product: featured)
+                            .listRowInsets(EdgeInsets())
+                            .listRowSeparator(.hidden)
+                    }
+                }
+                ForEach(sections, id: \.category.id) { section in
+                    Section {
+                        ForEach(section.products) { product in
+                            ProductRow(product: product)
+                        }
+                    } header: {
+                        // Colore esplicito: l'intestazione grigia di sistema non supera l'audit di contrasto.
+                        Text(section.category.label)
+                            .font(.title3.weight(.semibold))
+                            .foregroundStyle(Color(.label))
+                            .textCase(nil)
+                    }
+                }
+                // Attribuzione e data del catalogo come ultima riga: obbligo di licenza (ODbL, CC BY-SA), mai
+                // rimuoverla; tocca per le licenze. Riga e non intestazione o piè di sezione: in una lista lunga
+                // l'audit di accessibilità li segnala come testo tagliato (verificato per bisezione).
                 Section {
                     Button {
                         showAttribution = true
@@ -45,19 +67,6 @@ struct ProductListView: View {
                     .accessibilityValue(repository.catalog.generatedAt.ISO8601Format())
                     .accessibilityHint("Apre le informazioni sulle fonti e le licenze")
                 }
-                ForEach(sections, id: \.category.id) { section in
-                    Section {
-                        ForEach(section.products) { product in
-                            ProductRow(product: product)
-                        }
-                    } header: {
-                        // Colore esplicito: l'intestazione grigia di sistema non supera l'audit di contrasto.
-                        Text(section.category.label)
-                            .font(.title3.weight(.semibold))
-                            .foregroundStyle(Color(.label))
-                            .textCase(nil)
-                    }
-                }
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Prodotti")
@@ -71,6 +80,8 @@ struct ProductListView: View {
                         Image(systemName: "info.circle")
                     }
                     .accessibilityLabel("Informazioni e licenze")
+                    // La data del catalogo anche qui: verificabile senza scorrere fino all'ultima riga.
+                    .accessibilityValue(repository.catalog.generatedAt.ISO8601Format())
                     .accessibilityIdentifier("attribution.button")
                 }
             }

@@ -18,7 +18,7 @@ public struct OBFClient: OBFSearching {
         "generic_name", "generic_name_it", "generic_name_en", "generic_name_fr", "quantity", "categories_tags",
         "image_front_url", "image_front_small_url", "ingredients_text", "ingredients_text_it",
         "ingredients_text_en", "ingredients_text_fr", "lang", "countries_tags", "labels_tags",
-        "last_modified_t", "unique_scans_n", "images"
+        "last_modified_t", "unique_scans_n", "ingredients_n", "unknown_ingredients_n", "images"
     ]
 
     public let baseURL: URL

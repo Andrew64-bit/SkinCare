@@ -28,7 +28,15 @@ struct ProductRow: View {
         .padding(.vertical, 4)
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("product.row.\(product.id)")
-        .contextMenu {
+        .productContextMenu(for: product)
+    }
+}
+
+extension View {
+    /// Menu contestuale condiviso da riga e scheda in evidenza: pagina del prodotto su Open Beauty Facts
+    /// (attribuzione per prodotto) e credito della foto (CC BY-SA 3.0).
+    func productContextMenu(for product: Product) -> some View {
+        contextMenu {
             Link(destination: product.sourceURL) {
                 Label("Apri su Open Beauty Facts", systemImage: "safari")
             }

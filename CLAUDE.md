@@ -41,3 +41,9 @@ di questo repo. Il piano approvato e la definition of done sono in
   passato "pulito". Regola: un comando di verifica non va mai messo in pipe senza `set -o pipefail`
   (o si legge `${pipestatus[1]}` in zsh); negli script di check usare `set -euo pipefail` e nessuna pipe
   sulle righe che decidono l'esito.
+- 2026-09-19 (builder del gauntlet): un sub-agent che lancia comandi in background può «finire» (notifica),
+  poi risvegliarsi da solo alla fine del suo comando e continuare a modificare file e usare il simulatore
+  mentre l'orchestratore ha già ripreso il checkout: due `xcodebuild test` concorrenti sono crollati e un
+  mio edit è saltato perché il file era cambiato sotto. Regola: prima di toccare il checkout dopo il
+  ritorno di un builder, fermarlo esplicitamente (`TaskStop`) e verificare `pgrep -f xcodebuild`; nei
+  prompt dei builder vietare i comandi in background.

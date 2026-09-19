@@ -8,24 +8,53 @@ public enum OBFMapper {
     public static let photoLicense = "CC BY-SA 3.0"
     public static let fallbackUploader = "contributori Open Beauty Facts"
     /// Una lista INCI reale ha molti ingredienti: sotto questa soglia il testo non è una lista utilizzabile.
-    public static let minimumIngredientTokens = 2
+    public static let minimumIngredientTokens = 5
+
+    /// Plausibilità della lista ingredienti: almeno 5 token, uno dei primi 4 è un ingrediente cosmetico
+    /// noto, e se OBF ha contato gli ingredienti ne ha trovati almeno 5. Scarta indirizzi, codici,
+    /// liste di alimenti finite sotto una categoria cosmetica e testi OCR inutilizzabili.
+    static func isPlausibleIngredientList(_ text: String, ingredientsN: Int?) -> Bool {
+        if let ingredientsN, ingredientsN < minimumIngredientTokens { return false }
+        let tokens = DescriptionComposer.ingredientTokens(from: text, max: 12)
+        guard tokens.count >= minimumIngredientTokens else { return false }
+        return tokens.prefix(4).contains { INCIVocabulary.isKnown($0) }
+    }
+
+    /// Nome con almeno 3 caratteri e una lettera latina, e diverso dal barcode.
+    static func isPlausibleName(_ name: String, code: String) -> Bool {
+        name.count >= 3 && name != code && name.range(of: "[A-Za-z]", options: .regularExpression) != nil
+    }
+
+    private static let quantityPattern = try? NSRegularExpression(
+        pattern: #"^\s*(\d+(?:[.,]\d+)?)\s*(ml|mL|ML|cl|cL|l|L|g|gr|G|kg|oz|fl\.?\s?oz)\b"#
+    )
+
+    /// «473ml - Normale…» → «473 ml»; senza unità riconoscibile all'inizio → nil (meglio niente che sporco).
+    static func sanitizedQuantity(_ raw: String?) -> String? {
+        guard let raw, let quantityPattern else { return nil }
+        let range = NSRange(raw.startIndex..., in: raw)
+        guard let match = quantityPattern.firstMatch(in: raw, range: range),
+              let number = Range(match.range(at: 1), in: raw),
+              let unit = Range(match.range(at: 2), in: raw) else { return nil }
+        return "\(raw[number]) \(raw[unit])"
+    }
 
     public static func map(
         _ dto: OBFProduct, category: CategorySpec, baseURL: URL = OBFClient.defaultBaseURL
     ) -> Product? {
-        guard let name = dto.bestName, name.count >= 3,
+        guard let name = dto.bestName, isPlausibleName(name, code: dto.code),
               let brand = dto.firstBrand,
               let url400 = dto.imageFrontURL,
               let ingredients = dto.bestIngredientsText,
-              DescriptionComposer.ingredientTokens(from: ingredients, max: minimumIngredientTokens).count
-                >= minimumIngredientTokens else {
+              isPlausibleIngredientList(ingredients, ingredientsN: dto.ingredientsN) else {
             return nil
         }
+        let quantity = sanitizedQuantity(dto.quantity)
         let composed = DescriptionComposer.compose(
             genericName: dto.italianGenericName,
             categorySingular: category.singular,
             brand: brand,
-            quantity: dto.quantity,
+            quantity: quantity,
             ingredientsText: ingredients
         )
         let sourceURL = baseURL.appending(path: "product/\(dto.code)")
@@ -34,7 +63,7 @@ public enum OBFMapper {
             name: name,
             brand: brand,
             category: ProductCategory(id: category.tag, label: category.label),
-            quantity: dto.quantity,
+            quantity: quantity,
             description: composed.description,
             ingredientsPreview: composed.ingredientsPreview,
             image: ProductImage(

@@ -39,7 +39,7 @@ struct CatalogAssemblerTests {
         let products = (from..<(from + count)).map { index in
             """
             {"code":"9000\(index)","product_name":"Prodotto \(index)","brands":"Marca","quantity":"50 ml",
-             "ingredients_text":"Aqua, Glycerin, Alcohol",
+             "ingredients_text":"Aqua, Glycerin, Alcohol Denat., Parfum, Limonene",
              "image_front_url":"https://images.openbeautyfacts.org/p/\(index)/front.400.jpg","last_modified_t":1780000000}
             """
         }
