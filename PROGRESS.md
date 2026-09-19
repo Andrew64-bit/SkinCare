@@ -56,4 +56,7 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
 - Categorie v1: facial-creams, cleansers, sunscreen, face-masks, anti-aging-face-care-products, lip-balms.
 
 ## Cap turni (piano)
-- Step 0–4 ≤ 35 turni · gauntlet ≤ 25 · verifica+pubblicazione ≤ 10. Turni usati: step 0 in corso.
+- Step 0–4 ≤ 35 turni · gauntlet ≤ 25 · verifica+pubblicazione ≤ 10.
+- **Sforamento registrato**: gli step 0–4 hanno usato circa 55 turni (≈ 20 oltre il cap), quasi tutti
+  nella diagnosi dell'audit di accessibilità (6 cause distinte trovate per bisezione con il lab).
+  Decisione: proseguire con i cap delle fasi restanti invariati e riportare lo sforamento nel resoconto.
