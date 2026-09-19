@@ -1,7 +1,8 @@
 # SkinCare (iOS)
 
 App iOS (SwiftUI, iOS 18+) che mostra un catalogo di prodotti skincare — foto, nome, marca, descrizione —
-raggruppati per categoria. I dati vengono da [Open Beauty Facts](https://world.openbeautyfacts.org)
+raggruppati per categoria, con ricerca locale per nome, marca, categoria o barcode (484 prodotti in
+6 categorie, fino a 100 per categoria). I dati vengono da [Open Beauty Facts](https://world.openbeautyfacts.org)
 attraverso una pipeline offline: l'app **non** interroga mai OBF, legge solo un `catalog.json` di nostra
 proprietà (incluso nell'app e pubblicato su GitHub Pages, rigenerato ogni settimana).
 
