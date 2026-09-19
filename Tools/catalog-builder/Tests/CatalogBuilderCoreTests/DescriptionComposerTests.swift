@@ -64,4 +64,45 @@ struct DescriptionComposerTests {
         )
         #expect(tooLong.description.hasPrefix("Crema viso di X."))
     }
+
+    @Test("bullets and slashes: '•' separates ingredients, ' / ' separates synonyms (first one kept)")
+    func bulletsAndSynonyms() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "Garnier", quantity: nil,
+            ingredientsText: "AQUA / WATER • COCO-BETAINE • PROPYLENE GLYCOL • SODIUM LAURETH SULFATE • PEG-120"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Coco-Betaine, Propylene Glycol, Sodium Laureth Sulfate")
+    }
+
+    @Test("a leading code or 'INGREDIENTS:' label is stripped")
+    func leadingLabelStripped() {
+        let coded = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "603258 115 - INGREDIENTS: Aqua, Glycerin, Parfum"
+        )
+        #expect(coded.ingredientsPreview == "Aqua, Glycerin, Parfum")
+        let italian = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Ingredienti: Aqua, Glycerin"
+        )
+        #expect(italian.ingredientsPreview == "Aqua, Glycerin")
+    }
+
+    @Test("newlines and middle dots also separate ingredients")
+    func newlinesSeparate() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Aqua\nGlycerin · Parfum\r\nLimonene"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Glycerin, Parfum, Limonene")
+    }
+
+    @Test("mixed-case tokens keep their casing")
+    func mixedCaseKept() {
+        let result = DescriptionComposer.compose(
+            genericName: nil, categorySingular: "Crema viso", brand: "X", quantity: nil,
+            ingredientsText: "Aqua, Butyrospermum Parkii Butter, CI 77891"
+        )
+        #expect(result.ingredientsPreview == "Aqua, Butyrospermum Parkii Butter, CI 77891")
+    }
 }

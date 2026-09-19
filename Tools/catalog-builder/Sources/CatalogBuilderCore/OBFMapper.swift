@@ -7,6 +7,8 @@ import SkinCareKit
 public enum OBFMapper {
     public static let photoLicense = "CC BY-SA 3.0"
     public static let fallbackUploader = "contributori Open Beauty Facts"
+    /// Una lista INCI reale ha molti ingredienti: sotto questa soglia il testo non è una lista utilizzabile.
+    public static let minimumIngredientTokens = 2
 
     public static func map(
         _ dto: OBFProduct, category: CategorySpec, baseURL: URL = OBFClient.defaultBaseURL
@@ -14,7 +16,9 @@ public enum OBFMapper {
         guard let name = dto.bestName, name.count >= 3,
               let brand = dto.firstBrand,
               let url400 = dto.imageFrontURL,
-              let ingredients = dto.bestIngredientsText else {
+              let ingredients = dto.bestIngredientsText,
+              DescriptionComposer.ingredientTokens(from: ingredients, max: minimumIngredientTokens).count
+                >= minimumIngredientTokens else {
             return nil
         }
         let composed = DescriptionComposer.compose(

@@ -12,8 +12,13 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
   `CatalogStore` (atomico, escluso da backup, corrotto → cancellato), `RemoteCatalogSource` (ETag/304),
   `CatalogRepository` (bundle vs store, refresh giornaliero tutto-o-niente). 31 test verdi, lint pulito.
 
+- 2026-09-19: step 2 — `Tools/catalog-builder` (DTO tolleranti, composer IT, rate limiter, client OBF,
+  mapper con filtri, assembler, CLI build/verify) in TDD: 39 test verdi. Catalogo reale generato:
+  120 prodotti, 6 categorie × 20, `QUALITY=PASS`, 33 s, 12 richieste a OBF. `BundledCatalog` nel Kit
+  con 3 test sullo snapshot (41 test verdi nel Kit). Lint pulito.
+
 ## In corso
-- Step 2: `Tools/catalog-builder` (client OBF, DTO, mapper, composer, rate limiter) + `CatalogQuality`.
+- Step 3: app (project.yml → xcodegen, viste, ImageLoader, attribuzione, stub rete DEBUG).
 
 ## Da fare
 - Step 2: `catalog-builder` + generazione `catalog.json` (≥ 60 prodotti).
@@ -24,6 +29,12 @@ Prova di completamento: `./scripts/check_done.sh` → `DONE=PASS`.
 - Step 7: repo pubblico `Andrew64-bit/SkinCare`, Pages, Action settimanale, URL nell'app.
 
 ## Decisioni prese
+- Descrizioni sempre in italiano: il nome generico OBF si usa solo se italiano (`generic_name_it` o
+  `lang == it`), altrimenti «{categoria} di {marca}». Selezione: nome ≥ 3, marca, foto fronte, INCI con
+  ≥ 2 ingredienti riconoscibili (separatori `, ; • · |` a capo; sinonimi «A / B» → A; etichette
+  «INGREDIENTS:» rimosse).
+- Credito foto: uploader risolto da `images` quando possibile (100/120), altrimenti «contributori
+  Open Beauty Facts» con link alla pagina prodotto (attribuzione comunque conforme).
 - L'app non chiama Open Beauty Facts: solo il builder (limite 10 ricerche/min per IP, NAT mobile, policy
   uso massivo). L'app legge `catalog.json` (bundle + URL statico con ETag).
 - Catalogo statico + pipeline invece di un backend vivo (confermato da Andrea il 2026-09-19); un'API

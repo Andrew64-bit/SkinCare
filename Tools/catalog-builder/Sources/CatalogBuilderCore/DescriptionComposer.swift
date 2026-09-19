@@ -42,15 +42,34 @@ public enum DescriptionComposer {
         return name.prefix(1).uppercased() + name.dropFirst()
     }
 
+    /// Etichetta iniziale tipo «603258 115 - INGREDIENTS:» / «Ingredienti:» / «INCI:».
+    private static let leadingLabelPattern = #"^[^,;•·\n]{0,40}?(ingredients?|ingredienti|inci|composition|composizione)\s*:"#
+    private static let separators = CharacterSet(charactersIn: ",;•·|\n\r")
+
+    /// Spezza la lista INCI nei singoli ingredienti: separatori reali (virgola, punto e virgola, punto
+    /// elenco, a capo), sinonimi «AQUA / WATER» ridotti al primo, asterischi tolti, liste tutte in
+    /// maiuscolo normalizzate. Restano solo i primi `max` token con almeno una lettera e ≤ 60 caratteri.
     static func ingredientTokens(from text: String, max: Int) -> [String] {
-        let cleaned = text
-            .split(whereSeparator: { $0 == "," || $0 == ";" })
-            .map { token in
-                token.replacingOccurrences(of: "*", with: "")
+        var body = text
+        if let label = body.range(of: leadingLabelPattern, options: [.regularExpression, .caseInsensitive]) {
+            body.removeSubrange(label)
+        }
+        let shouting = body.range(of: "[a-z]", options: .regularExpression) == nil
+        let tokens = body
+            .components(separatedBy: separators)
+            .map { raw -> String in
+                var token = raw.replacingOccurrences(of: "*", with: "")
+                if let synonym = token.range(of: " / ") {
+                    token = String(token[..<synonym.lowerBound])
+                }
+                token = token
                     .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
                     .trimmingCharacters(in: .whitespacesAndNewlines)
+                return shouting ? token.capitalized : token
             }
-            .filter { !$0.isEmpty && $0.count <= 60 }
-        return Array(cleaned.prefix(max))
+            .filter { token in
+                !token.isEmpty && token.count <= 60 && token.range(of: "[A-Za-z]", options: .regularExpression) != nil
+            }
+        return Array(tokens.prefix(max))
     }
 }

@@ -69,6 +69,15 @@ struct OBFMapperTests {
         #expect(OBFMapper.map(try OBFDecoder.product(from: Data(json.utf8)), category: facialCreams) == nil)
     }
 
+    @Test("a product whose ingredient list yields fewer than 2 tokens is not selected")
+    func tooFewIngredientTokensRejected() throws {
+        let json = """
+        {"code":"1","product_name":"Crema","brands":"B","ingredients_text":"Aqua",
+         "image_front_url":"https://images.openbeautyfacts.org/a/front.400.jpg"}
+        """
+        #expect(OBFMapper.map(try OBFDecoder.product(from: Data(json.utf8)), category: facialCreams) == nil)
+    }
+
     @Test("a product without brand is not selected")
     func noBrandRejected() throws {
         let json = """

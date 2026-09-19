@@ -11,6 +11,7 @@ let package = Package(
     targets: [
         .target(
             name: "SkinCareKit",
+            resources: [.copy("Resources/catalog.json")],
             swiftSettings: [.enableUpcomingFeature("StrictConcurrency")]
         ),
         .testTarget(
