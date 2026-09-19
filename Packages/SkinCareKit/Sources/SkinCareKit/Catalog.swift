@@ -8,12 +8,18 @@ public struct Catalog: Codable, Sendable, Equatable {
     public var schemaVersion: Int
     public var generatedAt: Date
     public var source: CatalogSourceInfo
+    /// Perimetro dichiarato dal builder (es. «Italia in evidenza: prodotti segnalati in vendita in Italia
+    /// in cima, resto dell'UE come riserva»). Opzionale: assente nei documenti v0.1/v0.2.
+    public var scope: String?
     public var products: [Product]
 
-    public init(schemaVersion: Int, generatedAt: Date, source: CatalogSourceInfo, products: [Product]) {
+    public init(
+        schemaVersion: Int, generatedAt: Date, source: CatalogSourceInfo, scope: String? = nil, products: [Product]
+    ) {
         self.schemaVersion = schemaVersion
         self.generatedAt = generatedAt
         self.source = source
+        self.scope = scope
         self.products = products
     }
 }

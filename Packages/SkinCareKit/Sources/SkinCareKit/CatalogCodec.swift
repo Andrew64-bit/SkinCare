@@ -72,6 +72,7 @@ public enum CatalogCodec {
             && isSecure(product.image.url200)
             && isSecure(product.image.url400)
             && isSecure(product.sourceURL)
+            && (product.image.cutoutURL.map(isSecure) ?? true)
     }
 
     private static func isSecure(_ url: URL) -> Bool {

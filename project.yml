@@ -13,6 +13,9 @@ settings:
     ENABLE_USER_SCRIPT_SANDBOXING: YES
     CODE_SIGN_STYLE: Automatic
     CODE_SIGN_IDENTITY: ""
+    # Team che Xcode scrive nel .xcodeproj alla prima apertura: fissarlo qui evita che il progetto
+    # rigenerato da xcodegen differisca da quello aperto in Xcode (check_done pretende il diff pulito).
+    DEVELOPMENT_TEAM: KXNM428P64
 packages:
   SkinCareKit:
     path: Packages/SkinCareKit
