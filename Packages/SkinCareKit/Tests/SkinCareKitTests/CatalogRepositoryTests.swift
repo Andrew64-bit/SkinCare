@@ -144,7 +144,8 @@ struct CatalogRepositoryTests {
     func sendsStoredETag() async throws {
         let (store, dir) = makeStore()
         defer { try? FileManager.default.removeItem(at: dir) }
-        try await store.save(StoredCatalog(catalog: newer(by: 1), etag: "\"e7\"", lastCheckedAt: now.addingTimeInterval(-2 * 86_400)))
+        let twoDaysAgo = now.addingTimeInterval(-2 * 86_400)
+        try await store.save(StoredCatalog(catalog: newer(by: 1), etag: "\"e7\"", lastCheckedAt: twoDaysAgo))
         let remote = FakeRemote(.success(.notModified))
         let repo = makeRepository(store: store, remote: remote)
         await repo.load()

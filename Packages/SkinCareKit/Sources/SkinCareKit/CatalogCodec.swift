@@ -61,7 +61,7 @@ public enum CatalogCodec {
         }
     }
 
-    static func isValid(_ product: Product) -> Bool {
+    public static func isValid(_ product: Product) -> Bool {
         let name = product.name.trimmingCharacters(in: .whitespacesAndNewlines)
         let brand = product.brand.trimmingCharacters(in: .whitespacesAndNewlines)
         let description = product.description.trimmingCharacters(in: .whitespacesAndNewlines)

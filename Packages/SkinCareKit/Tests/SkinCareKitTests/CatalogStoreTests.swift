@@ -14,7 +14,8 @@ struct CatalogStoreTests {
     func saveLoadRoundTrip() async throws {
         let (store, dir) = makeStore()
         defer { try? FileManager.default.removeItem(at: dir) }
-        let stored = StoredCatalog(catalog: TestCatalogs.make(productCount: 2), etag: "\"abc\"", lastCheckedAt: TestCatalogs.generatedAt)
+        let catalog = TestCatalogs.make(productCount: 2)
+        let stored = StoredCatalog(catalog: catalog, etag: "\"abc\"", lastCheckedAt: TestCatalogs.generatedAt)
         try await store.save(stored)
         let loaded = await store.load()
         #expect(loaded == stored)
@@ -55,7 +56,8 @@ struct CatalogStoreTests {
     func recordCheck() async throws {
         let (store, dir) = makeStore()
         defer { try? FileManager.default.removeItem(at: dir) }
-        let stored = StoredCatalog(catalog: TestCatalogs.make(productCount: 2), etag: "\"e1\"", lastCheckedAt: TestCatalogs.generatedAt)
+        let catalog = TestCatalogs.make(productCount: 2)
+        let stored = StoredCatalog(catalog: catalog, etag: "\"e1\"", lastCheckedAt: TestCatalogs.generatedAt)
         try await store.save(stored)
         let later = TestCatalogs.generatedAt.addingTimeInterval(3600)
         try await store.recordCheck(at: later)

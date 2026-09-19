@@ -37,4 +37,7 @@ di questo repo. Il piano approvato e la definition of done sono in
   un solo «gap più grande» per round, cap 3 round per pezzo, tutto in `gauntlet/LOG.md`.
 
 ## Lezioni apprese
-- (vuoto: aggiungere qui ogni correzione ricevuta)
+- 2026-09-19 (lint del Kit): `swiftlint ... | tail` ha restituito exit 0 con 5 violazioni, e il commit è
+  passato "pulito". Regola: un comando di verifica non va mai messo in pipe senza `set -o pipefail`
+  (o si legge `${pipestatus[1]}` in zsh); negli script di check usare `set -euo pipefail` e nessuna pipe
+  sulle righe che decidono l'esito.

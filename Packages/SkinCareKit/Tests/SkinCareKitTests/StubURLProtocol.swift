@@ -3,8 +3,14 @@ import Synchronization
 
 /// Risponde alle richieste HTTP dei test senza rete. Gli handler sono registrati per URL esatto, così
 /// i test possono girare in parallelo senza interferire.
-final class StubURLProtocol: URLProtocol {
-    typealias Handler = @Sendable (URLRequest) throws -> (status: Int, headers: [String: String], body: Data)
+struct StubReply: Sendable {
+    var status: Int
+    var headers: [String: String] = [:]
+    var body = Data()
+}
+
+class StubURLProtocol: URLProtocol {
+    typealias Handler = @Sendable (URLRequest) throws -> StubReply
 
     private static let handlers = Mutex<[String: Handler]>([:])
     private static let requests = Mutex<[String: URLRequest]>([:])
@@ -36,7 +42,9 @@ final class StubURLProtocol: URLProtocol {
         }
         do {
             let reply = try handler(request)
-            let response = HTTPURLResponse(url: url, statusCode: reply.status, httpVersion: "HTTP/1.1", headerFields: reply.headers)!
+            let response = HTTPURLResponse(
+                url: url, statusCode: reply.status, httpVersion: "HTTP/1.1", headerFields: reply.headers
+            )!
             client.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
             client.urlProtocol(self, didLoad: reply.body)
             client.urlProtocolDidFinishLoading(self)
