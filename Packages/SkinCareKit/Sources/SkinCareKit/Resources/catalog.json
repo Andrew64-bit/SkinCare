@@ -1,5 +1,5 @@
 {
-  "generatedAt" : "2026-09-19T14:28:09Z",
+  "generatedAt" : "2026-09-19T14:53:00Z",
   "products" : [
     {
       "brand" : "Mixa",
@@ -186,12 +186,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/4084200772901"
     },
     {
-      "brand" : "avril",
+      "brand" : "Avril",
       "category" : {
         "id" : "facial-creams",
         "label" : "Creme viso"
       },
-      "description" : "Crema viso di avril, 200 ml. Ingredienti principali: AQUA (WATER), CAPRYLIC/CAPRIC TRIGLYCERIDE, CETYL LACTATE COCO-CAPRYLATE/CAPRATE, CETEARYL ALCOHOL.",
+      "description" : "Crema viso di Avril, 200 ml. Ingredienti principali: AQUA (WATER), CAPRYLIC/CAPRIC TRIGLYCERIDE, CETYL LACTATE COCO-CAPRYLATE/CAPRATE, CETEARYL ALCOHOL.",
       "id" : "3662217004867",
       "image" : {
         "credit" : {
@@ -289,7 +289,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3560071162115",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "org-carrefour"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/356/007/116/2115/front_fr.33.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/356/007/116/2115/front_fr.33.400.jpg"
@@ -312,7 +312,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/4005808999675",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "jean-yves"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/400/580/899/9675/front_fr.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/400/580/899/9675/front_fr.4.400.jpg"
@@ -352,7 +352,7 @@
         "id" : "facial-creams",
         "label" : "Creme viso"
       },
-      "description" : "Crema viso di Marque Repère, 75 ml. Ingredienti principali: Aqua, octyldodecanol, polyglyceryl-3 dicitrate/stearate, glycerin.",
+      "description" : "Crema viso di Marque Repère, 75 ml. Ingredienti principali: Aqua, octyldodecanol, polyglyceryl-3 dicitrate, glycerin.",
       "id" : "3564700701058",
       "image" : {
         "credit" : {
@@ -363,7 +363,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/356/470/070/1058/front_fr.3.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/356/470/070/1058/front_fr.3.400.jpg"
       },
-      "ingredientsPreview" : "Aqua, octyldodecanol, polyglyceryl-3 dicitrate/stearate, glycerin",
+      "ingredientsPreview" : "Aqua, octyldodecanol, polyglyceryl-3 dicitrate, glycerin",
       "lastModified" : "2024-09-24T07:35:16Z",
       "name" : "Crème hydratante visage et corps",
       "quantity" : "75 ml",
@@ -393,12 +393,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/8690506473860"
     },
     {
-      "brand" : "NIVEA",
+      "brand" : "Nivea",
       "category" : {
         "id" : "facial-creams",
         "label" : "Creme viso"
       },
-      "description" : "Crema viso di NIVEA, 100 ml. Ingredienti principali: Aqua, Glycerin, Myristyl Alcohol, Alcohol Denat..",
+      "description" : "Crema viso di Nivea, 100 ml. Ingredienti principali: Aqua, Glycerin, Myristyl Alcohol, Alcohol Denat..",
       "id" : "4005900009135",
       "image" : {
         "credit" : {
@@ -421,7 +421,7 @@
         "id" : "facial-creams",
         "label" : "Creme viso"
       },
-      "description" : "Crema viso di Bioderma, 30 ml. Ingredienti principali: aqua/water/eau, glycerin, methyl methacrylate crosspolymer, dipropylene glycol.",
+      "description" : "Crema viso di Bioderma, 30 ml. Ingredienti principali: aqua, glycerin, methyl methacrylate crosspolymer, dipropylene glycol.",
       "id" : "3401360106994",
       "image" : {
         "credit" : {
@@ -432,7 +432,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/340/136/010/6994/front_fr.18.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/340/136/010/6994/front_fr.18.400.jpg"
       },
-      "ingredientsPreview" : "aqua/water/eau, glycerin, methyl methacrylate crosspolymer, dipropylene glycol",
+      "ingredientsPreview" : "aqua, glycerin, methyl methacrylate crosspolymer, dipropylene glycol",
       "lastModified" : "2026-03-25T10:31:42Z",
       "name" : "Sébium sensitive",
       "quantity" : "30 ml",
@@ -554,12 +554,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/3337875743563"
     },
     {
-      "brand" : "COSRX",
+      "brand" : "Cosrx",
       "category" : {
         "id" : "cleansers",
         "label" : "Detergenti"
       },
-      "description" : "Detergente di COSRX, 150 ml. Ingredienti principali: Water, Cocamidopropyl Betaine, Sodium Lauroyl nicus Branch/Fruit/Leaf Extract, Butylene Glycol.",
+      "description" : "Detergente di Cosrx, 150 ml. Ingredienti principali: Water, Cocamidopropyl Betaine, Sodium Lauroyl nicus Branch, Butylene Glycol.",
       "id" : "8809416470511",
       "image" : {
         "credit" : {
@@ -570,34 +570,11 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/880/941/647/0511/front_en.15.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/880/941/647/0511/front_en.15.400.jpg"
       },
-      "ingredientsPreview" : "Water, Cocamidopropyl Betaine, Sodium Lauroyl nicus Branch/Fruit/Leaf Extract, Butylene Glycol",
+      "ingredientsPreview" : "Water, Cocamidopropyl Betaine, Sodium Lauroyl nicus Branch, Butylene Glycol",
       "lastModified" : "2026-05-28T14:40:37Z",
       "name" : "Low PH good morning gel cleanser",
       "quantity" : "150 ml",
       "sourceURL" : "https://world.openbeautyfacts.org/product/8809416470511"
-    },
-    {
-      "brand" : "Léa Nature",
-      "category" : {
-        "id" : "cleansers",
-        "label" : "Detergenti"
-      },
-      "description" : "Detergente di Léa Nature, 500 ml. Ingredienti principali: Decyl Glucoside Parfum (Fragrance), Levulinic Acid, Sodium Benzoate Sodium Hydroxide, Lactic Acid.",
-      "id" : "3517360008685",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3517360008685",
-          "uploader" : "openfoodfacts-contributors"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/351/736/000/8685/front_fr.13.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/351/736/000/8685/front_fr.13.400.jpg"
-      },
-      "ingredientsPreview" : "Decyl Glucoside Parfum (Fragrance), Levulinic Acid, Sodium Benzoate Sodium Hydroxide, Lactic Acid",
-      "lastModified" : "2026-05-10T16:14:47Z",
-      "name" : "Précieux Argan Eau micellaire anti-âge",
-      "quantity" : "500 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3517360008685"
     },
     {
       "brand" : "Bioderma",
@@ -623,12 +600,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/3401395376706"
     },
     {
-      "brand" : "La roche-posay",
+      "brand" : "La Roche-Posay",
       "category" : {
         "id" : "cleansers",
         "label" : "Detergenti"
       },
-      "description" : "Detergente di La roche-posay, 30 ml. Ingredienti principali: Water, Denatured Alcohol, Propanediol, Glycolic Acid.",
+      "description" : "Detergente di La Roche-Posay, 30 ml. Ingredienti principali: Water, Denatured Alcohol, Propanediol, Glycolic Acid.",
       "id" : "3337875722827",
       "image" : {
         "credit" : {
@@ -669,12 +646,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/3401395376935"
     },
     {
-      "brand" : "LASCAD",
+      "brand" : "Lascad",
       "category" : {
         "id" : "cleansers",
         "label" : "Detergenti"
       },
-      "description" : "Detergente di LASCAD, 200 ml. Ingredienti principali: Aqua, hexylene glycol, glycerin, poloxamer 184.",
+      "description" : "Detergente di Lascad, 200 ml. Ingredienti principali: Aqua, hexylene glycol, glycerin, poloxamer 184.",
       "id" : "3600550038071",
       "image" : {
         "credit" : {
@@ -783,74 +760,6 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/8901138500061"
     },
     {
-      "brand" : "Diadermine",
-      "category" : {
-        "id" : "cleansers",
-        "label" : "Detergenti"
-      },
-      "description" : "Detergente di Diadermine, 125 ml. Ingredienti principali: EthyI Acetate, Alcohol denat., Aqua, Parfum.",
-      "id" : "3178041321792",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3178041321792",
-          "uploader" : "openfoodfacts-contributors"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/317/804/132/1792/front_fr.7.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/317/804/132/1792/front_fr.7.400.jpg"
-      },
-      "ingredientsPreview" : "EthyI Acetate, Alcohol denat., Aqua, Parfum",
-      "lastModified" : "2026-03-25T10:47:12Z",
-      "name" : "Dissolvant douceur",
-      "quantity" : "125 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3178041321792"
-    },
-    {
-      "brand" : "Cien",
-      "category" : {
-        "id" : "cleansers",
-        "label" : "Detergenti"
-      },
-      "description" : "Detergente di Cien. Ingredienti principali: aqua, methylpropanediol, sodium cocoamphoacetate, panthenol.",
-      "id" : "20864781",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/20864781",
-          "uploader" : "kiliweb"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/000/002/086/4781/front_fr.4.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/000/002/086/4781/front_fr.4.400.jpg"
-      },
-      "ingredientsPreview" : "aqua, methylpropanediol, sodium cocoamphoacetate, panthenol",
-      "lastModified" : "2018-11-01T14:19:54Z",
-      "name" : "Eau micellaire sensitive",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/20864781"
-    },
-    {
-      "brand" : "Labell",
-      "category" : {
-        "id" : "cleansers",
-        "label" : "Detergenti"
-      },
-      "description" : "Detergente di Labell, 200 mL. Ingredienti principali: acetone, butyl acetate, ricinus communis seed oil, CI 26100.",
-      "id" : "3250391551071",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3250391551071",
-          "uploader" : "scailyna"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/325/039/155/1071/front_fr.8.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/325/039/155/1071/front_fr.8.400.jpg"
-      },
-      "ingredientsPreview" : "acetone, butyl acetate, ricinus communis seed oil, CI 26100",
-      "lastModified" : "2026-03-25T16:11:00Z",
-      "name" : "Dissolvant à l'huile de ricin",
-      "quantity" : "200 mL",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3250391551071"
-    },
-    {
       "brand" : "Inell",
       "category" : {
         "id" : "cleansers",
@@ -908,7 +817,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3250392620844",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "openfoodfacts-contributors"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/325/039/262/0844/front_fr.5.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/325/039/262/0844/front_fr.5.400.jpg"
@@ -920,35 +829,103 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/3250392620844"
     },
     {
-      "brand" : "La Rosée",
+      "brand" : "Garancia",
       "category" : {
-        "id" : "sunscreen",
-        "label" : "Solari"
+        "id" : "cleansers",
+        "label" : "Detergenti"
       },
-      "description" : "Protezione solare di La Rosée, 150 ml. Ingredienti principali: Aqua (Water), Dicaprylyl Carbonate, Phenylbenzimidazole Sulfonic Hexyl Benzoate, Propanediol.",
-      "id" : "3770000717587",
+      "description" : "Detergente di Garancia, 30 ml. Ingredienti principali: Aqua (Water, Peg-6 Caprylic/Capric Glycerides, Hordeum Vulgare Juice, Biosaccharide Gum-1.",
+      "id" : "3700928800153",
       "image" : {
         "credit" : {
           "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3770000717587",
-          "uploader" : "raphael0202"
+          "sourceURL" : "https://world.openbeautyfacts.org/product/3700928800153",
+          "uploader" : "bessheron"
         },
-        "url200" : "https://images.openbeautyfacts.org/images/products/377/000/071/7587/front_fr.6.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/377/000/071/7587/front_fr.6.400.jpg"
+        "url200" : "https://images.openbeautyfacts.org/images/products/370/092/880/0153/front_fr.8.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/370/092/880/0153/front_fr.8.400.jpg"
       },
-      "ingredientsPreview" : "Aqua (Water), Dicaprylyl Carbonate, Phenylbenzimidazole Sulfonic Hexyl Benzoate, Propanediol",
-      "lastModified" : "2026-05-25T14:37:16Z",
-      "name" : "la Rosée lait solaire spf 50+",
-      "quantity" : "150 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3770000717587"
+      "ingredientsPreview" : "Aqua (Water, Peg-6 Caprylic/Capric Glycerides, Hordeum Vulgare Juice, Biosaccharide Gum-1",
+      "lastModified" : "2026-03-25T09:43:53Z",
+      "name" : "Source Micellaire Enchantée",
+      "quantity" : "30 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/3700928800153"
     },
     {
-      "brand" : "SVR",
+      "brand" : "Balea",
+      "category" : {
+        "id" : "cleansers",
+        "label" : "Detergenti"
+      },
+      "description" : "Detergente di Balea. Ingredienti principali: Aqua, Propylene Glycol, Aloe Barbadensis Leaf Juice, Dipropylene Glycol.",
+      "id" : "4010355583154",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/4010355583154",
+          "uploader" : "docsniper"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/401/035/558/3154/front_de.14.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/401/035/558/3154/front_de.14.400.jpg"
+      },
+      "ingredientsPreview" : "Aqua, Propylene Glycol, Aloe Barbadensis Leaf Juice, Dipropylene Glycol",
+      "lastModified" : "2026-03-26T02:24:14Z",
+      "name" : "Mizellen Augen Make-Up Entferner Pads",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/4010355583154"
+    },
+    {
+      "brand" : "Garnier",
+      "category" : {
+        "id" : "cleansers",
+        "label" : "Detergenti"
+      },
+      "description" : "Detergente di Garnier, 125 ml. Ingredienti principali: Aqua, Hexylene Glycol, Glycerin, Poloxamer 184.",
+      "id" : "3600541729476",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/3600541729476",
+          "uploader" : "alia"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/360/054/172/9476/front_en.10.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/360/054/172/9476/front_en.10.400.jpg"
+      },
+      "ingredientsPreview" : "Aqua, Hexylene Glycol, Glycerin, Poloxamer 184",
+      "lastModified" : "2026-06-07T01:04:09Z",
+      "name" : "Micellar Cleansing Water",
+      "quantity" : "125 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/3600541729476"
+    },
+    {
+      "brand" : "Nivea",
+      "category" : {
+        "id" : "cleansers",
+        "label" : "Detergenti"
+      },
+      "description" : "Detergente di Nivea, 200 ml. Ingredienti principali: Aqua, PEG-40 Hydrogenated Castor Oil, Vitis Vinifera Seed Oil, Panthenol.",
+      "id" : "4005808916887",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/4005808916887",
+          "uploader" : "openfoodfacts-contributors"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/400/580/891/6887/front_nb.4.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/400/580/891/6887/front_nb.4.400.jpg"
+      },
+      "ingredientsPreview" : "Aqua, PEG-40 Hydrogenated Castor Oil, Vitis Vinifera Seed Oil, Panthenol",
+      "lastModified" : "2022-01-16T18:07:48Z",
+      "name" : "MicellAIR",
+      "quantity" : "200 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/4005808916887"
+    },
+    {
+      "brand" : "Svr",
       "category" : {
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di SVR, 200 ml. Ingredienti principali: Water, Dicaprylyl Ether, Diisopropyl Adipate, Diethylamino Hydroxybenzoyl Hexyl Benzoate.",
+      "description" : "Protezione solare di Svr, 200 ml. Ingredienti principali: Water, Dicaprylyl Ether, Diisopropyl Adipate, Diethylamino Hydroxybenzoyl Hexyl Benzoate.",
       "id" : "3662361002146",
       "image" : {
         "credit" : {
@@ -1150,58 +1127,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/4005800027932"
     },
     {
-      "brand" : "Avène",
+      "brand" : "Corine De Farme",
       "category" : {
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di Avène, 200 ml. Ingredienti principali: Avene Thermal Spring Water (Avene Aqua), C12-15 Alkyl Benzoate, Coco-Caprylate/Caprate Disopropyl Adipate, Water (Aqua).",
-      "id" : "3282770396317",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3282770396317",
-          "uploader" : "flonix"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/328/277/039/6317/front_fr.5.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/328/277/039/6317/front_fr.5.400.jpg"
-      },
-      "ingredientsPreview" : "Avene Thermal Spring Water (Avene Aqua), C12-15 Alkyl Benzoate, Coco-Caprylate/Caprate Disopropyl Adipate, Water (Aqua)",
-      "lastModified" : "2026-07-28T09:53:10Z",
-      "name" : "Spray Enfant 50+ Très Haute Protection",
-      "quantity" : "200 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3282770396317"
-    },
-    {
-      "brand" : "Lovea",
-      "category" : {
-        "id" : "sunscreen",
-        "label" : "Solari"
-      },
-      "description" : "Protezione solare di Lovea, 150 ml. Ingredienti principali: Aqua (Water) Dibutyl Adipate, Polyglyceryl-6 Stearate, Glyceryl Stearate, Cocos Nucifera (Coconut) Oil.",
-      "id" : "3506770001010",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3506770001010",
-          "uploader" : "openfoodfacts-contributors"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/350/677/000/1010/front_fr.4.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/350/677/000/1010/front_fr.4.400.jpg"
-      },
-      "ingredientsPreview" : "Aqua (Water) Dibutyl Adipate, Polyglyceryl-6 Stearate, Glyceryl Stearate, Cocos Nucifera (Coconut) Oil",
-      "lastModified" : "2025-08-19T14:01:50Z",
-      "name" : "Spray Hydratant 50+",
-      "quantity" : "150 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3506770001010"
-    },
-    {
-      "brand" : "Corine de Farme",
-      "category" : {
-        "id" : "sunscreen",
-        "label" : "Solari"
-      },
-      "description" : "Protezione solare di Corine de Farme, 50 ml. Ingredienti principali: Aqua, C12-15 Alkyl Benzoate, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine.",
+      "description" : "Protezione solare di Corine De Farme, 50 ml. Ingredienti principali: Aqua, C12-15 Alkyl Benzoate, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine.",
       "id" : "3468080009332",
       "image" : {
         "credit" : {
@@ -1219,12 +1150,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/3468080009332"
     },
     {
-      "brand" : "Zenova suncare",
+      "brand" : "Zenova Suncare",
       "category" : {
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di Zenova suncare, 200 ml. Ingredienti principali: Aqua, C12-15 Alkyl Benzoate, Glycerin, Ethylhexyl Triazone.",
+      "description" : "Protezione solare di Zenova Suncare, 200 ml. Ingredienti principali: Aqua, C12-15 Alkyl Benzoate, Glycerin, Ethylhexyl Triazone.",
       "id" : "8710444220828",
       "image" : {
         "credit" : {
@@ -1242,35 +1173,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/8710444220828"
     },
     {
-      "brand" : "Avène",
+      "brand" : "Eau Thermale Avène",
       "category" : {
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di Avène, 250 ml. Ingredienti principali: Eau thermal Avène, c12-15 alkyl benzoate, dicaprylyl carbonate, eau.",
-      "id" : "3282770100747",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3282770100747",
-          "uploader" : "herne"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/328/277/010/0747/front_fr.20.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/328/277/010/0747/front_fr.20.400.jpg"
-      },
-      "ingredientsPreview" : "Eau thermal Avène, c12-15 alkyl benzoate, dicaprylyl carbonate, eau",
-      "lastModified" : "2026-06-07T07:44:13Z",
-      "name" : "Lait SPF 50+",
-      "quantity" : "250 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3282770100747"
-    },
-    {
-      "brand" : "Eau thermale Avène",
-      "category" : {
-        "id" : "sunscreen",
-        "label" : "Solari"
-      },
-      "description" : "Protezione solare di Eau thermale Avène, 100 ml. Ingredienti principali: Avene Thermal Spring Water (Avene Aqua), Diethylamino Hydroxybenzoyl Hexyl Benzoate, Diisopropyl Sebacate, Coco-Caprylate/Caprate.",
+      "description" : "Protezione solare di Eau Thermale Avène, 100 ml. Ingredienti principali: Avene Thermal Spring Water (Avene Aqua), Diethylamino Hydroxybenzoyl Hexyl Benzoate, Diisopropyl Sebacate, Coco-Caprylate/Caprate.",
       "id" : "3282770396874",
       "image" : {
         "credit" : {
@@ -1311,18 +1219,18 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/4012400800711"
     },
     {
-      "brand" : "Nivea sun",
+      "brand" : "Nivea Sun",
       "category" : {
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di Nivea sun, 200 ml. Ingredienti principali: Aqua, Alcohol Denat, Butyl Methoxydibenzoylmethane, Ethylhexyl Triazone.",
+      "description" : "Protezione solare di Nivea Sun, 200 ml. Ingredienti principali: Aqua, Alcohol Denat, Butyl Methoxydibenzoylmethane, Ethylhexyl Triazone.",
       "id" : "4005900597243",
       "image" : {
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/4005900597243",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "jbieber"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/400/590/059/7243/front_fr.9.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/400/590/059/7243/front_fr.9.400.jpg"
@@ -1334,12 +1242,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/4005900597243"
     },
     {
-      "brand" : "LA ROCHE-POSAY",
+      "brand" : "La Roche-Posay",
       "category" : {
         "id" : "sunscreen",
         "label" : "Solari"
       },
-      "description" : "Protezione solare di LA ROCHE-POSAY, 150 ml. Ingredienti principali: WATER, ISOPROPYL PALMITATE, ACOHOL DENAT, BUTYL METHOXYDIBENZOYLMETHANE.",
+      "description" : "Protezione solare di La Roche-Posay, 150 ml. Ingredienti principali: WATER, ISOPROPYL PALMITATE, ACOHOL DENAT, BUTYL METHOXYDIBENZOYLMETHANE.",
       "id" : "3337875917872",
       "image" : {
         "credit" : {
@@ -1378,6 +1286,98 @@
       "name" : "Solaire peau parfaite 50+",
       "quantity" : "150 ml",
       "sourceURL" : "https://world.openbeautyfacts.org/product/3660005795300"
+    },
+    {
+      "brand" : "Nivea",
+      "category" : {
+        "id" : "sunscreen",
+        "label" : "Solari"
+      },
+      "description" : "Protezione solare di Nivea, 200 ml. Ingredienti principali: Aqua, Homosalate, Glycerin, Alcohal Denat..",
+      "id" : "4005900246905",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/4005900246905",
+          "uploader" : "openfoodfacts-contributors"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/400/590/024/6905/front_de.4.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/400/590/024/6905/front_de.4.400.jpg"
+      },
+      "ingredientsPreview" : "Aqua, Homosalate, Glycerin, Alcohal Denat.",
+      "lastModified" : "2025-02-04T16:53:08Z",
+      "name" : "Nivea sun Schutz & Pflege",
+      "quantity" : "200 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/4005900246905"
+    },
+    {
+      "brand" : "La Roche-Posay",
+      "category" : {
+        "id" : "sunscreen",
+        "label" : "Solari"
+      },
+      "description" : "Protezione solare di La Roche-Posay, 200 ml. Ingredienti principali: Aqua, Alcohol Denat., Homosalate, Ethylhexyl Salicylate.",
+      "id" : "3337875698696",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/3337875698696",
+          "uploader" : "laurent"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/333/787/569/8696/front_fr.7.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/333/787/569/8696/front_fr.7.400.jpg"
+      },
+      "ingredientsPreview" : "Aqua, Alcohol Denat., Homosalate, Ethylhexyl Salicylate",
+      "lastModified" : "2026-03-25T10:05:35Z",
+      "name" : "Anthelios Dermo-Pediatrics 50+",
+      "quantity" : "200 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/3337875698696"
+    },
+    {
+      "brand" : "Sun Dance",
+      "category" : {
+        "id" : "sunscreen",
+        "label" : "Solari"
+      },
+      "description" : "Protezione solare di Sun Dance, 200 ml. Ingredienti principali: Аqua, Dibutyl Adipate, Glycerin, Diethylamino Hydroxybenzoyl Hexyl Benzoate.",
+      "id" : "4066447786460",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/4066447786460",
+          "uploader" : "smoothie-app"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/406/644/778/6460/front_de.18.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/406/644/778/6460/front_de.18.400.jpg"
+      },
+      "ingredientsPreview" : "Аqua, Dibutyl Adipate, Glycerin, Diethylamino Hydroxybenzoyl Hexyl Benzoate",
+      "lastModified" : "2026-05-04T10:51:14Z",
+      "name" : "Latte solare per bambini 50+",
+      "quantity" : "200 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/4066447786460"
+    },
+    {
+      "brand" : "Cien",
+      "category" : {
+        "id" : "sunscreen",
+        "label" : "Solari"
+      },
+      "description" : "Protezione solare di Cien, 250 ml. Ingredienti principali: Aqua, Octocrylene, Alcohol, Glycerin.",
+      "id" : "20382933",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/20382933",
+          "uploader" : "sil"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/000/002/038/2933/front_de.5.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/000/002/038/2933/front_de.5.400.jpg"
+      },
+      "ingredientsPreview" : "Aqua, Octocrylene, Alcohol, Glycerin",
+      "lastModified" : "2025-02-05T20:50:00Z",
+      "name" : "Sonnenmilch classic LSF 30",
+      "quantity" : "250 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/20382933"
     },
     {
       "brand" : "Argile",
@@ -1449,12 +1449,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/5017634256739"
     },
     {
-      "brand" : "SOHO N.Y.C",
+      "brand" : "Soho N.y.c",
       "category" : {
         "id" : "face-masks",
         "label" : "Maschere viso"
       },
-      "description" : "Maschera viso di SOHO N.Y.C, 100 ml. Ingredienti principali: Aqua, Glycerin, Aloe Barbadensis Leaf Extract, Alcohol Denat..",
+      "description" : "Maschera viso di Soho N.y.c, 100 ml. Ingredienti principali: Aqua, Glycerin, Aloe Barbadensis Leaf Extract, Alcohol Denat..",
       "id" : "8683420170045",
       "image" : {
         "credit" : {
@@ -1621,7 +1621,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/8809301767566",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "gala-nafikova"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/880/930/176/7566/front_fr.3.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/880/930/176/7566/front_fr.3.400.jpg"
@@ -1661,7 +1661,7 @@
         "id" : "face-masks",
         "label" : "Maschere viso"
       },
-      "description" : "Maschera viso di Garnier, 28 gr. Ingredienti principali: Aqua, Propylene Glycol, Glycerin, P-Anisic Acid.",
+      "description" : "Maschera viso di Garnier, 28 g. Ingredienti principali: Aqua, Propylene Glycol, Glycerin, P-Anisic Acid.",
       "id" : "3600542385336",
       "image" : {
         "credit" : {
@@ -1675,7 +1675,7 @@
       "ingredientsPreview" : "Aqua, Propylene Glycol, Glycerin, P-Anisic Acid",
       "lastModified" : "2026-06-21T08:22:07Z",
       "name" : "Garnier Nem Bombası Dinlendirici Kağıt Maske 28 gr",
-      "quantity" : "28 gr",
+      "quantity" : "28 g",
       "sourceURL" : "https://world.openbeautyfacts.org/product/3600542385336"
     },
     {
@@ -1713,7 +1713,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/5902539710427",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "cassya"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/590/253/971/0427/front_fr.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/590/253/971/0427/front_fr.4.400.jpg"
@@ -1826,7 +1826,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3661434003424",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "monapp"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/366/143/400/3424/front_fr.3.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/366/143/400/3424/front_fr.3.400.jpg"
@@ -1872,7 +1872,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3178040433809",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "tacite"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/317/804/043/3809/front_fr.5.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/317/804/043/3809/front_fr.5.400.jpg"
@@ -1963,7 +1963,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/4005900107589",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "tacite"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/400/590/010/7589/front_fr.6.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/400/590/010/7589/front_fr.6.400.jpg"
@@ -1986,7 +1986,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3600541738508",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "teolemon"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/360/054/173/8508/front_fr.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/360/054/173/8508/front_fr.4.400.jpg"
@@ -2009,7 +2009,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/4005800294778",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "openfoodfacts-contributors"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/400/580/029/4778/front_fr.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/400/580/029/4778/front_fr.4.400.jpg"
@@ -2032,7 +2032,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/5943048002788",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "openfoodfacts-contributors"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/594/304/800/2788/front_en.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/594/304/800/2788/front_en.4.400.jpg"
@@ -2044,35 +2044,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/5943048002788"
     },
     {
-      "brand" : "Soin Amalthée",
+      "brand" : "Caremare",
       "category" : {
         "id" : "anti-aging-face-care-products",
         "label" : "Anti-età"
       },
-      "description" : "Trattamento viso anti-età di Soin Amalthée, 100 g. Ingredienti principali: Sodium Rapeseedate, Sodium Cocoate, Aqua, Goat Milk.",
-      "id" : "3770020070006",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3770020070006",
-          "uploader" : "contributori Open Beauty Facts"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/377/002/007/0006/front_fr.13.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/377/002/007/0006/front_fr.13.400.jpg"
-      },
-      "ingredientsPreview" : "Sodium Rapeseedate, Sodium Cocoate, Aqua, Goat Milk",
-      "lastModified" : "2021-02-10T13:48:30Z",
-      "name" : "L'incontournable savon au lait de chèvre parfum amande",
-      "quantity" : "100 g",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3770020070006"
-    },
-    {
-      "brand" : "caremare",
-      "category" : {
-        "id" : "anti-aging-face-care-products",
-        "label" : "Anti-età"
-      },
-      "description" : "Trattamento viso anti-età di caremare. Ingredienti principali: ALOE BARBADENSIS LEAF JUICE, CAPRYLIC/CAPRIC TRIGLYCERIDE, PROPANEDIOL, GLYCERYL STEARATE SE.",
+      "description" : "Trattamento viso anti-età di Caremare. Ingredienti principali: ALOE BARBADENSIS LEAF JUICE, CAPRYLIC/CAPRIC TRIGLYCERIDE, PROPANEDIOL, GLYCERYL STEARATE SE.",
       "id" : "4262351040296",
       "image" : {
         "credit" : {
@@ -2100,7 +2077,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3600523732548",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "openfoodfacts-contributors"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/360/052/373/2548/front_fr.3.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/360/052/373/2548/front_fr.3.400.jpg"
@@ -2122,7 +2099,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3700454229541",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "fuginae"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/370/045/422/9541/front_fr.8.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/370/045/422/9541/front_fr.8.400.jpg"
@@ -2134,35 +2111,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/3700454229541"
     },
     {
-      "brand" : "Soin Amalthée",
+      "brand" : "Caremare",
       "category" : {
         "id" : "anti-aging-face-care-products",
         "label" : "Anti-età"
       },
-      "description" : "Trattamento viso anti-età di Soin Amalthée, 100 g. Ingredienti principali: Sodium Rapeseedate, Sodium Cocoate, Aqua, Goat Milk.",
-      "id" : "3770020070013",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3770020070013",
-          "uploader" : "contributori Open Beauty Facts"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/377/002/007/0013/front_fr.6.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/377/002/007/0013/front_fr.6.400.jpg"
-      },
-      "ingredientsPreview" : "Sodium Rapeseedate, Sodium Cocoate, Aqua, Goat Milk",
-      "lastModified" : "2021-02-10T13:54:57Z",
-      "name" : "L'incontournable savon au lait de chèvre parfum thé",
-      "quantity" : "100 g",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3770020070013"
-    },
-    {
-      "brand" : "caremare",
-      "category" : {
-        "id" : "anti-aging-face-care-products",
-        "label" : "Anti-età"
-      },
-      "description" : "Trattamento viso anti-età di caremare, 30 ml. Ingredienti principali: ALOE BARBADENSIS LEAF JUICE, AQUA, CAPRYLIC/CAPRIC TRIGLYCERIDE, PENTYLENE GLYCOL.",
+      "description" : "Trattamento viso anti-età di Caremare, 30 ml. Ingredienti principali: ALOE BARBADENSIS LEAF JUICE, AQUA, CAPRYLIC/CAPRIC TRIGLYCERIDE, PENTYLENE GLYCOL.",
       "id" : "4262351040364",
       "image" : {
         "credit" : {
@@ -2191,7 +2145,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/3614270429835",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "mume"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/361/427/042/9835/front_en.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/361/427/042/9835/front_en.4.400.jpg"
@@ -2249,35 +2203,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/7640183490613"
     },
     {
-      "brand" : "L'Oréal",
+      "brand" : "Alvora Lab",
       "category" : {
         "id" : "anti-aging-face-care-products",
         "label" : "Anti-età"
       },
-      "description" : "Trattamento viso anti-età di L'Oréal, 50 ml. Ingredienti principali: Aqua/ water, GLYCERIN DIMETHICONE ISOHEXADECANE, ALCOHOL DENAT, LINALOOL CI 60730/EXT.",
-      "id" : "3600523201501",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3600523201501",
-          "uploader" : "jolanta6"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/360/052/320/1501/front_lt.3.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/360/052/320/1501/front_lt.3.400.jpg"
-      },
-      "ingredientsPreview" : "Aqua/ water, GLYCERIN DIMETHICONE ISOHEXADECANE, ALCOHOL DENAT, LINALOOL CI 60730/EXT",
-      "lastModified" : "2025-08-25T11:25:36Z",
-      "name" : "Revitalift filler",
-      "quantity" : "50 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3600523201501"
-    },
-    {
-      "brand" : "ALVORA LAB",
-      "category" : {
-        "id" : "anti-aging-face-care-products",
-        "label" : "Anti-età"
-      },
-      "description" : "Trattamento viso anti-età di ALVORA LAB, 30 ml. Ingredienti principali: Hamamelis Virginiana Water (25-50%), Barbadensis Leaf Juice Aloe (10-25%), Tetrapeptide-21 (1-5%), Butylene Glycerin (5-10%).",
+      "description" : "Trattamento viso anti-età di Alvora Lab, 30 ml. Ingredienti principali: Hamamelis Virginiana Water (25-50%), Barbadensis Leaf Juice Aloe (10-25%), Tetrapeptide-21 (1-5%), Butylene Glycerin (5-10%).",
       "id" : "0717639101076",
       "image" : {
         "credit" : {
@@ -2293,6 +2224,75 @@
       "name" : "ALBA PEPTIDE SERUM",
       "quantity" : "30 ml",
       "sourceURL" : "https://world.openbeautyfacts.org/product/0717639101076"
+    },
+    {
+      "brand" : "Diadermine",
+      "category" : {
+        "id" : "anti-aging-face-care-products",
+        "label" : "Anti-età"
+      },
+      "description" : "Trattamento viso anti-età di Diadermine, 15 ml. Ingredienti principali: Aqua, Hexanediol, Glycerin, Cocoglycerides.",
+      "id" : "3178040695160",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/3178040695160",
+          "uploader" : "miel2thym"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/317/804/069/5160/front_fr.16.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/317/804/069/5160/front_fr.16.400.jpg"
+      },
+      "ingredientsPreview" : "Aqua, Hexanediol, Glycerin, Cocoglycerides",
+      "lastModified" : "2016-10-09T15:26:42Z",
+      "name" : "Lift + Lissage immédiat Gel-Crème Sublime Regard",
+      "quantity" : "15 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/3178040695160"
+    },
+    {
+      "brand" : "Swiss Toniq Geneva",
+      "category" : {
+        "id" : "anti-aging-face-care-products",
+        "label" : "Anti-età"
+      },
+      "description" : "Trattamento viso anti-età di Swiss Toniq Geneva, 30 ml. Ingredienti principali: Simmondsia Chinensis Seed Oil, Rosa Canina Fruit Oil, Isomalt, Lecithin.",
+      "id" : "7640183490330",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/7640183490330",
+          "uploader" : "swisstoniq"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/764/018/349/0330/front_en.3.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/764/018/349/0330/front_en.3.400.jpg"
+      },
+      "ingredientsPreview" : "Simmondsia Chinensis Seed Oil, Rosa Canina Fruit Oil, Isomalt, Lecithin",
+      "lastModified" : "2025-08-05T08:02:51Z",
+      "name" : "Advanced Repair 11-in-1 Serum With Essential Oil",
+      "quantity" : "30 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/7640183490330"
+    },
+    {
+      "brand" : "Comptoir Provençal Des Argiles",
+      "category" : {
+        "id" : "anti-aging-face-care-products",
+        "label" : "Anti-età"
+      },
+      "description" : "Trattamento viso anti-età di Comptoir Provençal Des Argiles, 50 ml. Ingredienti principali: Ribes Nigrum (Black currant) leaf water, Aqua (Water), Glycerin, _Corylus avellana_ (Hazelnut) seed oil.",
+      "id" : "3760020731403",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/3760020731403",
+          "uploader" : "miel2thym"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/376/002/073/1403/front_fr.7.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/376/002/073/1403/front_fr.7.400.jpg"
+      },
+      "ingredientsPreview" : "Ribes Nigrum (Black currant) leaf water, Aqua (Water), Glycerin, _Corylus avellana_ (Hazelnut) seed oil",
+      "lastModified" : "2016-10-09T13:40:24Z",
+      "name" : "BB cream Crème soin teintée Sable anti-âge",
+      "quantity" : "50 ml",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/3760020731403"
     },
     {
       "brand" : "Vaseline",
@@ -2316,28 +2316,6 @@
       "name" : "Vaseline lip therapy",
       "quantity" : "20 g",
       "sourceURL" : "https://world.openbeautyfacts.org/product/50064861"
-    },
-    {
-      "brand" : "Neutrogena",
-      "category" : {
-        "id" : "lip-balms",
-        "label" : "Balsami labbra"
-      },
-      "description" : "Balsamo labbra di Neutrogena. Ingredienti principali: Hydrogenated Polyisobutene, Synthetic Wax, Polyisobutene, Polycyceryl-3 Diisostearate.",
-      "id" : "3574660085563",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/3574660085563",
-          "uploader" : "gabrpetr"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/357/466/008/5563/front_fr.8.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/357/466/008/5563/front_fr.8.400.jpg"
-      },
-      "ingredientsPreview" : "Hydrogenated Polyisobutene, Synthetic Wax, Polyisobutene, Polycyceryl-3 Diisostearate",
-      "lastModified" : "2026-05-26T08:30:47Z",
-      "name" : "Neutrogena Lipcare Stick Norwegian Formula",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/3574660085563"
     },
     {
       "brand" : "Vaseline",
@@ -2385,35 +2363,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/3264680004117"
     },
     {
-      "brand" : "La-roche-posay",
-      "category" : {
-        "id" : "lip-balms",
-        "label" : "Balsami labbra"
-      },
-      "description" : "Balsamo labbra di La-roche-posay, 4,7 ml. Ingredienti principali: Polyethylene, Polybutene, Bis-Diglyceryl Polyacyladipate-2, Butyrospermum Parkii Butter/Shea Butter.",
-      "id" : "30070349",
-      "image" : {
-        "credit" : {
-          "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/30070349",
-          "uploader" : "openfoodfacts-contributors"
-        },
-        "url200" : "https://images.openbeautyfacts.org/images/products/000/003/007/0349/front_fr.13.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/000/003/007/0349/front_fr.13.400.jpg"
-      },
-      "ingredientsPreview" : "Polyethylene, Polybutene, Bis-Diglyceryl Polyacyladipate-2, Butyrospermum Parkii Butter/Shea Butter",
-      "lastModified" : "2026-06-07T05:32:46Z",
-      "name" : "Nutritic Lèvres - soin transformation lèvres desséchées",
-      "quantity" : "4,7 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/30070349"
-    },
-    {
       "brand" : "Mixa",
       "category" : {
         "id" : "lip-balms",
         "label" : "Balsami labbra"
       },
-      "description" : "Balsamo labbra di Mixa. Ingredienti principali: Cera Microcristallina, Polybutene, Hydrogenated Polyisobutene, Ricinus Communis.",
+      "description" : "Balsamo labbra di Mixa. Ingredienti principali: Cera Microcristallina / Microcrystalline Wax, Polybutene, Hydrogenated Polyisobutene, Ricinus Communis / Castor Seed Oil.",
       "id" : "3058320048117",
       "image" : {
         "credit" : {
@@ -2424,7 +2379,7 @@
         "url200" : "https://images.openbeautyfacts.org/images/products/305/832/004/8117/front_fr.7.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/305/832/004/8117/front_fr.7.400.jpg"
       },
-      "ingredientsPreview" : "Cera Microcristallina, Polybutene, Hydrogenated Polyisobutene, Ricinus Communis",
+      "ingredientsPreview" : "Cera Microcristallina / Microcrystalline Wax, Polybutene, Hydrogenated Polyisobutene, Ricinus Communis / Castor Seed Oil",
       "lastModified" : "2026-06-08T08:59:57Z",
       "name" : "Soin des lèvres Antidessèchement",
       "sourceURL" : "https://world.openbeautyfacts.org/product/3058320048117"
@@ -2508,7 +2463,7 @@
         "credit" : {
           "license" : "CC BY-SA 3.0",
           "sourceURL" : "https://world.openbeautyfacts.org/product/0792850897687",
-          "uploader" : "contributori Open Beauty Facts"
+          "uploader" : "winst0n"
         },
         "url200" : "https://images.openbeautyfacts.org/images/products/079/285/089/7687/front_en.4.200.jpg",
         "url400" : "https://images.openbeautyfacts.org/images/products/079/285/089/7687/front_en.4.400.jpg"
@@ -2547,7 +2502,7 @@
         "id" : "lip-balms",
         "label" : "Balsami labbra"
       },
-      "description" : "Balsamo labbra di Vaseline, 20 gr. Ingredienti principali: Petrolatum, Theobroma Cacao Seed Butter, Aroma, Benzyl Alcohol.",
+      "description" : "Balsamo labbra di Vaseline, 20 g. Ingredienti principali: Petrolatum, Theobroma Cacao Seed Butter, Aroma, Benzyl Alcohol.",
       "id" : "8690637879531",
       "image" : {
         "credit" : {
@@ -2561,7 +2516,7 @@
       "ingredientsPreview" : "Petrolatum, Theobroma Cacao Seed Butter, Aroma, Benzyl Alcohol",
       "lastModified" : "2026-06-03T07:49:08Z",
       "name" : "Vaseline Lip Therapy Cocoa Butter Dudak Bakım Kremi",
-      "quantity" : "20 gr",
+      "quantity" : "20 g",
       "sourceURL" : "https://world.openbeautyfacts.org/product/8690637879531"
     },
     {
@@ -2588,12 +2543,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/5060968412944"
     },
     {
-      "brand" : "neutrogena",
+      "brand" : "Neutrogena",
       "category" : {
         "id" : "lip-balms",
         "label" : "Balsami labbra"
       },
-      "description" : "Balsamo labbra di neutrogena. Ingredienti principali: Ricinus Communis Oil, Paraffin, Cera Alba, Cetyl Palmitate.",
+      "description" : "Balsamo labbra di Neutrogena. Ingredienti principali: Ricinus Communis Oil, Paraffin, Cera Alba, Cetyl Palmitate.",
       "id" : "0574660085563",
       "image" : {
         "credit" : {
@@ -2633,12 +2588,12 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/0792850897748"
     },
     {
-      "brand" : "INGU",
+      "brand" : "Ingu",
       "category" : {
         "id" : "lip-balms",
         "label" : "Balsami labbra"
       },
-      "description" : "Balsamo labbra di INGU, 10 ml. Ingredienti principali: Polybutene, Hydrogenated Polyisobutene, Ethylhexyl Palmitate, Microcrystalline Wax.",
+      "description" : "Balsamo labbra di Ingu, 10 ml. Ingredienti principali: Polybutene, Hydrogenated Polyisobutene, Ethylhexyl Palmitate, Microcrystalline Wax.",
       "id" : "8852660636875",
       "image" : {
         "credit" : {
@@ -2725,27 +2680,73 @@
       "sourceURL" : "https://world.openbeautyfacts.org/product/4006000002033"
     },
     {
-      "brand" : "Janssen Cosmetics",
+      "brand" : "Blistex",
       "category" : {
         "id" : "lip-balms",
         "label" : "Balsami labbra"
       },
-      "description" : "Balsamo labbra di Janssen Cosmetics, 15 ml. Ingredienti principali: Polybutene, Pentaerythrityl Tetraisostearate, Hydrogenated Polydecene, Bis-Diglyceryl Polyacyladipate-2.",
-      "id" : "4040943006512",
+      "description" : "Balsamo labbra di Blistex, 3.7 g. Ingredienti principali: Hydrogenated Coconut Oil, Euphorbia Cerifera Wax, Homosalate, Beeswax.",
+      "id" : "0637740949148",
       "image" : {
         "credit" : {
           "license" : "CC BY-SA 3.0",
-          "sourceURL" : "https://world.openbeautyfacts.org/product/4040943006512",
-          "uploader" : "openfoodfacts-contributors"
+          "sourceURL" : "https://world.openbeautyfacts.org/product/0637740949148",
+          "uploader" : "zeynepozturk11"
         },
-        "url200" : "https://images.openbeautyfacts.org/images/products/404/094/300/6512/front_en.4.200.jpg",
-        "url400" : "https://images.openbeautyfacts.org/images/products/404/094/300/6512/front_en.4.400.jpg"
+        "url200" : "https://images.openbeautyfacts.org/images/products/063/774/094/9148/front_en.4.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/063/774/094/9148/front_en.4.400.jpg"
       },
-      "ingredientsPreview" : "Polybutene, Pentaerythrityl Tetraisostearate, Hydrogenated Polydecene, Bis-Diglyceryl Polyacyladipate-2",
-      "lastModified" : "2026-07-02T08:50:58Z",
-      "name" : "Janssen Cosmetics Onarıcı Gece Dudak Maskesi 15 ml",
-      "quantity" : "15 ml",
-      "sourceURL" : "https://world.openbeautyfacts.org/product/4040943006512"
+      "ingredientsPreview" : "Hydrogenated Coconut Oil, Euphorbia Cerifera Wax, Homosalate, Beeswax",
+      "lastModified" : "2026-08-26T09:16:47Z",
+      "name" : "Blistex Lip Infusions Nourish SPF15 Dudak Bakım Kremi",
+      "quantity" : "3.7 g",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/0637740949148"
+    },
+    {
+      "brand" : "Vaseline",
+      "category" : {
+        "id" : "lip-balms",
+        "label" : "Balsami labbra"
+      },
+      "description" : "Balsamo labbra di Vaseline, 4.8 g. Ingredienti principali: Octyldodecanol, Cera Microcristallina, Caprylic/Capric Triglyceride, Ricinus Communis Seed Oil.",
+      "id" : "8683130085127",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/8683130085127",
+          "uploader" : "zeynepozturk11"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/868/313/008/5127/front_en.4.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/868/313/008/5127/front_en.4.400.jpg"
+      },
+      "ingredientsPreview" : "Octyldodecanol, Cera Microcristallina, Caprylic/Capric Triglyceride, Ricinus Communis Seed Oil",
+      "lastModified" : "2026-08-26T09:15:25Z",
+      "name" : "Vaseline Lip Therapy Dudak Bakım Kremi Original",
+      "quantity" : "4.8 g",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/8683130085127"
+    },
+    {
+      "brand" : "Blistex",
+      "category" : {
+        "id" : "lip-balms",
+        "label" : "Balsami labbra"
+      },
+      "description" : "Balsamo labbra di Blistex, 3.7 g. Ingredienti principali: Hydrogenated Coconut Oil, Octyldodecanol, Euphorbia Cerifera Wax, Beeswax.",
+      "id" : "0637740948394",
+      "image" : {
+        "credit" : {
+          "license" : "CC BY-SA 3.0",
+          "sourceURL" : "https://world.openbeautyfacts.org/product/0637740948394",
+          "uploader" : "zeynepozturk11"
+        },
+        "url200" : "https://images.openbeautyfacts.org/images/products/063/774/094/8394/front_en.4.200.jpg",
+        "url400" : "https://images.openbeautyfacts.org/images/products/063/774/094/8394/front_en.4.400.jpg"
+      },
+      "ingredientsPreview" : "Hydrogenated Coconut Oil, Octyldodecanol, Euphorbia Cerifera Wax, Beeswax",
+      "lastModified" : "2026-08-26T09:12:40Z",
+      "name" : "Blistex Lip Revitalizer Yenileyici Dolgun Görünüm Sağlayan Dudak Kremi",
+      "quantity" : "3.7 g",
+      "sourceURL" : "https://world.openbeautyfacts.org/product/0637740948394"
     }
   ],
   "schemaVersion" : 1,
