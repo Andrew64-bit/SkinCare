@@ -98,3 +98,16 @@ ESITO P3: VINTO — round 1, alla cieca (modalità scura a taglia standard + Dyn
 ESITO P4: CAP — miniature quadrate 72 pt; prossimo passo riquadro 4:5 centrato.
 ESITO P5: CAP — 16/120 anteprime con rumore OCR; crediti foto corretti post-cap.
 
+## v0.2 — P6 ricerca (cap 2 round) — 2026-09-19
+
+Bar scelto nel piano: la ricerca del sample Landmarks. Verificato sul simulatore: il suo `.searchable` sta
+nella colonna laterale dello split view e su iPhone non produce risultati (la cattura mostrava solo il campo
+«Mount» sopra Landmarks/Map/Collections) → non confrontabile. **Bar sostituito con la ricerca dell'app
+Impostazioni di sistema** (stesso simulatore, query «Wi» digitata, risultati reali). Catture via XCUITest
+(`testCaptureSearchScreens`, `TEST_RUNNER_SKINCARE_BAR_CAPTURE=1`), perché il pannello del simulatore di
+Claude richiede `sudo xcode-select`. Nostra: rete reale, query «nivea».
+
+Round 1: `rounds/P6/round-1/` (ours-search, bar-search), mappa cieca A=ours B=bar. Critico in corso.
+Osservazione dalla nostra cattura: tre «Nivea Creme» quasi identiche (barcode diversi per formato/mercato)
+→ deduplica per marca+nome+formato aggiunta al builder (test), attiva dal catalogo rigenerato.
+

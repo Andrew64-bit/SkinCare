@@ -3,7 +3,7 @@ import Foundation
 import SkinCareKit
 
 /// Uso:
-///   catalog-builder build --out <file.json> [--per-category 20] [--max-pages 2] [--min-interval 6.5]
+///   catalog-builder build --out <file.json> [--per-category 100] [--max-pages 5] [--min-interval 6.5]
 ///                         [--user-agent "App/Versione (contatto)"]
 ///   catalog-builder verify <file.json>
 /// Exit: 0 ok · 1 soglia di qualità non superata · 2 errore d'uso o di rete.
@@ -23,6 +23,7 @@ enum CLI {
         FileHandle.standardError.write(Data("""
         uso: catalog-builder build --out <file.json> [--per-category N] [--max-pages N] [--min-interval S] [--user-agent UA]
              catalog-builder verify <file.json>
+        predefiniti: --per-category 100 --max-pages 5 --min-interval 6.5
 
         """.utf8))
         return 2
@@ -35,8 +36,9 @@ enum CLI {
 
     static func build(_ args: [String]) async -> Int32 {
         guard let out = option("--out", in: args) else { return usage() }
-        let perCategory = option("--per-category", in: args).flatMap(Int.init) ?? 20
-        let maxPages = option("--max-pages", in: args).flatMap(Int.init) ?? 2
+        // Predefiniti v0.2: fino a 100 prodotti per categoria su al massimo 5 pagine (ricerca «il prodotto che uso»).
+        let perCategory = option("--per-category", in: args).flatMap(Int.init) ?? 100
+        let maxPages = option("--max-pages", in: args).flatMap(Int.init) ?? 5
         let minInterval = option("--min-interval", in: args).flatMap(Double.init) ?? 6.5
         let userAgent = option("--user-agent", in: args) ?? defaultUserAgent
 

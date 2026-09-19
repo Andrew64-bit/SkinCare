@@ -67,7 +67,7 @@ if [ -d "$OUT/ui.xcresult" ]; then
 fi
 
 step "5. gauntlet"
-for piece in P1 P2 P3 P4 P5; do
+for piece in P1 P2 P3 P4 P5 P6; do
   if grep -qE "^ESITO $piece: (VINTO|CAP)" gauntlet/LOG.md 2>/dev/null; then
     ok "$piece: $(grep -E "^ESITO $piece:" gauntlet/LOG.md | tail -1)"
   else
@@ -77,10 +77,10 @@ done
 refs=$(ls gauntlet/reference/*.png 2>/dev/null | wc -l | tr -d ' ')
 if [ "$refs" -ge 4 ]; then ok "catture del bar: $refs"; else fail "catture del bar: $refs (minimo 4)"; fi
 won=0
-for piece in P1 P2 P3 P4 P5; do
+for piece in P1 P2 P3 P4 P5 P6; do
   case "$(grep -E "^ESITO $piece:" gauntlet/LOG.md 2>/dev/null | tail -1)" in "ESITO $piece: VINTO"*) won=$((won + 1));; esac
 done
-summary+=("gauntlet vinti $won/5")
+summary+=("gauntlet vinti $won/6")
 
 step "6. verificatore a contesto fresco"
 if grep -qE "^VERIFICATORE: PASS" PROGRESS.md; then ok "VERIFICATORE: PASS in PROGRESS.md"; else fail "esito del verificatore assente in PROGRESS.md"; fi

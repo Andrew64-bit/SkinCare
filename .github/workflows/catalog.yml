@@ -26,6 +26,7 @@ jobs:
         run: >
           swift run -c release catalog-builder build
           --out ../../docs/catalog/catalog.json
+          --per-category 100 --max-pages 5
           --user-agent "SkinCareCatalogBuilder/0.1 (+https://github.com/Andrew64-bit/SkinCare)"
 
       - name: Verifica di qualità (QUALITY=PASS obbligatorio)
