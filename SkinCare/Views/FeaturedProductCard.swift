@@ -33,7 +33,9 @@ struct FeaturedProductCard: View {
             }
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("In evidenza: \(product.name), \(product.brand)")
+        .accessibilityLabel(
+            "In evidenza: \(product.name), \(product.brand)" + (product.soldInItaly ? ", venduto in Italia" : "")
+        )
         .accessibilityIdentifier("product.featured.\(product.id)")
         .productContextMenu(for: product)
         .task(id: displayURL) { await load() }

@@ -85,7 +85,13 @@ done
 summary+=("gauntlet vinti $won/7")
 
 step "6. verificatore a contesto fresco"
-if grep -qE "^VERIFICATORE: PASS" PROGRESS.md; then ok "VERIFICATORE: PASS in PROGRESS.md"; else fail "esito del verificatore assente in PROGRESS.md"; fi
+# Marcatore versionato: il PASS di una consegna precedente non vale per quella corrente.
+REQUIRED_VERIFIER_TAG="${REQUIRED_VERIFIER_TAG:-v0.3}"
+if grep -qE "^VERIFICATORE $REQUIRED_VERIFIER_TAG: PASS" PROGRESS.md; then
+  ok "VERIFICATORE $REQUIRED_VERIFIER_TAG: PASS in PROGRESS.md"
+else
+  fail "esito del verificatore per $REQUIRED_VERIFIER_TAG assente in PROGRESS.md"
+fi
 
 step "7. catalogo remoto e immagini ritagliate"
 URL=$(grep -oE 'https://[^"]+/catalog\.json' SkinCare/AppConfig.swift | head -1)

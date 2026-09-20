@@ -17,10 +17,12 @@
 		75AA4C369A2BEF58FDA409DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769C17DEAEF403EBBE688CC7 /* Assets.xcassets */; };
 		799D57765997FB19B3E8224B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F40F250F3247DC7B3A8996 /* ImageLoader.swift */; };
 		851A4DA67518DE04F5B43B6A /* FeaturedProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F1EAB5A505F1F0A9DB503 /* FeaturedProductCard.swift */; };
+		9E0494225CA4A5890C523444 /* ItalyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5208EA1091FBD5CA6B396BF /* ItalyBadge.swift */; };
 		B7973F30300BE1F8CF856FE2 /* SkinCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433FF5BB0FDF5D4890B5867 /* SkinCareApp.swift */; };
 		C896C2E01EF1329206FB051C /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801924F34E21D4A0FCE078C /* ProductListView.swift */; };
 		CE1A1A38E46649153FDA9C4F /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D12CA610F3AB3A30BBEAB /* ProductRow.swift */; };
 		DA2F5AFAF7A1728F33C4B3A4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A8ABE5937BF069C42C77B55C /* PrivacyInfo.xcprivacy */; };
+		F000C9B557CB3BB4DE9FA229 /* ProductListDiagnosticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B119E38D3DD6E35315B1F7 /* ProductListDiagnosticsUITests.swift */; };
 		FE27D895CC232474A9C7EC5A /* UITestStubURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694C084A3225413708CDFAA /* UITestStubURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +50,9 @@
 		914F1EAB5A505F1F0A9DB503 /* FeaturedProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductCard.swift; sourceTree = "<group>"; };
 		9801924F34E21D4A0FCE078C /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		A10D527EAA6A5E73AD1516B5 /* SkinCare.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SkinCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5208EA1091FBD5CA6B396BF /* ItalyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalyBadge.swift; sourceTree = "<group>"; };
 		A8ABE5937BF069C42C77B55C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A9B119E38D3DD6E35315B1F7 /* ProductListDiagnosticsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDiagnosticsUITests.swift; sourceTree = "<group>"; };
 		D13BD4C9DF4CD071BF621228 /* AttributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionView.swift; sourceTree = "<group>"; };
 		E512A3D1BB67DAD3BB5EF9AD /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		E694C084A3225413708CDFAA /* UITestStubURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestStubURLProtocol.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 		3BF7307AE5DC5805F3CCF912 /* SkinCareUITests */ = {
 			isa = PBXGroup;
 			children = (
+				A9B119E38D3DD6E35315B1F7 /* ProductListDiagnosticsUITests.swift */,
 				77E588AA31F3C156048B32A0 /* ProductListUITests.swift */,
 			);
 			path = SkinCareUITests;
@@ -113,6 +118,7 @@
 			children = (
 				D13BD4C9DF4CD071BF621228 /* AttributionView.swift */,
 				914F1EAB5A505F1F0A9DB503 /* FeaturedProductCard.swift */,
+				A5208EA1091FBD5CA6B396BF /* ItalyBadge.swift */,
 				053C8CF9AEE182C60DB6F543 /* ProductImageView.swift */,
 				9801924F34E21D4A0FCE078C /* ProductListView.swift */,
 				512D12CA610F3AB3A30BBEAB /* ProductRow.swift */,
@@ -254,6 +260,7 @@
 				496999B9377C8CB7733CFAB2 /* AuditLabView.swift in Sources */,
 				851A4DA67518DE04F5B43B6A /* FeaturedProductCard.swift in Sources */,
 				799D57765997FB19B3E8224B /* ImageLoader.swift in Sources */,
+				9E0494225CA4A5890C523444 /* ItalyBadge.swift in Sources */,
 				46BE16B02C78A475C35467C7 /* ProductImageView.swift in Sources */,
 				C896C2E01EF1329206FB051C /* ProductListView.swift in Sources */,
 				CE1A1A38E46649153FDA9C4F /* ProductRow.swift in Sources */,
@@ -266,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F000C9B557CB3BB4DE9FA229 /* ProductListDiagnosticsUITests.swift in Sources */,
 				1B68AFDCE28715B54C6AF7F6 /* ProductListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

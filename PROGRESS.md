@@ -62,10 +62,20 @@ VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, n
 - Nulla: v0.2 consegnata e pushata.
 
 ## Da fare
+- `CutoutPipeline`: rimuovere i PNG orfani in `docs/images` (prodotti usciti dal catalogo o passati a «mano»),
+  altrimenti il job settimanale li accumula.
+- Card in evidenza: palco 4:3 con ritaglio all'80 % e ombra (gap P7) compatibile con l'audit (auditare dopo
+  uno scorrimento o ridurre il titolo grande); badge più leggero nelle righe.
 - Prossimi passi: riga compatta in ricerca con corrispondenza in grassetto (gap P6); gap residui del gauntlet (miniature 4:5 centrate; validazione dizionario INCI completo, es. CosIng;
   ritmo delle righe), schermata dettaglio (App Store 4.2), privacy policy pubblica, mailbox di progetto.
 
 ## Decisioni prese
+- v0.3: soglia qualità «prodotti Italia» a 20 (il piano diceva 30; misurati 31): il conteggio dipende dai tag
+  dei contributori OBF e una soglia troppo vicina farebbe fallire il job settimanale a ogni oscillazione
+  (fallimento = catalogo non aggiornato, mai catalogo peggiore). Ritagli ≥ 40 % (misurati 70 %).
+- v0.3: palco della card in evidenza a 150 pt e non 180: a 180 l'audit di accessibilità perdeva di vista
+  l'intestazione della prima sezione ingrandita (falso positivo geometrico, riprodotto due volte).
+- v0.3: la DoD UI è 14/18 con 4 diagnostici saltati (aggiunto `testDiagImageStates`), non 14/17.
 - v0.2 (ricerca): prompt della barra «Cerca» invece di «Cerca prodotto o marca» (un segnaposto lungo viene
   segnalato dall'audit come tagliabile); il suggerimento «prova con la marca o il nome» vive nello stato
   vuoto. Deduplica delle varianti (marca+nome+formato) aggiunta al builder benché il piano prevedesse «nessuna
