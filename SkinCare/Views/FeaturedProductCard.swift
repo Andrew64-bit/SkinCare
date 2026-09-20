@@ -25,23 +25,13 @@ struct FeaturedProductCard: View {
     private var displayURL: URL { product.image.cutoutURL ?? product.image.url400 }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            HStack(spacing: 8) {
-                Text(product.brand)
-                    .font(.footnote.weight(.semibold))
-                    .textCase(.uppercase)
-                if product.soldInItaly {
-                    ItalyBadge(productID: product.id, onDark: !hasCutout)
-                }
+        Group {
+            if hasCutout {
+                stagedCard
+            } else {
+                photoCard
             }
-            Text(product.name)
-                .font(.title2.weight(.bold))
         }
-        .foregroundStyle(hasCutout ? Color(.label) : .white)
-        .shadow(color: hasCutout ? .clear : .black.opacity(0.5), radius: 4)
-        .padding(16)
-        .frame(maxWidth: .infinity, minHeight: 200, alignment: .bottomLeading)
-        .background { hasCutout ? AnyView(cutoutStage) : AnyView(photo) }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("In evidenza: \(product.name), \(product.brand)")
         .accessibilityIdentifier("product.featured.\(product.id)")
@@ -49,25 +39,65 @@ struct FeaturedProductCard: View {
         .task(id: displayURL) { await load() }
     }
 
-    /// Ritaglio centrato nella metà alta della scheda su fondo neutro (nessuno scrim: il testo è in colore etichetta).
-    private var cutoutStage: some View {
-        Color(.secondarySystemGroupedBackground)
-            .overlay(alignment: .top) {
-                if let image {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 120)
-                        .padding(.top, 16)
-                        .padding(.trailing, 16)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                } else if failed {
-                    Image(systemName: "photo")
-                        .font(.largeTitle)
-                        .foregroundStyle(.secondary)
-                        .padding(.top, 40)
+    /// Ritaglio su un palco a tutta larghezza (lo stesso sistema tessera-e-margine delle miniature, in
+    /// grande) con marca, badge e titolo sotto: nessuno scrim, testo in colore etichetta.
+    private var stagedCard: some View {
+        // Palco compatto (150 pt): con 180 pt l'audit di accessibilità non riusciva più a osservare
+        // l'intestazione «Creme viso» ingrandita (finiva sotto la piega) e la segnalava come non scalabile.
+        VStack(alignment: .leading, spacing: 10) {
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill(Color(.tertiarySystemFill))
+                .frame(height: 150)
+                .overlay {
+                    if let image {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 112)
+                    } else if failed {
+                        Image(systemName: "photo")
+                            .font(.largeTitle)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            VStack(alignment: .leading, spacing: 4) {
+                HStack(spacing: 8) {
+                    Text(product.brand)
+                        .font(.footnote.weight(.semibold))
+                        .textCase(.uppercase)
+                    if product.soldInItaly {
+                        ItalyBadge(productID: product.id)
+                    }
+                }
+                Text(product.name)
+                    .font(.title2.weight(.bold))
+            }
+            .foregroundStyle(Color(.label))
+        }
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color(.secondarySystemGroupedBackground))
+    }
+
+    /// Foto originale a tutta scheda con scrim e testo bianco (quando il ritaglio non esiste).
+    private var photoCard: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 8) {
+                Text(product.brand)
+                    .font(.footnote.weight(.semibold))
+                    .textCase(.uppercase)
+                if product.soldInItaly {
+                    ItalyBadge(productID: product.id, onDark: true)
                 }
             }
+            Text(product.name)
+                .font(.title2.weight(.bold))
+        }
+        .foregroundStyle(.white)
+        .shadow(color: .black.opacity(0.5), radius: 4)
+        .padding(16)
+        .frame(maxWidth: .infinity, minHeight: 200, alignment: .bottomLeading)
+        .background { photo }
     }
 
     /// Foto originale ritagliata a riempire la scheda con il gradiente in basso; in attesa o senza rete resta

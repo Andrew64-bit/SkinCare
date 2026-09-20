@@ -138,3 +138,18 @@ alto a destra lasciando ~70 % della card vuota; le tessere mescolano ritaglio su
 badge pesa più della marca. Fix chiesto: palco a tutta larghezza (`RoundedRectangle(16)` in
 `tertiarySystemFill`, 180 pt), ritaglio `scaledToFit` al 75 % dell'altezza centrato, marca/badge/titolo sotto.
 
+Builder round 1 → 2 (orchestratore, `FeaturedProductCard`): card in evidenza con palco a tutta larghezza
+(`RoundedRectangle(16)` in `tertiarySystemFill`, ritaglio `scaledToFit` centrato, marca/badge/titolo sotto, testo
+`Color(.label)`, nessuno scrim); foto originale a tutta scheda con scrim solo quando il ritaglio manca. Palco
+150 pt e non 180: con 180 l'audit di accessibilità non riusciva più a osservare l'intestazione «Creme viso»
+ingrandita (finiva sotto la piega) e la segnalava come non scalabile (falso positivo geometrico riprodotto 2×).
+Catture `rounds/P7/round-2/`, coppie cieche `P7`/`P7-dark`, mappa A=bar B=ours.
+
+Round 2 — critico: **A (bar)** → perso. Gap residuo: il ritaglio copre ~8 % di un palco 340×148 pt e «sembra un
+segnaposto»; chiesto riquadro 4:3 (raggio 20), ritaglio all'80 % dell'altezza con 20 pt di margine e ombra
+`black 0.18, radius 16, y 8`. Da fare insieme al vincolo dell'audit (un palco più alto sposta l'intestazione
+sotto la piega): ad esempio auditando dopo uno scorrimento, o riducendo il titolo grande. Nota anche: «un pill
+pesante ripetuto in ogni riga» (badge): valutare un'icona sola con etichetta di accessibilità.
+
+ESITO P7: CAP — 2 round persi contro Landmarks; gap residuo: palco 4:3 con ritaglio grande e ombra (compatibile con l'audit), badge più leggero.
+
