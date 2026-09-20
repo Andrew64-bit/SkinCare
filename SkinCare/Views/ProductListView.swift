@@ -5,10 +5,12 @@ struct ProductListView: View {
     let repository: CatalogRepository
     @State private var showAttribution = false
     @State private var query = ""
+    @State private var italyOnly = false
 
     /// Ricerca locale (nome, marca, categoria, barcode): nessuna chiamata di rete.
     private var visibleProducts: [Product] {
-        ProductSearch.filter(repository.catalog.products, query: query)
+        let base = italyOnly ? repository.catalog.products.filter(\.soldInItaly) : repository.catalog.products
+        return ProductSearch.filter(base, query: query)
     }
 
     private var isSearching: Bool {
@@ -45,7 +47,7 @@ struct ProductListView: View {
                             .listRowSeparator(.hidden)
                     }
                 }
-                if isSearching, visibleProducts.isEmpty {
+                if visibleProducts.isEmpty, isSearching || italyOnly {
                     Section {
                         emptySearchState
                     }
@@ -92,6 +94,27 @@ struct ProductListView: View {
             )
             .navigationTitle("Prodotti")
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Menu {
+                        Button {
+                            italyOnly = false
+                        } label: {
+                            Label("Tutti i prodotti", systemImage: italyOnly ? "circle" : "checkmark.circle.fill")
+                        }
+                        .accessibilityIdentifier("filter.all")
+                        Button {
+                            italyOnly = true
+                        } label: {
+                            Label("Solo venduti in Italia", systemImage: italyOnly ? "checkmark.circle.fill" : "circle")
+                        }
+                        .accessibilityIdentifier("filter.italy")
+                    } label: {
+                        Image(systemName: italyOnly
+                            ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
+                    }
+                    .accessibilityLabel(italyOnly ? "Filtro: solo venduti in Italia" : "Filtro: tutti i prodotti")
+                    .accessibilityIdentifier("filter.menu")
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showAttribution = true
@@ -126,13 +149,22 @@ struct ProductListView: View {
             Label("Nessun prodotto trovato", systemImage: "magnifyingglass")
                 .foregroundStyle(Color(.label))
         } description: {
-            Text("Nessun risultato per “\(query.trimmingCharacters(in: .whitespaces))” fra i "
-                + "\(repository.catalog.products.count) prodotti del catalogo. "
-                + "Prova con la marca o il nome: il catalogo cresce ogni settimana.")
+            Text(emptyStateText)
                 .foregroundStyle(ProductRow.mutedText)
         }
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("search.empty")
+    }
+
+    private var emptyStateText: String {
+        let scope = italyOnly
+            ? "\(repository.catalog.products.filter(\.soldInItaly).count) prodotti segnalati in vendita in Italia"
+            : "\(repository.catalog.products.count) prodotti del catalogo"
+        if isSearching {
+            return "Nessun risultato per “\(query.trimmingCharacters(in: .whitespaces))” fra i \(scope). "
+                + "Prova con la marca o il nome: il catalogo cresce ogni settimana."
+        }
+        return "Nessun prodotto fra i \(scope)."
     }
 
     private var attribution: some View {

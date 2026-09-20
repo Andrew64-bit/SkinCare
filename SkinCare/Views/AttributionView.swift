@@ -31,6 +31,13 @@ struct AttributionView: View {
                         licenseRow("Questo catalogo", "Database derivato, pubblicato a sua volta sotto ODbL v1.0")
                     }
                 }
+                Section("Venduto in Italia e immagini") {
+                    Text("Il badge «Venduto in Italia» segue le segnalazioni dei contributori di Open Beauty Facts "
+                        + "(paese di vendita o etichetta in italiano): possono mancare prodotti. I prodotti segnalati in "
+                        + "Italia stanno in cima a ogni categoria; gli altri prodotti europei restano come riserva.")
+                    Text("Le immagini ritagliate su sfondo neutro sono derivate automaticamente dalle foto dei contributori "
+                        + "(CC BY-SA 3.0, stesso autore e stessa licenza); dove il ritaglio non riesce resta la foto originale.")
+                }
                 Section("Marchi e limiti") {
                     Text("Nomi, marchi e confezioni appartengono ai rispettivi proprietari e sono mostrati a solo scopo "
                         + "identificativo. L'app non è affiliata ad alcun marchio né a Open Beauty Facts.")

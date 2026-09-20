@@ -25,7 +25,7 @@ nonisolated final class UITestStubURLProtocol: URLProtocol {
                 return
             }
             respond(url: url, status: 200, headers: ["Content-Type": "application/json", "ETag": "\"uitest\""], body: body)
-        } else if url.host()?.hasSuffix("openbeautyfacts.org") == true {
+        } else if url.host()?.hasSuffix("openbeautyfacts.org") == true || url.host()?.hasSuffix("github.io") == true {
             respond(url: url, status: 200, headers: ["Content-Type": "image/png"], body: Self.imageData(for: url))
         } else {
             client.urlProtocol(self, didFailWithError: URLError(.unsupportedURL))

@@ -21,28 +21,57 @@ struct FeaturedProductCard: View {
     static let scrimStart: CGFloat = 0.0
     static let scrimOpacity: Double = 0.75
 
+    private var hasCutout: Bool { product.image.cutoutURL != nil }
+    private var displayURL: URL { product.image.cutoutURL ?? product.image.url400 }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(product.brand)
-                .font(.footnote.weight(.semibold))
-                .textCase(.uppercase)
+            HStack(spacing: 8) {
+                Text(product.brand)
+                    .font(.footnote.weight(.semibold))
+                    .textCase(.uppercase)
+                if product.soldInItaly {
+                    ItalyBadge(productID: product.id, onDark: !hasCutout)
+                }
+            }
             Text(product.name)
                 .font(.title2.weight(.bold))
         }
-        .foregroundStyle(.white)
-        .shadow(color: .black.opacity(0.5), radius: 4)
+        .foregroundStyle(hasCutout ? Color(.label) : .white)
+        .shadow(color: hasCutout ? .clear : .black.opacity(0.5), radius: 4)
         .padding(16)
         .frame(maxWidth: .infinity, minHeight: 200, alignment: .bottomLeading)
-        .background { photo }
+        .background { hasCutout ? AnyView(cutoutStage) : AnyView(photo) }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("In evidenza: \(product.name), \(product.brand)")
         .accessibilityIdentifier("product.featured.\(product.id)")
         .productContextMenu(for: product)
-        .task(id: product.image.url400) { await load() }
+        .task(id: displayURL) { await load() }
     }
 
-    /// Foto ritagliata a riempire esattamente la scheda (lo sfondo prende la misura del testo) con il
-    /// gradiente a tutta larghezza; in attesa o senza rete resta un fondo neutro con l'icona segnaposto.
+    /// Ritaglio centrato nella metà alta della scheda su fondo neutro (nessuno scrim: il testo è in colore etichetta).
+    private var cutoutStage: some View {
+        Color(.secondarySystemGroupedBackground)
+            .overlay(alignment: .top) {
+                if let image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 120)
+                        .padding(.top, 16)
+                        .padding(.trailing, 16)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                } else if failed {
+                    Image(systemName: "photo")
+                        .font(.largeTitle)
+                        .foregroundStyle(.secondary)
+                        .padding(.top, 40)
+                }
+            }
+    }
+
+    /// Foto originale ritagliata a riempire la scheda con il gradiente in basso; in attesa o senza rete resta
+    /// un fondo neutro con l'icona segnaposto.
     private var photo: some View {
         Color(.secondarySystemFill)
             .overlay {
@@ -67,12 +96,12 @@ struct FeaturedProductCard: View {
     }
 
     private func load() async {
-        if let cached = loader.cachedImage(for: product.image.url400) {
+        if let cached = loader.cachedImage(for: displayURL) {
             image = cached
             return
         }
         failed = false
-        if let loaded = await loader.image(for: product.image.url400) {
+        if let loaded = await loader.image(for: displayURL) {
             image = loaded
         } else {
             image = nil

@@ -124,3 +124,17 @@ corrispondente in grassetto (`AttributedString`), una riga «marca · formato»,
 per risultato invece di quattro, senza troncamenti (regole audit).
 
 ESITO P6: CAP — round 1 annullato (bar in stato vuoto), round 2 perso contro la ricerca di Contatti; gap residuo: riga compatta con corrispondenza evidenziata.
+
+## v0.3 — P7 immagini ritagliate + badge (cap 2 round) — 2026-09-20
+
+Bar: Landmarks (catture in `reference/`, chiaro e scuro). Nostra: rete reale con i ritagli serviti da Pages
+(`rounds/P7/round-1/ours-{light,dark}.png`); coppie cieche `P7` e `P7-dark`, mappa A=bar B=ours in entrambe.
+Nota di processo: la prima cattura mostrava foto originali «fit» su bianco scambiate per ritagli; il test UI
+(`value == loaded:cutout`) ha smascherato una sostituzione di testo non applicata in `ProductImageView`
+(`.task(id: url200)` invariato). Regola: ogni sostituzione di testo negli script va asserita.
+
+Round 1 — critico: **A (bar)** → perso. Gap: nella card in evidenza il ritaglio (~46×100 pt) galleggia in
+alto a destra lasciando ~70 % della card vuota; le tessere mescolano ritaglio su grigio e foto piena; il
+badge pesa più della marca. Fix chiesto: palco a tutta larghezza (`RoundedRectangle(16)` in
+`tertiarySystemFill`, 180 pt), ritaglio `scaledToFit` al 75 % dell'altezza centrato, marca/badge/titolo sotto.
+

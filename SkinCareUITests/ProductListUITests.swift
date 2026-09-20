@@ -86,6 +86,15 @@ final class ProductListUITests: XCTestCase {
         return line
     }
 
+    /// Attende che una miniatura sia caricata, da foto originale («loaded») o da ritaglio («loaded:cutout»).
+    private func waitLoaded(_ element: XCUIElement, file: StaticString = #filePath, line: UInt = #line) {
+        let predicate = NSPredicate(format: "value == 'loaded' OR value == 'loaded:cutout'")
+        let result = XCTWaiter().wait(for: [XCTNSPredicateExpectation(predicate: predicate, object: element)], timeout: 15)
+        XCTAssertEqual(
+            result, .completed, "\(element.identifier): non caricata (\(element.value ?? "nil"))", file: file, line: line
+        )
+    }
+
     private func wait(for element: XCUIElement, value: String, timeout: TimeInterval = 15,
                       file: StaticString = #filePath, line: UInt = #line) {
         let predicate = NSPredicate(format: "value == %@", value)
@@ -109,7 +118,7 @@ final class ProductListUITests: XCTestCase {
         let firstThree = Array(images(in: app).allElementsBoundByIndex.prefix(3))
         XCTAssertEqual(firstThree.count, 3)
         for image in firstThree {
-            wait(for: image, value: "loaded")
+            waitLoaded(image)
         }
     }
 
@@ -161,7 +170,7 @@ final class ProductListUITests: XCTestCase {
     func testAccessibilityAudit() throws {
         let app = launch(.stubbed)
         XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
-        wait(for: images(in: app).firstMatch, value: "loaded")
+        waitLoaded(images(in: app).firstMatch)
         // Le issue vengono raccolte (return true = non registrate dall'audit) e riportate in un'unica
         // asserzione con tipo, descrizione ed elemento: così il fallimento dice sempre quale elemento è.
         let issues = AuditIssueLog()
@@ -270,66 +279,58 @@ final class ProductListUITests: XCTestCase {
         add(attachment)
     }
 
-    /// Diagnostica: audita una variante alla volta e stampa il rapporto (fallisce sempre, di proposito).
-    func testAuditLab() throws {
-        try XCTSkipUnless(ProcessInfo.processInfo.environment["SKINCARE_AUDIT_LAB"] == "1", "diagnostica: SKINCARE_AUDIT_LAB=1")
-        var report: [String] = []
-        for variant in ["full", "compose:hRt"] {
-            let app = XCUIApplication()
-            app.launchEnvironment["SKINCARE_UITEST"] = "1"
-            app.launchEnvironment["SKINCARE_UITEST_LAB"] = variant
-            app.launch()
-            _ = app.staticTexts.firstMatch.waitForExistence(timeout: 10)
-            sleep(2)
-            let issues = AuditIssueLog()
-            try app.performAccessibilityAudit { issue in
-                issues.lines.append(issue.compactDescription)
-                return true
-            }
-            report.append("\(variant): \(issues.lines.isEmpty ? "ok" : issues.lines.joined(separator: " | "))")
-            app.terminate()
-        }
-        XCTFail("LAB REPORT\n" + report.joined(separator: "\n"))
+    // MARK: - v0.3: Italia in evidenza e immagini ritagliate
+
+    private func badges(in app: XCUIApplication) -> XCUIElementQuery {
+        app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH 'product.badge.italy.'"))
     }
 
-    /// Diagnostica: bisezione della lista reale per attribuire un'issue senza elemento.
-    func testAuditBisect() throws {
-        try XCTSkipUnless(ProcessInfo.processInfo.environment["SKINCARE_AUDIT_LAB"] == "1", "diagnostica: SKINCARE_AUDIT_LAB=1")
-        func audit(_ variant: String) throws -> [String] {
-            let app = XCUIApplication()
-            app.launchEnvironment["SKINCARE_UITEST"] = "1"
-            app.launchEnvironment["SKINCARE_UITEST_LAB"] = variant
-            app.launch()
-            _ = app.staticTexts.firstMatch.waitForExistence(timeout: 10)
-            sleep(2)
-            let issues = AuditIssueLog()
-            try app.performAccessibilityAudit { issue in
-                issues.lines.append(issue.compactDescription)
-                return true
+    func testItalianBadgeIsShownAndItalianProductsComeFirst() {
+        let app = launch(.stubbed)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        let badge = badges(in: app).firstMatch
+        XCTAssertTrue(badge.waitForExistence(timeout: 10), "nessun badge «Venduto in Italia» visibile")
+        XCTAssertEqual(badge.label, "Venduto in Italia")
+        // La prima riga di ogni schermata iniziale è italiana: il badge della prima riga esiste.
+        let firstRow = rows(in: app).firstMatch
+        let firstID = firstRow.identifier.replacingOccurrences(of: "product.row.", with: "")
+        XCTAssertTrue(app.descendants(matching: .any)["product.badge.italy.\(firstID)"].exists,
+                      "la prima riga (\(firstID)) non è italiana: l'ordine italiani-prima non è rispettato")
+    }
+
+    func testItalyFilterHidesNonItalianRows() {
+        let app = launch(.stubbed)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        app.buttons["filter.menu"].tap()
+        app.buttons["filter.italy"].tap()
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        for _ in 0..<4 {
+            for row in rows(in: app).allElementsBoundByIndex {
+                let id = row.identifier.replacingOccurrences(of: "product.row.", with: "")
+                XCTAssertTrue(app.descendants(matching: .any)["product.badge.italy.\(id)"].exists,
+                              "riga non italiana visibile con il filtro attivo: \(id)")
             }
-            app.terminate()
-            return issues.lines
+            app.swipeUp()
         }
-        var report: [String] = []
-        var start = 0
-        var count = 120
-        let all = try audit("rows:\(start):\(count)")
-        report.append("rows:\(start):\(count) → \(all)")
-        if all.isEmpty {
-            XCTFail("REPORT\n" + report.joined(separator: "\n") + "\nnessuna issue con le sole righe: composizione")
-            return
+        app.buttons["filter.menu"].tap()
+        app.buttons["filter.all"].tap()
+        XCTAssertGreaterThanOrEqual(distinctRows(in: app, minimum: 20).count, 20)
+    }
+
+    func testCutoutImagesLoadOnRowsThatHaveThem() {
+        let app = launch(.stubbed)
+        XCTAssertTrue(rows(in: app).firstMatch.waitForExistence(timeout: 10))
+        // Le miniature con ritaglio espongono value «loaded:cutout»; i primi prodotti (italiani in cima) possono
+        // non averne, quindi si scorre finché una compare (al massimo 8 schermate).
+        let predicate = NSPredicate(format: "identifier BEGINSWITH 'image.' AND value == 'loaded:cutout'")
+        let cutout = app.images.matching(predicate).firstMatch
+        var found = cutout.waitForExistence(timeout: 8)
+        var swipes = 0
+        while !found && swipes < 8 {
+            app.swipeUp()
+            swipes += 1
+            found = cutout.waitForExistence(timeout: 5)
         }
-        while count > 1 {
-            let half = count / 2
-            let left = try audit("rows:\(start):\(half)")
-            report.append("rows:\(start):\(half) → \(left)")
-            if !left.isEmpty { count = half; continue }
-            let right = try audit("rows:\(start + half):\(count - half)")
-            report.append("rows:\(start + half):\(count - half) → \(right)")
-            if !right.isEmpty { start += half; count -= half; continue }
-            report.append("nessuna metà riproduce: dipende dal numero di righe o dallo scorrimento")
-            break
-        }
-        XCTFail("REPORT\n" + report.joined(separator: "\n") + "\nrange finale: \(start):\(count)")
+        XCTAssertTrue(found, "nessuna miniatura ritagliata caricata nelle prime \(swipes + 1) schermate")
     }
 }

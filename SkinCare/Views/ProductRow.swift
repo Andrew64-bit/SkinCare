@@ -20,9 +20,14 @@ struct ProductRow: View {
                     .foregroundStyle(Color(.label))
                     .accessibilityIdentifier("product.name.\(product.id)")
                 // Marca a colore pieno: si stacca dalla descrizione attenuata sotto.
-                Text(product.brand)
-                    .font(.subheadline.weight(.medium))
-                    .foregroundStyle(Color(.label))
+                HStack(spacing: 8) {
+                    Text(product.brand)
+                        .font(.subheadline.weight(.medium))
+                        .foregroundStyle(Color(.label))
+                    if product.soldInItaly {
+                        ItalyBadge(productID: product.id)
+                    }
+                }
                 // Descrizione intera (nessun troncamento né lineLimit: l'audit di accessibilità segnala il testo
                 // tagliato) ma in due righe brevi e attenuate, così la riga non si legge come un paragrafo.
                 VStack(alignment: .leading, spacing: 2) {
