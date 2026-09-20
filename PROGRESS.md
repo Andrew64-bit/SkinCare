@@ -58,8 +58,17 @@ VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, n
   `REQUIRE_REMOTE=1 ./scripts/check_done.sh` →
   `DONE=PASS · kit 52 test · builder 67 test · snapshot 484 prodotti · UI 11/14 passati, 0 falliti, 3 saltati · gauntlet vinti 2/6 · remoto ok · 2026-09-19T18:27:43Z`
 
+- 2026-09-19/20: v0.3 — «Italia in evidenza» (31 prodotti segnalati in vendita in Italia in cima a ogni
+  categoria, badge «Venduto in Italia», filtro «Solo Italia», ricerche mirate per paese/lingua nel builder,
+  +creme mani e acque micellari: 594 prodotti in 8 categorie) e **immagini ritagliate** (Vision nel builder:
+  419 ritagli su 594 = 70 %, PNG 400×400 trasparenti pubblicati su Pages, cancello copertura 12–92 % /
+  persona ≤ 8 %, manifest incrementale). Kit 59 test, builder 85, suite UI 14/18 (0 falliti, 4 diagnostici
+  saltati). Gauntlet P7 a CAP (2 round). Verificatore v0.3: PASS, 8 note applicate salvo la 6 (orfani).
+
+VERIFICATORE v0.3: PASS (2026-09-20, sub-agent a contesto fresco; note applicate, vedi «Decisioni prese» e «Da fare»)
+
 ## In corso
-- Nulla: v0.2 consegnata e pushata.
+- Check finale `REQUIRE_REMOTE=1 ./scripts/check_done.sh` (v0.3) e push.
 
 ## Da fare
 - `CutoutPipeline`: rimuovere i PNG orfani in `docs/images` (prodotti usciti dal catalogo o passati a «mano»),
