@@ -67,8 +67,11 @@ VERIFICATORE: PASS (2026-09-19, sub-agent a contesto fresco; rapporto in chat, n
 
 VERIFICATORE v0.3: PASS (2026-09-20, sub-agent a contesto fresco; note applicate, vedi «Decisioni prese» e «Da fare»)
 
+- 2026-09-20: `REQUIRE_REMOTE=1 ./scripts/check_done.sh` →
+  `DONE=PASS · kit 59 test · builder 85 test · snapshot 594 prodotti · UI 14/18 passati, 0 falliti, 4 saltati · gauntlet vinti 2/7 · remoto ok · 2026-09-20T10:52:19Z`
+
 ## In corso
-- Check finale `REQUIRE_REMOTE=1 ./scripts/check_done.sh` (v0.3) e push.
+- Nulla: v0.3 consegnata e pushata.
 
 ## Da fare
 - `CutoutPipeline`: rimuovere i PNG orfani in `docs/images` (prodotti usciti dal catalogo o passati a «mano»),
@@ -115,6 +118,9 @@ VERIFICATORE v0.3: PASS (2026-09-20, sub-agent a contesto fresco; note applicate
 - Categorie v1: facial-creams, cleansers, sunscreen, face-masks, anti-aging-face-care-products, lip-balms.
 
 ## Cap turni (piano)
+- v0.3 (ritagli + Italia): cap 25 turni superato di circa 20 (segfault da oggetti stale, sostituzione di
+  testo non applicata smascherata dal test UI, collisione sul simulatore, audit e palco della card).
+  Proseguito per non lasciare branch, catalogo e Pages a metà; registrato qui.
 - v0.2 (ricerca): cap 20 turni superato di circa 5 (round P6 annullato e rifatto, catalogo ricostruito due
   volte per includere la deduplica). Proseguito per non lasciare branch e catalogo a metà; registrato qui.
 - Step 0–4 ≤ 35 turni · gauntlet ≤ 25 · verifica+pubblicazione ≤ 10.
